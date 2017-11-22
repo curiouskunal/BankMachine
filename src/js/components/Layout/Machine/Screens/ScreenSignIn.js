@@ -15,10 +15,10 @@ export default class ScreenSignIn extends React.Component {
       <div id="screen-signin">
         <div>
           <div class = "left">
-            <JButton buttonclass="headerButton" text="BACK" nav="../" {...this.props}/>
+            <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
           </div>
           <div class = "right">
-            <JButton buttonclass="headerButton" text="EXIT" nav="/" {...this.props}/>
+            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
           </div>
         </div>
         

@@ -1,5 +1,5 @@
 import React from "react";
-import JButton from "./Layout/Machine/JButton";
+
 
 
 //var $ = require('jquery');
@@ -11,6 +11,7 @@ export default class Header extends React.Component {
     return (
       <div>
         <h1>{this.props.title}</h1>
+        
       </div>
     );
   }

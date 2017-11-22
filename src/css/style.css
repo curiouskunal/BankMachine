@@ -18,12 +18,12 @@ h1{
 	float: right;	
 }
 
-.center{
-	background-color: grey;
-	margin-top: 100px !important;
+.big{
+	color: white;
+	font-weight: bold;
+	background-color: blue;
 	height: 100px;
 	width: 400px;
-	margin: 0 auto;
 }
 
 .center{

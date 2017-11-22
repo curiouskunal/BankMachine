@@ -11,23 +11,23 @@ export default class Machine extends React.Component {
       <div id="content-wrapper">
         <div id="buttons">
 	        <div class = "left">
-				<JButton text="HOME"/>
+				<JButton text={"HOME"}/>
 			</div>
 			<div class = "right">
-				<JButton text="EXIT"/>
+				<JButton text={"EXIT"}/>
 			</div>
 		</div>
         
         <Title title="Welcome to RBC" />
         
         <div class = "center">
-        	<JButton text="Welcome"/>
+        	<JButton text={"Welcome"} style={"big"} />
         </div>
         <div class = "center">
-        	<JButton text="Francais"/>
+        	<JButton text={"Francais"} style={"big"}/>
         </div>
         <div id="otherLanguages" class="left">
-        	<JButton text="Other Languages"/>
+        	<JButton text={"Other Languages"}/>
         </div>
       </div>
     );

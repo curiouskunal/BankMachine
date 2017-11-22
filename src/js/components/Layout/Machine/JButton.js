@@ -4,12 +4,23 @@ import React from "react";
 //var $ = require('jquery');
 
 export default class JButton extends React.Component {
+    constructor(){
+        super();
+    }
+    
+  navigate(){
+      this.props.history.push(this.props.nav.toString());
+      //alert('Navigating to: ' + this.props.nav); 
+  }
 
-
-  render() {
+  render() { 
     return (
       <div>
-        <button class={this.props.style == null? "btn btn-success": this.props.style}> {this.props.text == null? "default button": this.props.text}</button>
+       
+        <button class="btn btn-success" onClick={(e) => {this.navigate();}}>
+            <img src={this.props.img == null? "": this.props.img} alt=""/>
+            <span>{this.props.text == null? "default button": this.props.text}</span>
+        </button>
       </div>
     );
   }

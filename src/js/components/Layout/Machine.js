@@ -1,6 +1,10 @@
 import React from "react";
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
+        
 import Title from "./Machine/Title";
 import JButton from "./Machine/JButton";
+import ScreenWelcome from "./Machine/Screens/ScreenWelcome"
+import ScreenSignIn from "./Machine/Screens/ScreenSignIn"
 
 //var $ = require('jquery');
 
@@ -9,26 +13,12 @@ export default class Machine extends React.Component {
   render() { 
     return (
       <div id="content-wrapper">
-        <div id="buttons">
-	        <div class = "left">
-				<JButton text={"HOME"}/>
-			</div>
-			<div class = "right">
-				<JButton text={"EXIT"}/>
-			</div>
-		</div>
-        
-        <Title title="Welcome to RBC" />
-        
-        <div class = "center">
-        	<JButton text={"Welcome"} style={"big"} />
-        </div>
-        <div class = "center">
-        	<JButton text={"Francais"} style={"big"}/>
-        </div>
-        <div id="otherLanguages" class="left">
-        	<JButton text={"Other Languages"}/>
-        </div>
+        <BrowserRouter>
+           <Switch>
+               <Route path="/" exact render={props => <ScreenWelcome {...props} />}/>
+               <Route path="/signin" exact render={props => <ScreenSignIn {...props} />}/>
+           </Switch>
+        </BrowserRouter>
       </div>
     );
   }

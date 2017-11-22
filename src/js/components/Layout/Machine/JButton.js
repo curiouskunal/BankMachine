@@ -24,7 +24,7 @@ export default class JButton extends React.Component {
     return (
       <div>
        
-        <button class="btn btn-success" onClick={(e) => {this.navigate();}}>
+        <button class={this.props.buttonclass} onClick={(e) => {this.navigate();}}>
             <img src={this.props.img == null? "": this.props.img} alt=""/>
             <span>{this.props.text == null? "default button": this.props.text}</span>
         </button>

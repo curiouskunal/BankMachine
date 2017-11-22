@@ -23,7 +23,7 @@ export default class ScreenCard extends React.Component {
 		</div>
         
         <Title title="Insert Card" />
-        
+        <JButton text="(card inserted)" nav="/home" {...this.props}/>
       </div>
     );
   }

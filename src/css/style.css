@@ -52,14 +52,16 @@ footer{
 }
 
 /*Small Button*/
-#screen-signin.btn{
+.headerButton{
 	color: white;
 	font-weight: bold;
 	background-color: green;
-	height: 200px;
-	width: 200px;
-	margin: 0 auto;
+	height: 50px;
+	width: 100px;
+	border: 1px solid green;
+    border-radius: 0px;
 }
+
 
 /*.center{
 	background-color: grey;
@@ -78,4 +80,9 @@ footer{
 	margin-left: 20px;
 	height: 100px;
 	width: 250px;
+}
+
+/*icons*/
+i{
+	margin: 5px;
 }

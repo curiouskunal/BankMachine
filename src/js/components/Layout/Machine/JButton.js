@@ -9,8 +9,15 @@ export default class JButton extends React.Component {
     }
     
   navigate(){
+      if(this.props.nav.toString() == "../"){
+           this.props.history.goBack();
+          return;
+      }
+      if(this.props.nav.toString() == "/"){
+           this.props.history.replace("/");
+          return;
+      }
       this.props.history.push(this.props.nav.toString());
-      //alert('Navigating to: ' + this.props.nav); 
   }
 
   render() { 

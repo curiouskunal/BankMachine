@@ -5,6 +5,8 @@ import Title from "./Machine/Title";
 import JButton from "./Machine/JButton";
 import ScreenWelcome from "./Machine/Screens/ScreenWelcome"
 import ScreenSignIn from "./Machine/Screens/ScreenSignIn"
+import ScreenCard from "./Machine/Screens/ScreenSignIn/ScreenCard"
+import ScreenMobile from "./Machine/Screens/ScreenSignIn/ScreenMobile"
 
 //var $ = require('jquery');
 
@@ -17,6 +19,9 @@ export default class Machine extends React.Component {
            <Switch>
                <Route path="/" exact render={props => <ScreenWelcome {...props} />}/>
                <Route path="/signin" exact render={props => <ScreenSignIn {...props} />}/>
+               <Route path="/signin/card" exact render={props => <ScreenCard {...props} />}/>
+               <Route path="/signin/mobile" exact render={props => <ScreenMobile {...props} />}/>
+               <Route path="/signin/number" exact render={props => <ScreenSignIn {...props} />}/>
            </Switch>
         </BrowserRouter>
       </div>

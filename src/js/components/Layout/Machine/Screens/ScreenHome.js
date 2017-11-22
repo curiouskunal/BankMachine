@@ -22,13 +22,15 @@ export default class ScreenHome extends React.Component {
 			</div>
 		</div>
         
-        <Title title="Sign In" />
-        <JButton text="Withdraw" img="/img/smile.png" nav="/signin/card" {...this.props}/>
-        <JButton text="Deposit" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
-        <JButton text="Transfer" img="/img/smile.png" nav="/test" {...this.props}/>
-        <JButton text="Check Account Balance" img="/img/smile.png" nav="/signin/card" {...this.props}/>
-        <JButton text="Manage Accounts" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
-        <JButton text="Sign Out" img="/img/smile.png" nav="/test" {...this.props}/>
+        <Title title="Home" />
+        <div class="buttons-main">
+            <JButton text="Withdraw" img="/img/smile.png" nav="/signin/card" {...this.props}/>
+            <JButton text="Deposit" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
+            <JButton text="Transfer" img="/img/smile.png" nav="/test" {...this.props}/>
+            <JButton text="Check Account Balance" img="/img/smile.png" nav="/signin/card" {...this.props}/>
+            <JButton text="Manage Accounts" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
+            <JButton text="Sign Out" img="/img/smile.png" nav="/test" {...this.props}/>
+        </div>
       </div>
     );
   }

@@ -13,14 +13,14 @@ export default class ScreenSignIn extends React.Component {
       console.log(this.props);
     return (
       <div id="screen-signin">
-        <div >
-	        <div class = "left">
-				<JButton text="BACK" nav="../" {...this.props}/>
-			</div>
-			<div class = "right">
-				<JButton text="EXIT" nav="/" {...this.props}/>
-			</div>
-		</div>
+        <div>
+          <div class = "left">
+            <JButton buttonclass="headerButton" text="BACK" nav="../" {...this.props}/>
+          </div>
+          <div class = "right">
+            <JButton buttonclass="headerButton" text="EXIT" nav="/" {...this.props}/>
+          </div>
+        </div>
         
         <Title title="Sign In" />
         <JButton text="I have my card" img="/img/smile.png" nav="/signin/card" {...this.props}/>

@@ -31,21 +31,24 @@ footer{
 	background-color: blue;
 	height: 100px;
 	width: 400px;
-
 }
+
 /*Big Button*/
 .btnBig{
 
 }
 
 /*Small Button*/
-#screen-signin.btn{
+.headerButton{
 	color: white;
 	font-weight: bold;
 	background-color: green;
 	height: 50px;
-	width: 200;
+	width: 100px;
+	border: 1px solid green;
+    border-radius: 0px;
 }
+
 
 /*.center{
 	background-color: grey;

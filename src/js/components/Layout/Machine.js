@@ -10,7 +10,7 @@ export default class Machine extends React.Component {
     return (
       <div id="content-wrapper">
         <Title title="Welcome to RBC" />
-        <JButton text="Francais"/>
+        <JButton text="Welcome"/>
         <JButton text="Francais"/>
       </div>
     );

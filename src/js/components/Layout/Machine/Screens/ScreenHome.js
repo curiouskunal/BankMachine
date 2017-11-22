@@ -13,14 +13,14 @@ export default class ScreenHome extends React.Component {
       console.log(this.props);
     return (
       <div id="screen-home">
-        <div >
-	        <div class = "left">
-				<JButton text="BACK" nav="../" {...this.props}/>
-			</div>
-			<div class = "right">
-				<JButton text="EXIT" nav="/" {...this.props}/>
-			</div>
-		</div>
+        <div>
+          <div class = "left">
+            <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
+          </div>
+          <div class = "right">
+            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
+          </div>
+        </div>
         
         <Title title="Home" />
         <div class="buttons-main">

@@ -9,6 +9,15 @@ export default class Machine extends React.Component {
   render() { 
     return (
       <div id="content-wrapper">
+        <div id="buttons">
+	        <div class = "left">
+				<JButton text="HOME"/>
+			</div>
+			<div class = "right">
+				<JButton text="EXIT"/>
+			</div>
+		</div>
+        
         <Title title="Welcome to RBC" />
         <JButton text="Welcome"/>
         <JButton text="Francais"/>

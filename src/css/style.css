@@ -1,3 +1,4 @@
+/*Outside Bank Machine*/
 body{
 	background-color: grey;
 }
@@ -5,48 +6,57 @@ h1{
 	text-align: center;
 	font-weight: bold;
 }
-
-.hedder{
-	background-color: #4CAF4F;
-}
-
-.left{
-	float: left;
-}
-
-.right{
-	float: right;	
-}
-
-.big{
-	color: white;
-	font-weight: bold;
-	background-color: blue;
-	height: 100px;
-	width: 400px;
-}
-
-.center{
-	background-color: grey;
-	margin-top: 100px !important;
-	height: 100px;
-	width: 400px;
-	margin: 0 auto;
-}
-/* must explicitly simulate inserting a card and entering acount #*/
-
 footer{
 	text-align: center;
 	color: white;
 }
-
-
+/*The Bank Machine Box*/
 #content-wrapper{
 	width: 1060px;
 	height: 660px;
 	background-color: white;
 	margin: 0 auto;
 }
+
+/*Direction Floats*/
+.left{float: left;}
+.center{margin: 0 auto;}
+.right{float: right;}
+
+/*Default Button*/
+.btn{
+	color: white;
+	margin-top: 100px !important;
+	font-weight: bold;
+	background-color: blue;
+	height: 100px;
+	width: 400px;
+
+}
+/*Big Button*/
+.btnBig{
+
+}
+
+/*Small Button*/
+#screen-signin.btn{
+	color: white;
+	font-weight: bold;
+	background-color: green;
+	height: 50px;
+	width: 200;
+}
+
+/*.center{
+	background-color: grey;
+	margin-top: 100px !important;
+	height: 100px;
+	width: 400px;
+	margin: 0 auto;
+}*/
+ /*must explicitly simulate inserting a card and entering acount #*/
+
+
 
 #otherLanguages{
 	background-color: grey;

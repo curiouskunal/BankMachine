@@ -18,6 +18,22 @@ h1{
 	float: right;	
 }
 
+.center{
+	background-color: grey;
+	margin-top: 100px !important;
+	height: 100px;
+	width: 400px;
+	margin: 0 auto;
+}
+
+.center{
+	background-color: grey;
+	margin-top: 100px !important;
+	height: 100px;
+	width: 400px;
+	margin: 0 auto;
+}
+/* must explicitly simulate inserting a card and entering acount #*/
 
 footer{
 	text-align: center;
@@ -30,4 +46,12 @@ footer{
 	height: 660px;
 	background-color: white;
 	margin: 0 auto;
+}
+
+#otherLanguages{
+	background-color: grey;
+	margin-top: 100px !important;
+	margin-left: 20px;
+	height: 100px;
+	width: 250px;
 }

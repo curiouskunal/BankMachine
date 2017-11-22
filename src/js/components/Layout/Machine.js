@@ -19,8 +19,16 @@ export default class Machine extends React.Component {
 		</div>
         
         <Title title="Welcome to RBC" />
-        <JButton text="Welcome"/>
-        <JButton text="Francais"/>
+        
+        <div class = "center">
+        	<JButton text="Welcome"/>
+        </div>
+        <div class = "center">
+        	<JButton text="Francais"/>
+        </div>
+        <div id="otherLanguages" class="left">
+        	<JButton text="Other Languages"/>
+        </div>
       </div>
     );
   }

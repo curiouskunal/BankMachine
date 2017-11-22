@@ -23,7 +23,6 @@ export default class JButton extends React.Component {
   render() { 
     return (
       <div class={this.props.bootstrap==null? "" : this.props.bootstrap}>
-       
         <button class={this.props.buttonclass==null? "" : this.props.buttonclass} onClick={(e) => {this.navigate();}}>
             <img src={this.props.img == null? "": this.props.img} alt=""/>
             <i class={this.props.icon==null? "" : ("fa "+ this.props.icon) } aria-hidden="true"></i>

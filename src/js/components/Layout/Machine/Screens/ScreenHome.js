@@ -17,9 +17,6 @@ export default class ScreenHome extends React.Component {
 	        <div class = "left">
 				<JButton text="BACK" nav="../" {...this.props}/>
 			</div>
-			<div class = "right">
-				<JButton text="EXIT" nav="/" {...this.props}/>
-			</div>
 		</div>
         
         <Title title="Home" />

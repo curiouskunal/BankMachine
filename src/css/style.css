@@ -33,6 +33,19 @@ footer{
 	width: 400px;
 }
 
+/**MATT START**/
+.buttonWrapper{
+	margin-top: 100px;
+	
+	margin: 0 auto;
+}
+#screen-signin .btn{
+	border-radius: 25px;
+	width: 200px;
+	height: 200px;
+}
+/**MATT END**/
+
 /*Big Button*/
 .btnBig{
 
@@ -67,4 +80,9 @@ footer{
 	margin-left: 20px;
 	height: 100px;
 	width: 250px;
+}
+
+/*icons*/
+i{
+	margin: 5px;
 }

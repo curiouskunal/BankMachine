@@ -15,17 +15,27 @@ export default class ScreenSignIn extends React.Component {
       <div id="screen-signin">
         <div>
           <div class = "left">
-            <JButton buttonclass="headerButton" text="BACK" nav="../" {...this.props}/>
+            <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
           </div>
           <div class = "right">
-            <JButton buttonclass="headerButton" text="EXIT" nav="/" {...this.props}/>
+            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
           </div>
         </div>
         
         <Title title="Sign In" />
-        <JButton text="I have my card" img="/img/smile.png" nav="/signin/card" {...this.props}/>
-        <JButton text="Mobile app sign in" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
-        <JButton text="Account number" img="/img/smile.png" nav="/test" {...this.props}/>
+        <div class="buttonWrapper">
+          <div class="col-md-4">
+              <JButton buttonclass="btn" text="I have my card" img="/img/smile.png" nav="/signin/card" {...this.props}/>
+          </div>
+          <div class="col-md-4">
+              <JButton buttonclass="btn" text="Mobile app sign in" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
+          </div>
+          <div class="col-md-4">
+              <JButton buttonclass="btn" text="Account number" img="/img/smile.png" nav="/test" {...this.props}/>
+          </div>
+        </div>
+
+        
       </div>
     );
   }

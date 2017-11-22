@@ -1,6 +1,6 @@
 import React from "react";
-import Title from "../../Title";
-import JButton from "../../JButton";
+import Title from "../Title";
+import JButton from "../JButton";
 
 //var $ = require('jquery');
 

@@ -16,9 +16,15 @@ export default class ScreenWelcome extends React.Component {
         
         
         <Title title="Welcome to RBC" />
-        <JButton text="Welcome" nav="/signin" {...this.props}/>
-        <JButton text="Francais" nav="/french" {...this.props}/>
-        <JButton buttonclass= "type2" text="Francais" nav="/french" {...this.props}/>
+        <div class="buttons-main">
+            <JButton text="Welcome" nav="/signin" {...this.props}/>
+            <JButton text="Francais" nav="/french" {...this.props}/>
+        </div>
+        
+        <div class="buttons-secondary">
+            <JButton buttonclass= "type2" text="Francais" nav="/french" {...this.props}/>
+        </div>
+        
       </div>
     );
   }

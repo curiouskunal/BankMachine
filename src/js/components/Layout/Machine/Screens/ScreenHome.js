@@ -4,7 +4,7 @@ import JButton from "../JButton";
 
 //var $ = require('jquery');
 
-export default class ScreenSignIn extends React.Component {
+export default class ScreenHome extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
@@ -12,7 +12,7 @@ export default class ScreenSignIn extends React.Component {
   render() {
       console.log(this.props);
     return (
-      <div id="screen-signin">
+      <div id="screen-home">
         <div >
 	        <div class = "left">
 				<JButton text="BACK" nav="../" {...this.props}/>
@@ -23,9 +23,12 @@ export default class ScreenSignIn extends React.Component {
 		</div>
         
         <Title title="Sign In" />
-        <JButton text="I have my card" img="/img/smile.png" nav="/signin/card" {...this.props}/>
-        <JButton text="Mobile app sign in" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
-        <JButton text="Account number" img="/img/smile.png" nav="/test" {...this.props}/>
+        <JButton text="Withdraw" img="/img/smile.png" nav="/signin/card" {...this.props}/>
+        <JButton text="Deposit" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
+        <JButton text="Transfer" img="/img/smile.png" nav="/test" {...this.props}/>
+        <JButton text="Check Account Balance" img="/img/smile.png" nav="/signin/card" {...this.props}/>
+        <JButton text="Manage Accounts" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
+        <JButton text="Sign Out" img="/img/smile.png" nav="/test" {...this.props}/>
       </div>
     );
   }

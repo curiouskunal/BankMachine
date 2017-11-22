@@ -5,8 +5,8 @@ import Title from "./Machine/Title";
 import JButton from "./Machine/JButton";
 import ScreenWelcome from "./Machine/Screens/ScreenWelcome"
 import ScreenSignIn from "./Machine/Screens/ScreenSignIn"
-import ScreenCard from "./Machine/Screens/ScreenSignIn/ScreenCard"
-import ScreenMobile from "./Machine/Screens/ScreenSignIn/ScreenMobile"
+import ScreenCard from "./Machine/Screens/ScreenCard"
+import ScreenMobile from "./Machine/Screens/ScreenMobile"
 
 //var $ = require('jquery');
 

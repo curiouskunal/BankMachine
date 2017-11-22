@@ -2,12 +2,13 @@ import React from "react";
 
 import Footer from "./Footer";
 import Header from "./Header";
+import Machine from "./Layout/Machine"
 
 export default class Layout extends React.Component {
   constructor() {
     super();
     this.state = {
-      title: "Welcome",
+      title: "Welcome to our Bank Machine Interface",
     };
   }
 
@@ -19,6 +20,7 @@ export default class Layout extends React.Component {
     return (
       <div>
         <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
+        <Machine />
         <Footer />
       </div>
     );

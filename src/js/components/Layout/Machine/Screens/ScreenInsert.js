@@ -27,7 +27,7 @@ export default class ScreenInsert extends React.Component {
 
         <div class="col-md-3">
             <i id="arrowdown" class="fa fa-long-arrow-down" aria-hidden="true"></i>
-            <p> Click on card reader below to "insert your card" </p>
+            <p> Click on deposit window below to "insert your card" </p>
           </div>
          <div class="col-md-1 col-md-offset-1 line1"></div>
           <div class="col-md-3 col-md-offset-1">

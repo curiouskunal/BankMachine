@@ -10,7 +10,11 @@ export default class ScreenLogout extends React.Component {
 //    }
 
   render() {
+    setTimeout(() =>{
+      window.location.href = '/';
+    }, 5000)
       console.log(this.props);
+    
     return (
       <div id="screen-logout">
         

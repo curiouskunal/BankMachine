@@ -4,7 +4,7 @@ import JButton from "../JButton";
 
 //var $ = require('jquery');
 
-export default class ScreenAmountSelect extends React.Component {
+export default class ScreenHome extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
@@ -12,47 +12,48 @@ export default class ScreenAmountSelect extends React.Component {
   render() {
       console.log(this.props);
     return (
-      <div id="screen-amountselect">
-         <div >
-	        <div class = "left">
+      <div id="screen-home">
+
+        <div>
+         <div class = "left">
             <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
           </div>
           <div class = "right">
-            <JButton buttonclass="headerButton" text="HOME" icon="fa-home" nav="/" {...this.props}/>
+            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
           </div>
         </div>
         
-        <Title title="Select an Amount" />
+        <Title title="Home" />
         
          <div class="buttons-main">
           <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="$20" nav="/amountselect/confirm" {...this.props}/>
+                <JButton buttonclass="boutton" text="Transf between acc confirm" icon="fa-money" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="$40" nav="/deposit" {...this.props}/>
+                  <JButton buttonclass="boutton" text="etransfer request confirm" icon="fa-money" nav="/transfermenu/etransfermenu/etransfer/request/confirm" {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="$60" nav="/transfermenu" {...this.props}/>
+                  <JButton buttonclass="boutton" text="etransfer send confirm" icon="fa-paper-plane-o" nav="transfermenu/etransfermenu/etransfer/send/confirm" {...this.props}/>
             </div>         
             </div>
             <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="$80" nav="/signin/card" {...this.props}/>
+                <JButton buttonclass="boutton" text="Check Account Balance" icon="fa-file-text-o" nav="/signin/card" {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="$100" nav="/signin/mobile" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Manage Accounts" icon="fa-cog" nav="/signin/mobile" {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Custom" nav="/test" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Sign Out" icon="fa-sign-out" nav="/logout" {...this.props}/>
             </div>         
             </div>
       

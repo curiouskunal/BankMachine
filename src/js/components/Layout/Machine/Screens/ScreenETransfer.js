@@ -4,7 +4,7 @@ import JButton from "../JButton";
 
 //var $ = require('jquery');
 
-export default class ScreenDropdown extends React.Component {
+export default class ScreenETransfer extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
@@ -12,7 +12,7 @@ export default class ScreenDropdown extends React.Component {
   render() {
       console.log(this.props);
     return (
-      <div id="screen-dropdown">
+      <div id="screen-etransfer">
         <div>
           <div class = "left">
             <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
@@ -22,7 +22,7 @@ export default class ScreenDropdown extends React.Component {
           </div>
         </div>
         
-        <Title title="DropDown" />
+        <Title title="eTransfer" />
         <div class="buttons-main">
 
         <div class="col-md-4">

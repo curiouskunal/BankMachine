@@ -24,7 +24,7 @@ export default class ScreenHome extends React.Component {
         <div class="buttons-main">
             <JButton text="Withdraw" img="/img/smile.png" nav="/signin/card" {...this.props}/>
             <JButton text="Deposit" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
-            <JButton text="Transfer" img="/img/smile.png" nav="/test" {...this.props}/>
+            <JButton text="Transfer" img="/img/smile.png" nav="/transfermenu" {...this.props}/>
             <JButton text="Check Account Balance" img="/img/smile.png" nav="/signin/card" {...this.props}/>
             <JButton text="Manage Accounts" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
             <JButton text="Sign Out" img="/img/smile.png" nav="/test" {...this.props}/>

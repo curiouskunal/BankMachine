@@ -8,7 +8,7 @@ import ScreenSignIn from "./Machine/Screens/ScreenSignIn"
 import ScreenCard from "./Machine/Screens/ScreenCard"
 import ScreenMobile from "./Machine/Screens/ScreenMobile"
 import ScreenHome from "./Machine/Screens/ScreenHome"
-import ScreenTransfer from "./Machine/Screens/ScreenTransferMenu"
+import ScreenTransferMenu from "./Machine/Screens/ScreenTransferMenu"
 
 //var $ = require('jquery');
 
@@ -25,7 +25,7 @@ export default class Machine extends React.Component {
                 <Route path="/signin/mobile" exact render={props => <ScreenMobile {...props} />}/>
                 <Route path="/signin/number" exact render={props => <ScreenSignIn {...props} />}/>
                 <Route path="/home" exact render={props => <ScreenHome {...props} />}/>
-                <Route path="/transfermenu" exact render={props => <TransferMenu {...props} />}/>
+                <Route path="/transfermenu" exact render={props => <ScreenTransferMenu {...props} />}/>
                 <Route path="/transfermenu" exact render={props => <ScreenHome {...props} />}/>
                 
         

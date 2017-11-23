@@ -24,11 +24,11 @@ export default class ScreenCard extends React.Component {
         
         <Title title="Insert Card" />
         <div class="buttons-main">
-          <div class="col-md-6 center">
+          <div class="col-md-5 center line">
             <img src="/img/IMG_7764.GIF"/>
           </div>
-        <div class="col-md-4">
-            <i id="arrowdown" class="fa fa-long-arrow-down" aria-hidden="true"></i>
+        <div class="col-md-3 col-md-offset-1">
+            <i id="arrowdown" class="fa fa-long-arrow-down"></i>s
             <p> Click on card reader below to "insert your card" </p>
           </div>
         </div>

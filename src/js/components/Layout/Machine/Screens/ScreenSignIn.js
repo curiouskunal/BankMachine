@@ -23,6 +23,7 @@ export default class ScreenSignIn extends React.Component {
         </div>
         
         <Title title="Sign In" />
+
         <div class="buttons-main">
           <div class="col-md-4">
              <div class='bouttons'>
@@ -41,6 +42,7 @@ export default class ScreenSignIn extends React.Component {
             </div>
       
     
+
         </div>
 
         

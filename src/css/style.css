@@ -28,7 +28,9 @@ h1{
     font-size: 45px;
 	color: var(--primary);
 }
-
+h3{
+    text-align: center;
+}
 .confirmtext h1{
 	font-size: 60px;
 }
@@ -332,6 +334,48 @@ span{
 
 /**Logout Page Ends**/
 
+
+/**Balance Page Start**/
+
+#screen-balance .table-fill{
+    width: 400px;
+    height: 200px;
+    overflow: auto;
+    color: white;
+    text-align: center;
+}
+table.center{
+    margin-left:auto;
+    margin-right:auto;
+}
+#screen-balance h1{
+    color:white;
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
+}
+#screen-balance h2{
+    color:white;
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
+}
+#screen-balance h3{
+    color:white;
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
+}
+#screen-balance .th{
+    text-align: center;
+}
+/**Balance Page Ends**/
 
 
 

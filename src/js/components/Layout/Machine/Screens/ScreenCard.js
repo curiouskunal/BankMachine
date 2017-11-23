@@ -23,7 +23,17 @@ export default class ScreenCard extends React.Component {
         </div>
         
         <Title title="Insert Card" />
-        <JButton text="(card inserted)" nav="/home" {...this.props}/>
+        <div class="buttons-main">
+          <div class="col-md-6 center">
+            <img src="/img/IMG_7764.GIF"/>
+          </div>
+        <div class="col-md-4">
+            <i id="arrow" class="fa fa-long-arrow-down" aria-hidden="true"></i>
+            <p> Click on card reader below to "insert your card" </p>
+          </div>
+        </div>
+
+
       </div>
     );
   }

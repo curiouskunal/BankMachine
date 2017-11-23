@@ -214,9 +214,27 @@ span{
 /** Transfer Menu Page Ends **/
 
 /**Screen Card Page Start**/
-
-
-
+#screen-card #arrow{
+	color: white;
+	font-size: 300px;
+	margin: 0 auto;
+}
+#screen-card p{
+	color: white;
+	font-size:30px; 
+}
+#screen-card img{
+	margin: 0 auto;
+}
+#machine{
+	width: 1060px;
+	margin: 0 auto;
+}
+#machine img{
+	margin-right: 30px;
+	float: right;
+	width: 400px;
+}
 /**Screen Card Page End**/
 
 

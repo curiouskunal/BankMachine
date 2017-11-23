@@ -235,12 +235,12 @@ span{
 
 
 /**Screen Card Page Start**/
-#screen-card #arrow{
+#arrowdown{
 	color: white;
 	font-size: 300px;
 	margin: 0 auto;
 }
-#screen-card p{
+#screen-card p , #screen-insert p{
 	color: white;
 	font-size:30px; 
 }

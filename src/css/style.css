@@ -10,6 +10,9 @@ footer{
 	text-align: center;
 	color: white;
 }
+button{
+	display: block;
+}
 /*The Bank Machine Box*/
 #content-wrapper{
 	width: 1060px;
@@ -24,19 +27,20 @@ footer{
 .right{float: right;}
 
 /*Default Button*/
-.btn{
+.HomeButton{
 	color: white;
-	margin-top: 100px !important;
+	/*display: felx;*/
+	/*margin-top: 100px !important;*/
 	font-weight: bold;
 	background-color: blue;
-	height: 100px;
-	width: 400px;
+	margin: 0 auto !important;
+/*	height: 100px;
+	width: 400px;*/
 }
 
 /**MATT START**/
 .buttonWrapper{
 	margin-top: 100px;
-	
 	margin: 0 auto;
 }
 #screen-signin .btn{
@@ -47,7 +51,11 @@ footer{
 /**MATT END**/
 
 /*Big Button*/
-.btnBig{
+.smallButton{
+	color: black;
+	font-weight: bold;
+	background-color: orange;
+	margin: 0 auto !important;
 
 }
 
@@ -85,4 +93,18 @@ footer{
 /*icons*/
 i{
 	margin: 5px;
+}
+
+.invis{
+	display: none;
+}
+span{
+	text-align: center;
+	display: block;
+}
+.headerButton span{
+	display: inline !important;
+}
+.smallButton span{
+	display: inline !important;
 }

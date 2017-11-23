@@ -17,12 +17,12 @@ export default class ScreenWelcome extends React.Component {
         
         <Title title="Welcome to RBC" />
         <div class="buttons-main">
-            <JButton text="Welcome" nav="/signin" {...this.props}/>
-            <JButton text="Francais" nav="/french" {...this.props}/>
+            <JButton text="Engish" buttonclass="HomeButton" nav="/signin" {...this.props}/>
+            <JButton text="Français" buttonclass="HomeButton" nav="/french" {...this.props}/>
         </div>
         
         <div class="buttons-secondary">
-            <JButton buttonclass= "type2" text="Other Languages" nav="/french" {...this.props}/>
+            <JButton buttonclass= "smallButton" text="More Languages" icon="fa-globe" nav="/french" {...this.props}/>
         </div>
 
       </div>

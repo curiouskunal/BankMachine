@@ -9,30 +9,26 @@ export default class ScreenConfirm extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
-ß
   render() {
       console.log(this.props);
     return (
       <div>
           <ConfirmText {...this.props}/>
-          <div class="buttons-main">
-          <div class="col-md-4">
-             <div class='bouttons'>
-                 <JButton buttonclass="boutton" text="Card sign in" icon="fa-credit-card-alt" nav="/signin/card" />
-            </div>
-          </div>
-          <div class="col-md-4 ">
+      <div class="buttons-main">
+        <div class="col-md-offset-2 col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Mobile app sign in" icon="fa-mobile" nav="/signin/mobile" />
-            </div>         
-           </div>
-          <div class="col-md-4">
-            <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Account number sign in" icon="fa-hashtag" nav="/signin/mobile" />
-            </div>         
+                <JButton {...this.props} text="Yes" buttonclass="boutton" icon="fa-check-circle" nav="/home" />
             </div>
         </div>
-      </div>
+
+        <div class="col-md-4">
+            <div class='bouttons'>
+                <JButton {...this.props} text="No" buttonclass="boutton" icon="fa-times-circle" nav="/home" />
+            </div>
+        </div>
+    </div>
+    
+    </div>
     );
   }
 }

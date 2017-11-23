@@ -37,7 +37,10 @@ export default class Machine extends React.Component {
                 <Route path="/logout" exact render={props => <ScreenLogout {...props} />}/>
                 <Route path="/insert" exact render={props => <ScreenInsert {...props} />}/>
                 <Route path="/print" exact render={props => <ScreenPrint {...props} />}/>
-                <Route path="/amountselect/confirm" exact render={props => <ScreenConfirm text="Withdraw?" amt="$20" textalt="(this is optional alternate text)" {...props} />}/>
+                <Route path="/amountselect/confirm" exact render={props => <ScreenConfirm text="Withdraw?" amt="$20"{...props} />}/>
+                <Route path="transfermenu/etransfermenu/etransfer/send/confirm" exact render={props => <ScreenConfirm text="Send eTransfer" amt="$20" textalt="to Kunal?" {...props} />}/>
+                <Route path="transfermenu/etransfermenu/etransfer/request/confirm" exact render={props => <ScreenConfirm text="Request eTransfer of" amt="$20" textalt="from Kunal?" {...props} />}/>
+                <Route path="transfermenu/betweenacct/confirm" exact render={props => <ScreenConfirm text="Trasnfer" amt="$20" textalt="from ____ to ____?" {...props} />}/>
            </Switch>
         </BrowserRouter>
       </div>

@@ -28,32 +28,32 @@ export default class ScreenHome extends React.Component {
          <div class="buttons-main">
           <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="Card sign in" icon="fa-credit-card-alt" nav="/signin/card" {...this.props}/>
+                <JButton buttonclass="boutton" text="Withdraw" icon="fa-money" nav="/signin/card" {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Mobile app sign in" icon="fa-mobile" nav="/signin/mobile" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Deposit" icon="fa-money" nav="/signin/mobile" {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Account number sign in" icon="fa-hashtag" nav="/signin/mobile" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Transfer" icon="fa-paper-plane-o" nav="/transfermenu" {...this.props}/>
             </div>         
             </div>
             <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="Card sign in" icon="fa-credit-card-alt" nav="/signin/card" {...this.props}/>
+                <JButton buttonclass="boutton" text="Check Account Balance" icon="fa-file-text-o" nav="/signin/card" {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Mobile app sign in" icon="fa-mobile" nav="/signin/mobile" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Manage Accounts" icon="fa-cog" nav="/signin/mobile" {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Account number sign in" icon="fa-hashtag" nav="/signin/mobile" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Sign Out" icon="fa-sign-out" nav="/test" {...this.props}/>
             </div>         
             </div>
       

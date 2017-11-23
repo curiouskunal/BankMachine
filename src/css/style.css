@@ -160,16 +160,16 @@ span{
 
 
 
-/** SignIn Page Start **/
-#screen-signin .buttons-main{
+/** SignIn and Print Page Start **/
+#screen-signin .buttons-main , #screen-print .buttons-main{
 	margin-top: 10% !important;
 	margin: 0 auto;
 }
-#screen-signin .buttons-main span{
+#screen-signin .buttons-main span, #screen-print .buttons-main span{
     margin-top: 40px;
     font-size: 25px;
 }
-/** SignIn Page Ends **/
+/** SignIn and Print Page Ends **/
 
 
 /** Home Page Start **/

@@ -13,25 +13,39 @@ export default class ScreenPrint extends React.Component {
       console.log(this.props);
     return (
       <div id="screen-print">
-      <Title title="Welcome to TD Canada Trust" />
-      <div class="buttons-secondary">
-        <JButton buttonclass= "smallButton" text="More Languages" icon="fa-globe" nav="/french" {...this.props}/>
-    </div>
-      <div class="buttons-main">
-        <div class="col-md-offset-2 col-md-4 ">
-            <div class='bouttons'>
-                <JButton text="English" buttonclass="boutton" nav="/signin" {...this.props}/>
+        <div>
+          <div class = "left">
+            <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
+          </div>
+          <div class = "right">
+            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
+          </div>
+        </div>
+        
+        <Title title="Would you like a receipt?" />
+         <div class="buttons-main">
+          <div class="col-md-4">
+             <div class='bouttons'>
+                 <JButton buttonclass="boutton" text="Paper Copy" icon="fa-file-text-o" nav="/home" {...this.props}/>
             </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class='bouttons'>
+                  <JButton buttonclass="boutton" text="Email" icon="fa-envelope-o" nav="/home" {...this.props}/>
+            </div>         
+           </div>
+          <div class="col-md-4">
+            <div class='bouttons'>
+                  <JButton buttonclass="boutton" text="No Receipt" icon="fa-times-circle-o" nav="/home" {...this.props}/>
+            </div>         
+            </div>
+      
+    
+
         </div>
 
-        <div class="col-md-4">
-            <div class='bouttons'>
-                <JButton text="Français" buttonclass="boutton" nav="/french" {...this.props}/>
-            </div>
-        </div>
-    </div>
-    
-    </div>
+        
+      </div>
     );
   }
 }

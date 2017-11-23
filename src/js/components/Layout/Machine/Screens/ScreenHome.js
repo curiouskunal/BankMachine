@@ -33,7 +33,7 @@ export default class ScreenHome extends React.Component {
             </div>
             <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="Check Account Balance" icon="fa-file-text-o" nav="/signin/card" {...this.props}/>
+                <JButton buttonclass="boutton" text="Check Account Balance" icon="fa-file-text-o" nav="/balance" {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">

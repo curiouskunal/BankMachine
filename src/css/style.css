@@ -36,21 +36,6 @@ button{
 .left{float: left;}
 .center{margin: 0 auto;}
 .right{float: right;}
-
-/*Default Button*/
-.HomeButton{
-	color: var(--bg);
-    /*border-radius: 25px;*/
-	width: 200px;
-	height: 200px;
-	/*display: felx;*/
-	/*margin-top: 100px !important;*/
-	font-weight: bold;
-	background-color: var(--primary);
-	margin: 0 auto !important;
-/*	height: 100px;
-	width: 400px;*/
-}
  
 /**MATT START**/
 .buttons-main{
@@ -65,13 +50,12 @@ button{
 	color: var(--bg);
 	font-weight: bold;
 	background-color: var(--ternary);
-	position: absolute;
-	top: 90%;
-	left: 76%;
 	border: 1px solid var(--secondary);
     border-radius: 10px;
     margin: 10px;
-}
+    height: 50px;
+    width: 200px;
+
 
 }
 
@@ -100,11 +84,9 @@ button{
 
 
 #otherLanguages{
-	background-color: grey; 
-	margin-top: 100px !important;
-	margin-left: 20px;
-	height: 100px;
-	width: 250px;
+	position: absolute;
+	top: 90%;
+	left: 76%;
 }
 
 /*icons*/

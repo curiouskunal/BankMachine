@@ -7,25 +7,32 @@ import JButton from "../JButton";
 export default class ScreenETransferMenu extends React.Component {
 //    componentWillMount(   //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
-ß
+
   render() {
       console.log(this.props);
     return (
       <div id="screen-etransfermenu">
-      <Title title="Welcome to TD Canada Trust" />
-      <div class="buttons-secondary">
-        <JButton buttonclass= "smallButton" text="More Languages" icon="fa-globe" nav="/french" {...this.props}/>
-    </div>
+        <div>
+         <div class = "left">
+            <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
+          </div>
+          <div class = "right">
+            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
+          </div>
+        </div>
+      <Title title="E-Transfer Menu" />
+    
+     
       <div class="buttons-main">
-        <div class="col-md-offset-2 col-md-4 ">
+        <div class="col-md-5 ">
             <div class='bouttons'>
-                <JButton text="English" buttonclass="boutton" nav="/signin" {...this.props}/>
+                <JButton text="Request Transfer" buttonclass="boutton" img="/img/cash-payment-icon-5-f.png"  nav="/transfermenu/etransfermenu/etransfer" {...this.props}/>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class='bouttons'>
-                <JButton text="Français" buttonclass="boutton" nav="/french" {...this.props}/>
+                <JButton text="Send Transfer" buttonclass="boutton" img="/img/cash-payment-icon-5.png"  nav="/transfermenu/etransfermenu/etransfer" {...this.props}/>
             </div>
         </div>
     </div>

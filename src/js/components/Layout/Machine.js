@@ -38,10 +38,10 @@ export default class Machine extends React.Component {
                 <Route path="/logout" exact render={props => <ScreenLogout {...props} />}/>
                 <Route path="/insert" exact render={props => <ScreenInsert {...props} />}/>
                 <Route path="/print" exact render={props => <ScreenPrint {...props} />}/>
-                <Route path="/amountselect/confirm" exact render={props => <ScreenConfirm text="Withdraw?" amt="$20"{...props} />}/>
-                <Route path="/transfermenu/etransfermenu/etransfer/send/confirm" exact render={props => <ScreenConfirm text="Send eTransfer" amt="$20" textalt="to Kunal?" {...props} />}/>
-                <Route path="/transfermenu/etransfermenu/etransfer/request/confirm" exact render={props => <ScreenConfirm text="Request eTransfer of" amt="$20" textalt="from Kunal?" {...props} />}/>
-                <Route path="/transfermenu/betweenacct/confirm" exact render={props => <ScreenConfirm text="Trasnfer" amt="$20" textalt="from ____ to ____?" {...props} />}/>
+                <Route path="/amountselect/confirm" exact render={props => <ScreenConfirm text="Withdraw?" amt="$20" from="" to="" {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/etransfer/send/confirm" exact render={props => <ScreenConfirm text="Send eTransfer" amt="$20"  from="savings" to="kunal@gmail.com" {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/etransfer/request/confirm" exact render={props => <ScreenConfirm text="Request eTransfer of" amt="$20" from="kunal@gmail.com" to="savings" {...props} />}/>
+                <Route path="/transfermenu/betweenacct/confirm" exact render={props => <ScreenConfirm text="Transfer" amt="$20" amt="$20" from="chequing" to="savings" {...props} />}/>
                 <Route path="/test" exact render={props => <ScreenTest {...props} />}/>
            </Switch>
         </BrowserRouter>

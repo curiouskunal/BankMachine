@@ -16,6 +16,8 @@ import ScreenInsert from "./Machine/Screens/ScreenInsert";
 import ScreenPrint from "./Machine/Screens/ScreenPrint";
 import ScreenConfirm from "./Machine/Screens/ScreenConfirm";
 import ScreenTest from "./Machine/Screens/ScreenTest";
+import ScreenFrench from "./Machine/Screens/ScreenFrench";
+
 
 //var $ = require('jquery');
 
@@ -43,6 +45,7 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu/etransfermenu/etransfer/request/confirm" exact render={props => <ScreenConfirm text="Request eTransfer of" amt="$20" textalt="from Kunal?" {...props} />}/>
                 <Route path="/transfermenu/betweenacct/confirm" exact render={props => <ScreenConfirm text="Trasnfer" amt="$20" textalt="from ____ to ____?" {...props} />}/>
                 <Route path="/test" exact render={props => <ScreenTest {...props} />}/>
+                <Route path="/french" exact render={props => <ScreenFrench {...props} />}/>                
            </Switch>
         </BrowserRouter>
       </div>

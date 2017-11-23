@@ -64,8 +64,8 @@ button{
 	font-weight: bold;
 	background-color: var(--ternary);
 	position: absolute;
-	top: 90%;
-	left: 76%;
+	top: 0%;
+	left: 0%;
 }
 #otherLanguages{
 	height: 100px;

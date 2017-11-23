@@ -15,6 +15,7 @@ import ScreenLogout from "./Machine/Screens/ScreenLogout";
 import ScreenInsert from "./Machine/Screens/ScreenInsert";
 import ScreenPrint from "./Machine/Screens/ScreenPrint";
 import ScreenConfirm from "./Machine/Screens/ScreenConfirm";
+import ScreenTest from "./Machine/Screens/ScreenTest";
 
 //var $ = require('jquery');
 
@@ -38,9 +39,10 @@ export default class Machine extends React.Component {
                 <Route path="/insert" exact render={props => <ScreenInsert {...props} />}/>
                 <Route path="/print" exact render={props => <ScreenPrint {...props} />}/>
                 <Route path="/amountselect/confirm" exact render={props => <ScreenConfirm text="Withdraw?" amt="$20"{...props} />}/>
-                <Route path="transfermenu/etransfermenu/etransfer/send/confirm" exact render={props => <ScreenConfirm text="Send eTransfer" amt="$20" textalt="to Kunal?" {...props} />}/>
-                <Route path="transfermenu/etransfermenu/etransfer/request/confirm" exact render={props => <ScreenConfirm text="Request eTransfer of" amt="$20" textalt="from Kunal?" {...props} />}/>
-                <Route path="transfermenu/betweenacct/confirm" exact render={props => <ScreenConfirm text="Trasnfer" amt="$20" textalt="from ____ to ____?" {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/etransfer/send/confirm" exact render={props => <ScreenConfirm text="Send eTransfer" amt="$20" textalt="to Kunal?" {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/etransfer/request/confirm" exact render={props => <ScreenConfirm text="Request eTransfer of" amt="$20" textalt="from Kunal?" {...props} />}/>
+                <Route path="/transfermenu/betweenacct/confirm" exact render={props => <ScreenConfirm text="Trasnfer" amt="$20" textalt="from ____ to ____?" {...props} />}/>
+                <Route path="/test" exact render={props => <ScreenTest {...props} />}/>
            </Switch>
         </BrowserRouter>
       </div>

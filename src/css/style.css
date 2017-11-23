@@ -48,9 +48,9 @@ button{
 /*	height: 100px;
 	width: 400px;*/
 }
-
+ 
 /**MATT START**/
-.buttonWrapper{
+.buttons-main{
 	margin-top: 15% !important;
 	margin: 0 auto;
 }
@@ -114,6 +114,15 @@ i{
 	margin: 5px;
 }
 
+#screen-signin .buttons-main i{
+    font-size: 150px;
+    color: black;
+}
+
+#screen-signin .buttons-main span{
+    font-size: 20px;
+    color: black;
+}
 .invis{
 	display: none;
 }

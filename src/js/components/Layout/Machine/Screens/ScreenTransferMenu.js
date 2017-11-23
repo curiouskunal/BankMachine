@@ -24,6 +24,7 @@ export default class TransferMenu extends React.Component {
         
         <Title title="Transfer Menu" />
         <div class="buttons-main">
+
           <div class="col-md-4 col-md-offset-2">
              <div class='bouttons'>
                  <JButton buttonclass="boutton" text="Between your Accounts" icon="fa-exchange" nav="/signin/card" {...this.props}/>

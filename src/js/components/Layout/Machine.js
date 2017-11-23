@@ -9,7 +9,7 @@ import ScreenCard from "./Machine/Screens/ScreenCard"
 import ScreenMobile from "./Machine/Screens/ScreenMobile"
 import ScreenHome from "./Machine/Screens/ScreenHome"
 import ScreenTransferMenu from "./Machine/Screens/ScreenTransferMenu"
-import ScreenETransferMenu from "./Machine/Screens/ScreenETransferMenu"
+import ScreenAmountSelect from "./Machine/Screens/ScreenAmountSelect"
 
 //var $ = require('jquery');
 
@@ -27,8 +27,8 @@ export default class Machine extends React.Component {
                 <Route path="/signin/number" exact render={props => <ScreenSignIn {...props} />}/>
                 <Route path="/home" exact render={props => <ScreenHome {...props} />}/>
                 <Route path="/transfermenu" exact render={props => <ScreenTransferMenu {...props} />}/>
-                <Route path="/etransfermenu" exact render={props => <ScreenETransferMenu {...props} />}/>
-                
+                <Route path="/transfermenu/etransfermenu" exact render={props => <ScreenETransferMenu {...props} />}/>
+                <Route path="/amountselect" exact render={props => <ScreenAmountSelect {...props} />}/>
         
            </Switch>
         </BrowserRouter>

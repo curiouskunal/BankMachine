@@ -5,8 +5,6 @@
     --bg: #12412A;
     --machine:black;
 }
-
-$grid-columns: 12 !default;
 /*Outside Bank Machine*/
 body{
 	font-family: 'Dosis', sans-serif;
@@ -38,21 +36,6 @@ button{
 .left{float: left;}
 .center{margin: 0 auto;}
 .right{float: right;}
-
-/*Default Button*/
-.HomeButton{
-	color: var(--bg);
-    /*border-radius: 25px;*/
-	width: 200px;
-	height: 200px;
-	/*display: felx;*/
-	/*margin-top: 100px !important;*/
-	font-weight: bold;
-	background-color: var(--primary);
-	margin: 0 auto !important;
-/*	height: 100px;
-	width: 400px;*/
-}
  
 /**MATT START**/
 .buttons-main{
@@ -70,10 +53,6 @@ button{
 	position: absolute;
 	top: 90%;
 	left: 76%;
-	border: 1px solid var(--secondary);
-    border-radius: 10px;
-    margin: 10px;
-}
 
 }
 
@@ -102,9 +81,6 @@ button{
 
 
 #otherLanguages{
-	background-color: grey; 
-	margin-top: 100px !important;
-	margin-left: 20px;
 	height: 100px;
 	width: 250px;
 }
@@ -114,15 +90,23 @@ i{
 	margin: 5px;
 }
 
-#screen-signin .buttons-main i{
-    font-size:125px;
+.buttons-main i{
+    font-size: 125px;
     color: var(--bg);
-}
 
+}
+#mobile i{
+    font-size: 400px;
+    color: red;
+}
 
 #screen-signin .buttons-main span{
     margin-top: 40px;
     font-size: 25px;
+}
+.buttons-main span{
+    font-size: 20px;
+    color: var(--bg);
 }
 .invis{
 	display: none;
@@ -139,8 +123,6 @@ span{
 	display: inline !important;
 }
 
-
-/**  GENERAL BUTTON CSS  **/ 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 *, *:before, *:after {
@@ -148,6 +130,7 @@ span{
   padding: 0;
   box-sizing: border-box;
 }
+
 
 .bouttons {
   text-align: center;
@@ -172,10 +155,14 @@ span{
   border-radius: 40px;
 }
 
+#mobile{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 .boutton span{
 	color: var(--bg);
 }
-/**  END GENERAL BUTTON CSS  **/ 
 
 
 

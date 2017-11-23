@@ -163,10 +163,6 @@ span{
 }
 /**  General Button End **/
 
-/** General Title **/
-.generalTitle{
-    color: pink;
-}
 
 
 
@@ -376,6 +372,10 @@ table.center{
 }
 /**Screen Card Page End**/
 
+
+/** TESTING STUFF **/
+
+
 /**Dropdown**/
 .Dropdown-root{
 	position:relative;}
@@ -431,25 +431,98 @@ table.center{
 }
 /** END dropdown**/
 
-/** TESTING Stuff **/
 
-#screen-test .buttons-main span{
+
+/** TESTING Stuff (stuff that is literally in 'test') **/
+
+/*search button*/
+#screen-numkey .buttons-main .boutton.tester1{
+    
+    margin: 0 auto;
+    margin-top: 25px;
+    background-color: lightgrey;
+    height: 60px;
+    width: 300px; !important
+}
+
+/*numeric input*/
+.numericInput{
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 490px;
+    height: 65px;
+    font-size: 50px;
+}
+
+
+#screen-numkey .buttons-main span{
     margin: 0 auto;
     font-size: 40px;
 }
-#screen-test .buttons-main .boutton{
-    height: 100px;
+#screen-numkey .buttons-main .boutton{
+    margin-left: -20px;
+    height: 75px;
     width: 175px;
     border-radius: 10px;
-    margin-bottom: -10px;
-   
-    
+    margin-bottom: -10px; 
 }
-#screen-test .buttons-main i{
+#screen-numkey .buttons-main i{
     font-size: 75px;
     color: var(--bg);
 }
-#screen-test .buttons-main{
+#screen-numkey .buttons-main{
 	margin-top: 5% !important;
 	margin: 0 auto;
 }
+
+
+
+
+
+
+
+/** e-Transfer stuff **/
+
+/*search button*/
+#screen-etransfer .buttons-main .boutton.tester1{
+    
+    margin: 0 auto;
+    margin-top: 25px;
+    background-color: lightgrey;
+    height: 60px;
+    width: 300px; !important
+}
+
+/*numeric input*/
+#screen-etransfer .numericInput{
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 490px;
+    height: 55px;
+    font-size: 50px;
+}
+
+
+#screen-etransfer .buttons-main span{
+    margin: 0 auto;
+    font-size: 40px;
+}
+#screen-etransfer .buttons-main .boutton{
+    margin-left: -20px;
+    height: 75px;
+    width: 175px;
+    border-radius: 10px;
+    margin-bottom: -10px; 
+}
+#screen-etransfer .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-etransfer .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+
+
+
+

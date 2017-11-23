@@ -41,6 +41,7 @@ export default class ScreenSignIn extends React.Component {
                   <JButton buttonclass="boutton pri" text="Mobile app sign in" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
             </div>         
             </div>
+
         </div>
 
         

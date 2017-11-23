@@ -18,12 +18,16 @@ export default class Machine extends React.Component {
       <div id="content-wrapper">
         <BrowserRouter>
            <Switch>
-               <Route path="/" exact render={props => <ScreenWelcome {...props} />}/>
-               <Route path="/signin" exact render={props => <ScreenSignIn {...props} />}/>
-               <Route path="/signin/card" exact render={props => <ScreenCard {...props} />}/>
-               <Route path="/signin/mobile" exact render={props => <ScreenMobile {...props} />}/>
-               <Route path="/signin/number" exact render={props => <ScreenSignIn {...props} />}/>
+                <Route path="/" exact render={props => <ScreenWelcome {...props} />}/>
+                <Route path="/signin" exact render={props => <ScreenSignIn {...props} />}/>
+                <Route path="/signin/card" exact render={props => <ScreenCard {...props} />}/>
+                <Route path="/signin/mobile" exact render={props => <ScreenMobile {...props} />}/>
+                <Route path="/signin/number" exact render={props => <ScreenSignIn {...props} />}/>
                 <Route path="/home" exact render={props => <ScreenHome {...props} />}/>
+                <Route path="/transfermenu" exact render={props => <ScreenHome {...props} />}/>
+                <Route path="/transfermenu" exact render={props => <ScreenHome {...props} />}/>
+        
+        
            </Switch>
         </BrowserRouter>
       </div>

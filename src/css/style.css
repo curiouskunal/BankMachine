@@ -240,6 +240,20 @@ span{
 }
 /** Amount Selected Page Ends **/
 
+/** Mobile Menu Page Start**/
+#screen-mobile #phone{
+	color: white;
+	font-size: 400px;
+	margin: 0 auto;
+}
+#screen-mobile p{
+	color: white;
+	font-size:30px; 
+}
+#screen-mobile img{
+	margin: 0 auto;
+}
+/** Mobile Page Menu End **/
 
 /**Welcome Page Start**/
 #screen-welcome .buttons-main span{

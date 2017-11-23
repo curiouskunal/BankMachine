@@ -4,7 +4,7 @@ import JButton from "../JButton";
 
 //var $ = require('jquery');
 
-export default class ScreenWelcome extends React.Component {
+export default class ScreenFrench extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }

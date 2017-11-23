@@ -32,7 +32,7 @@ export default class TransferMenu extends React.Component {
           </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="e-Transfer" icon="fa-envelope-o" nav="/transfermenu/etransfer" {...this.props}/>
+                  <JButton buttonclass="boutton" text="e-Transfer" icon="fa-envelope-o" nav="/transfermenu/etransfermenu" {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4 col-md-offset-2">

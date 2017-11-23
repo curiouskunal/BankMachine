@@ -18,6 +18,7 @@ import ScreenConfirm from "./Machine/Screens/ScreenConfirm";
 import ScreenTest from "./Machine/Screens/ScreenTest";
 import ScreenFrench from "./Machine/Screens/ScreenFrench";
 import ScreenETransfer from "./Machine/Screens/ScreenETransfer";
+import ScreenBalance from "./Machine/Screens/ScreenBalance";
 
 
 //var $ = require('jquery');
@@ -48,7 +49,8 @@ export default class Machine extends React.Component {
                 <Route path="/test" exact render={props => <ScreenTest {...props} />}/>
                 <Route path="/french" exact render={props => <ScreenFrench {...props} />}/>        
                 <Route path="/transfermenu/etransfermenu/etransfer/send" exact render={props => <ScreenETransfer {...props} />}/> 
-                <Route path="/transfermenu/etransfermenu/etransfer/request" exact render={props => <ScreenETransfer {...props} />}/>           
+                <Route path="/transfermenu/etransfermenu/etransfer/request" exact render={props => <ScreenETransfer {...props} />}/>
+                <Route path="/balance" exact render={props => <ScreenBalance {...props} />}/>            
            </Switch>
         </BrowserRouter>
       </div>

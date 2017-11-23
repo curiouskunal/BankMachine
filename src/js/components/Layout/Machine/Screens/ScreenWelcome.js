@@ -13,19 +13,25 @@ export default class ScreenWelcome extends React.Component {
       console.log(this.props);
     return (
       <div id="screen-welcome">
-        
-        
-        <Title title="Welcome to RBC" />
-        <div class="buttons-main">
-            <JButton text="Engish" buttonclass="HomeButton" nav="/signin" {...this.props}/>
-            <JButton text="Français" buttonclass="HomeButton" nav="/french" {...this.props}/>
-        </div>
-        
-        <div class="buttons-secondary">
-            <JButton buttonclass= "smallButton" text="More Languages" icon="fa-globe" nav="/french" {...this.props}/>
+      <Title title="Welcome to TD Canada Trust" />
+      <div class="buttons-main">
+        <div class="col-md-offset-2 col-md-4 ">
+            <div class='bouttons'>
+                <JButton text="English" buttonclass="boutton" nav="/signin" {...this.props}/>
+            </div>
         </div>
 
-      </div>
+        <div class="col-md-4">
+            <div class='bouttons'>
+                <JButton text="Français" buttonclass="boutton" nav="/french" {...this.props}/>
+            </div>
+        </div>
+
+    </div>
+    <div class="buttons-secondary">
+        <JButton buttonclass= "smallButton" text="More Languages" icon="fa-globe" nav="/french" {...this.props}/>
+    </div>
+    </div>
     );
   }
 }

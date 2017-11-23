@@ -194,8 +194,20 @@ span{
 /** Home Page Ends **/
 
 /**Screen Card Page Start**/
+#screen-card #arrow{
+	color: white;
+	font-size: 300px;
+	margin: 100px auto;
+}
 
+#screen-card p{
+	color: white;
+	font-size:30px; 
+}
 
+#screen-card img{
+	margin: 0 auto;
+}
 /**Screen Card Page End**/
 
 

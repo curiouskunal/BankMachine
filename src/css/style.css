@@ -176,15 +176,15 @@ span{
     margin-top: 10px;
     font-size: 25px;
 }
-#screen-home .buttons-main .boutton{
+#screen-home, #screen-amountselect .buttons-main .boutton{
     height: 215px;
     width: 300px;
 }
-#screen-home .buttons-main i{
+#screen-home, #screen-amountselect .buttons-main i{
     font-size: 75px;
     color: var(--bg);
 }
-#screen-home .buttons-main{
+#screen-home, #screen-amountselect .buttons-main{
 	margin-top: 5% !important;
 	margin: 0 auto;
 }
@@ -210,8 +210,16 @@ span{
 	margin-top: 5% !important;
 	margin: 0 auto;
 }
-
 /** Transfer Menu Page Ends **/
+
+/** Amount Selected Page Start **/
+#screen-amountselect .buttons-main span{
+    margin: 0 auto;
+    font-size: 50px;
+}
+/** Amount Selected Page Ends **/
+
+
 
 /**Screen Card Page Start**/
 #screen-card #arrow{

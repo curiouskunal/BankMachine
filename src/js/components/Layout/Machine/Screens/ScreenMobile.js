@@ -29,20 +29,16 @@ export default class ScreenMobile extends React.Component {
           </div>
         </div>
         
-        <div class="buttons-main">
         
         <Title title=""/>
-        <div class="col-sm-5">
-
-        
-        <i id="phone" class="fa fa-mobile" aria-hidden="false"></i>
-            <p> Tap phone here </p>
-        </div>
-        <div class="col-md-4">
-            
-                    <img src="/img/qrcode.png" onClick={(e) => {this.nav();}}/>
-                    <p align = 'center'> Open app and scan code </p>
-
+        <div class="buttons-main">
+          <div class="col-md-5 center line2">
+            <img src="/img/qrcode.png" onClick={(e) => {this.nav();}}/>
+            <p class="scan">Open app and scan code</p>
+          </div>
+        <div class="col-md-3 col-md-offset-1">
+            <i id="mobile" class="fa fa-mobile" aria-hidden="false"></i>s
+            <p class="tap">Tap phone here</p>
           </div>
         </div>
 

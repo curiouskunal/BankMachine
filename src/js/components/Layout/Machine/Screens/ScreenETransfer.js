@@ -23,11 +23,11 @@ export default class ScreenETransfer extends React.Component {
             <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
           </div>
           <div class = "right">
-            <JButton buttonclass="headerButton" text="HOME" icon="fa-home" nav="/" {...this.props}/>
+            <JButton buttonclass="headerButton" text="HOME" icon="fa-home" nav="/home" {...this.props}/>
           </div>
         </div>
         
-        <Title title="e-Transfer" />
+        <Title title="Transfer" />
         <div class="buttons-main">
 
        <div class="col-md-12">

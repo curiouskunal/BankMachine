@@ -28,7 +28,9 @@ h1{
     font-size: 45px;
 	color: var(--primary);
 }
-
+h3{
+    text-align: center;
+}
 .confirmtext h1{
 	font-size: 60px;
 }
@@ -161,10 +163,6 @@ span{
 }
 /**  General Button End **/
 
-/** General Title **/
-.generalTitle{
-    color: pink;
-}
 
 
 
@@ -278,6 +276,48 @@ span{
 /**Logout Page Ends**/
 
 
+/**Balance Page Start**/
+
+#screen-balance .table-fill{
+    width: 400px;
+    height: 200px;
+    overflow: auto;
+    color: white;
+    text-align: center;
+}
+table.center{
+    margin-left:auto;
+    margin-right:auto;
+}
+#screen-balance h1{
+    color:white;
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
+}
+#screen-balance h2{
+    color:white;
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
+}
+#screen-balance h3{
+    color:white;
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
+}
+#screen-balance .th{
+    text-align: center;
+}
+/**Balance Page Ends**/
+
 
 
 /**Screen Card Page Start**/
@@ -331,6 +371,10 @@ span{
     width: 100%;
 }
 /**Screen Card Page End**/
+
+
+/** TESTING STUFF **/
+
 
 /**Dropdown**/
 .Dropdown-root{
@@ -387,25 +431,98 @@ span{
 }
 /** END dropdown**/
 
-/** TESTING Stuff **/
 
-#screen-test .buttons-main span{
+
+/** TESTING Stuff (stuff that is literally in 'test') **/
+
+/*search button*/
+#screen-numkey .buttons-main .boutton.tester1{
+    
+    margin: 0 auto;
+    margin-top: 25px;
+    background-color: lightgrey;
+    height: 60px;
+    width: 300px; !important
+}
+
+/*numeric input*/
+.numericInput{
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 490px;
+    height: 65px;
+    font-size: 50px;
+}
+
+
+#screen-numkey .buttons-main span{
     margin: 0 auto;
     font-size: 40px;
 }
-#screen-test .buttons-main .boutton{
-    height: 100px;
+#screen-numkey .buttons-main .boutton{
+    margin-left: -20px;
+    height: 75px;
     width: 175px;
     border-radius: 10px;
-    margin-bottom: -10px;
-   
-    
+    margin-bottom: -10px; 
 }
-#screen-test .buttons-main i{
+#screen-numkey .buttons-main i{
     font-size: 75px;
     color: var(--bg);
 }
-#screen-test .buttons-main{
+#screen-numkey .buttons-main{
 	margin-top: 5% !important;
 	margin: 0 auto;
 }
+
+
+
+
+
+
+
+/** e-Transfer stuff **/
+
+/*search button*/
+#screen-etransfer .buttons-main .boutton.tester1{
+    
+    margin: 0 auto;
+    margin-top: 25px;
+    background-color: lightgrey;
+    height: 60px;
+    width: 300px; !important
+}
+
+/*numeric input*/
+#screen-etransfer .numericInput{
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 490px;
+    height: 55px;
+    font-size: 50px;
+}
+
+
+#screen-etransfer .buttons-main span{
+    margin: 0 auto;
+    font-size: 40px;
+}
+#screen-etransfer .buttons-main .boutton{
+    margin-left: -20px;
+    height: 75px;
+    width: 175px;
+    border-radius: 10px;
+    margin-bottom: -10px; 
+}
+#screen-etransfer .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-etransfer .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+
+
+
+

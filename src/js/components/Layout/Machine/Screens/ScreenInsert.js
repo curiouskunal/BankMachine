@@ -22,7 +22,7 @@ export default class ScreenInsert extends React.Component {
           </div>
         </div>
         
-        <Title title="Insert Card" />
+        <Title title="Insert Cash or Cheque" />
         <div class="buttons-main">
           <div class="col-md-5 center line">
           <div class="padCashInsert">

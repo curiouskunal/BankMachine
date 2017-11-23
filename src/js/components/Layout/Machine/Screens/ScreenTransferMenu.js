@@ -12,14 +12,14 @@ export default class ScreenHome extends React.Component {
   render() {
       console.log(this.props);
     return (
-      <div id="screen-trasnferoptions">
+      <div id="screen-trasnfermenu">
         <div >
 	        <div class = "left">
 				<JButton text="BACK" nav="../" {...this.props}/>
 			</div>
 		</div>
         
-        <Title title="Transfer Options" />
+        <Title title="Transfer Menu" />
         <div class="buttons-main">
             <JButton text="Between your Accounts" img="/img/smile.png" nav="/signin/card" {...this.props}/>
             <JButton text="e-Transfer" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
@@ -29,4 +29,4 @@ export default class ScreenHome extends React.Component {
       </div>
     );
   }
-}6j8cc8
+}

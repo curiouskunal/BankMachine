@@ -24,17 +24,17 @@ export default class ScreenSignIn extends React.Component {
         
         <Title title="Sign In" />
         <div class="buttons-main">
-          <div class="col-md-4">
+          <div class="col-md-offset-2 col-md-2 ">
              <div class='bouttons'>
-                <JButton  buttonclass="boutton" text="Mobile app sign in" icon="fa-credit-card-alt" nav="/signin/mobile" {...this.props}/>
+                <JButton buttonclass="boutton" text="Mobile app sign in" icon="fa-credit-card-alt" nav="/signin/mobile" {...this.props}/>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-2 ">
             <div class='bouttons'>
                   <JButton buttonclass="boutton" text="Mobile app sign in" icon="fa-mobile" nav="/signin/mobile" {...this.props}/>
             </div>         
            </div>
-          <div class="col-md-4">
+          <div class="col-md-2 col-md-offset">
             <div class='bouttons'>
                   <JButton buttonclass="boutton" text="Mobile app sign in" icon="fa-hashtag" nav="/signin/mobile" {...this.props}/>
             </div>         

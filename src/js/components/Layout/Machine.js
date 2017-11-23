@@ -11,6 +11,7 @@ import ScreenHome from "./Machine/Screens/ScreenHome"
 import ScreenTransferMenu from "./Machine/Screens/ScreenTransferMenu"
 import ScreenETransferMenu from "./Machine/Screens/ScreenETransferMenu"
 import ScreenAmountSelect from "./Machine/Screens/ScreenAmountSelect"
+import ScreenLogout from "./Machine/Screens/ScreenLogout"
 
 //var $ = require('jquery');
 
@@ -30,7 +31,8 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu" exact render={props => <ScreenTransferMenu {...props} />}/>
                 <Route path="/transfermenu/etransfermenu" exact render={props => <ScreenETransferMenu {...props} />}/>
                 <Route path="/amountselect" exact render={props => <ScreenAmountSelect {...props} />}/>
-        
+                <Route path="/logout" exact render={props => <ScreenLogout {...props} />}/>
+                
            </Switch>
         </BrowserRouter>
       </div>

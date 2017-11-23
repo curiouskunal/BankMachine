@@ -53,7 +53,7 @@ export default class ScreenHome extends React.Component {
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Sign Out" icon="fa-sign-out" nav="/test" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Sign Out" icon="fa-sign-out" nav="/logout" {...this.props}/>
             </div>         
             </div>
       

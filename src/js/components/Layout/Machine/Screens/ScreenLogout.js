@@ -4,7 +4,7 @@ import JButton from "../JButton";
 
 //var $ = require('jquery');
 
-export default class ScreenWelcome extends React.Component {
+export default class ScreenLogout extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
@@ -12,7 +12,7 @@ export default class ScreenWelcome extends React.Component {
   render() {
       console.log(this.props);
     return (
-      <div id="screen-welcome">
+      <div id="screen-logout">
         
         
         <Title title="Welcome to RBC" />

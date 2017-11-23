@@ -24,15 +24,17 @@ export default class ScreenSignIn extends React.Component {
         
         <Title title="Sign In" />
         <div class="buttonWrapper">
+
           
-              <JButton bootstrap="col-md-4" outerdiv="bouttons" buttonclass="HomeButton" text="I have my card" img="/img/smile.png" nav="/signin/card" {...this.props}/>
-          
-          
-              <JButton bootstrap="col-md-4" outerdiv="bouttons" buttonclass="HomeButton" text="Mobile app sign in" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
+              <JButton bootstrap="col-md-4" outerdiv="bouttons" buttonclass="boutton pri" text="I have my card" img="/img/smile.png" nav="/signin/card" {...this.props}/>
           
           
-              <JButton bootstrap="col-md-4" outerdiv="bouttons" buttonclass="HomeButton" text="Account number" img="/img/smile.png" nav="/test" {...this.props}/>
+              <JButton bootstrap="col-md-4" outerdiv="bouttons" buttonclass="boutton pri" text="Mobile app sign in" img="/img/smile.png" nav="/signin/mobile" {...this.props}/>
           
+          
+              <JButton bootstrap="col-md-4" outerdiv="bouttons" buttonclass="boutton pri" text="Account number" img="/img/smile.png" nav="/test" {...this.props}/>
+          
+
         </div>
 
         

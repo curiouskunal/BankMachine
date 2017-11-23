@@ -14,6 +14,9 @@ export default class ScreenWelcome extends React.Component {
     return (
       <div id="screen-welcome">
       <Title title="Welcome to TD Canada Trust" />
+      <div class="buttons-secondary">
+        <JButton buttonclass= "smallButton" text="More Languages" icon="fa-globe" nav="/french" {...this.props}/>
+    </div>
       <div class="buttons-main">
         <div class="col-md-offset-2 col-md-4 ">
             <div class='bouttons'>
@@ -28,9 +31,7 @@ export default class ScreenWelcome extends React.Component {
         </div>
 
     </div>
-    <div class="buttons-secondary">
-        <JButton buttonclass= "smallButton" text="More Languages" icon="fa-globe" nav="/french" {...this.props}/>
-    </div>
+    
     </div>
     );
   }

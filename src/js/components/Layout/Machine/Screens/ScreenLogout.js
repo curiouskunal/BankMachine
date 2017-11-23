@@ -15,10 +15,13 @@ export default class ScreenLogout extends React.Component {
       <div id="screen-logout">
         
         
-        <Title title="Welcome to RBC" />
-        <JButton text="Welcome" nav="/signin" {...this.props}/>
-        <JButton text="Francais" nav="/french" {...this.props}/>
-      </div>
+        <Title title="Thank you for banking with TD" />
+        <div class="buttons-main">
+            <div class="logoutIMG">
+               <img src="/img/TDguy.jpg"/>
+            </div>
+        </div>
+       </div>
     );
   }
 }

@@ -233,6 +233,27 @@ span{
 /** Amount Selected Page Ends **/
 
 
+/**Welcome Page Start**/
+#screen-welcome .buttons-main span{
+    font-size: 35px
+}
+#screen-welcome .buttons-main{
+	margin-top: 10% !important;
+	margin: 0 auto;
+}
+/**Welcome Page Ends**/
+
+/**Logout Page Start**/
+.logoutIMG{
+    width: 400px;
+    height: 500px;
+    margin: 40px auto;
+}
+#screen-logout img{
+    height: 500px;
+}
+
+/**Logout Page Ends**/
 
 /**Screen Card Page Start**/
 #arrowdown{
@@ -250,7 +271,7 @@ span{
 #machine{
 	width: 1060px;
 	/*margin: 0 ;*/
-		margin-left: auto;
+    margin-left: auto;
 	margin-right: auto;
 }
 #machine img{

@@ -177,15 +177,15 @@ span{
     margin-top: 10px;
     font-size: 25px;
 }
-#screen-home, #screen-amountselect .buttons-main .boutton{
+#screen-home .buttons-main .boutton{
     height: 215px;
     width: 300px;
 }
-#screen-home, #screen-amountselect .buttons-main i{
+#screen-home .buttons-main i{
     font-size: 75px;
     color: var(--bg);
 }
-#screen-home, #screen-amountselect .buttons-main{
+#screen-home .buttons-main{
 	margin-top: 5% !important;
 	margin: 0 auto;
 }
@@ -217,6 +217,18 @@ span{
 #screen-amountselect .buttons-main span{
     margin: 0 auto;
     font-size: 50px;
+}
+#screen-amountselect .buttons-main .boutton{
+    height: 215px;
+    width: 300px;
+}
+#screen-amountselect .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-amountselect .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
 }
 /** Amount Selected Page Ends **/
 

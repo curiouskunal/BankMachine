@@ -277,13 +277,7 @@ span{
 
 /**Logout Page Ends**/
 
-/**ETransferMenu Page Start**/
-/*
-#screen-etransfermenu .buttons-main{
-	margin-top: 5% !important;
-}
-*/
-/**ETransferMenu Page Ends**/
+
 
 
 /**Screen Card Page Start**/
@@ -339,3 +333,26 @@ span{
 /**Screen Card Page End**/
 
 
+
+/** TESTING SHIT **/
+
+#screen-test .buttons-main span{
+    margin: 0 auto;
+    font-size: 40px;
+}
+#screen-test .buttons-main .boutton{
+    height: 100px;
+    width: 175px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+   
+    
+}
+#screen-test .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-test .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}

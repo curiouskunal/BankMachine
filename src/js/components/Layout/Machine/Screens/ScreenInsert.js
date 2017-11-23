@@ -32,8 +32,6 @@ export default class ScreenInsert extends React.Component {
             <p> Click on card reader below to "insert your card" </p>
           </div>
         </div>
-
-
       </div>
     );
   }

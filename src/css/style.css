@@ -256,10 +256,10 @@ span{
 /** Mobile Page Menu End **/
 
 /**Welcome Page Start**/
-#screen-welcome .buttons-main span{
+#screen-welcome .buttons-main span, #screen-etransfermenu .buttons-main span{
     font-size: 35px
 }
-#screen-welcome .buttons-main{
+#screen-welcome .buttons-main, #screen-etransfermenu .buttons-main{
 	margin-top: 10% !important;
 	margin: 0 auto;
 }
@@ -276,6 +276,15 @@ span{
 }
 
 /**Logout Page Ends**/
+
+/**ETransferMenu Page Start**/
+/*
+#screen-etransfermenu .buttons-main{
+	margin-top: 5% !important;
+}
+*/
+/**ETransferMenu Page Ends**/
+
 
 /**Screen Card Page Start**/
 
@@ -296,14 +305,6 @@ span{
     border-right-width: 2px;
 }
 
-/*
-.line1{
-    height: 500px;
-    border-left-style: solid;
-    border-left-color: white;
-    border-left-width: 2px;
-}
-*/
 #arrowdown{
     margin-top: 35px;
     display: inline-block;

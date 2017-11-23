@@ -14,7 +14,12 @@ export default class MachineHardware extends React.Component {
   render() {
     return (
         <div id="machine">
+        	<div class="col-md-6">
+        	<img src="/img/MoneyHole.jpg"/>
+        	</div>
+        	<div class="col-md-6">         	
         	<img src="/img/IMG_7768.jpeg" onClick={(e) => {this.nav();}}/>    
+        	</div>
         </div>         
       
     );

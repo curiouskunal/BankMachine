@@ -1,22 +1,24 @@
 :root{
-    --primary: #7FA68C;
-    --secondary: #8BC34A;
-    --ternary: #F4511E;
-    --bg: #CFD8DC;
+    --primary: #008900;
+    --secondary: #12412A;
+    --ternary: grey;
+    --bg: #EEF6EB;
     --machine:black;
 }
 /*Outside Bank Machine*/
 body{
+	font-family: 'Dosis', sans-serif;
 	background-color: var(--machine);
 }
 h1{
+	font-family: 'Dosis', sans-serif;
 	text-align: center;
 	font-weight: bold;
 }
 
 footer{
 	text-align: center;
-	color: white;
+	color: var(--bg);
 }
 button{
 	display: block;
@@ -36,7 +38,7 @@ button{
 
 /*Default Button*/
 .HomeButton{
-	color: white;
+	color: var(--bg);
     /*border-radius: 25px;*/
 	width: 200px;
 	height: 200px;
@@ -72,19 +74,19 @@ button{
 
 /*Small Button*/
 .headerButton{
-	color: white;
+	color: var(--bg);
 	font-weight: bold;
 	background-color: var(--secondary);
 	height: 50px;
 	width: 100px;
 
 }
-.headerButton .left{
+.left .headerButton {
 	border: 1px solid var(--secondary);
     border-radius: 0px 0px 50px 0px;
 }
 
-.headerButton .right{
+.right .headerButton{
 	border: 1px solid var(--secondary);
     border-radius: 0px 0px 0px 50px;
 }
@@ -116,17 +118,18 @@ i{
 
 #screen-signin .buttons-main i{
     font-size: 150px;
-    color: black;
+    color: var(--bg);
 }
 
 #screen-signin .buttons-main span{
     font-size: 20px;
-    color: black;
+    color: var(--bg);
 }
 .invis{
 	display: none;
 }
 span{
+	font-family: 'Dosis', sans-serif;
 	text-align: center;
 	display: block;
 }
@@ -137,7 +140,6 @@ span{
 	display: inline !important;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 *, *:before, *:after {
@@ -166,10 +168,11 @@ span{
   border-radius: 5px;
   color: var(--primary);
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+  border-radius: 40px;
 }
 
 .boutton span{
-	color: white;
+	color: var(--bg);
 }
 
 

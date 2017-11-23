@@ -27,7 +27,7 @@ export default class ScreenAmountSelect extends React.Component {
          <div class="buttons-main">
           <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="$20" nav="/withdraw" {...this.props}/>
+                <JButton buttonclass="boutton" text="$20" nav="/amountselect/confirm" {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">

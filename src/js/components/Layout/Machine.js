@@ -3,17 +3,18 @@ import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
         
 import Title from "./Machine/Title";
 import JButton from "./Machine/JButton";
-import ScreenWelcome from "./Machine/Screens/ScreenWelcome"
-import ScreenSignIn from "./Machine/Screens/ScreenSignIn"
-import ScreenCard from "./Machine/Screens/ScreenCard"
-import ScreenMobile from "./Machine/Screens/ScreenMobile"
-import ScreenHome from "./Machine/Screens/ScreenHome"
-import ScreenTransferMenu from "./Machine/Screens/ScreenTransferMenu"
-import ScreenETransferMenu from "./Machine/Screens/ScreenETransferMenu"
-import ScreenAmountSelect from "./Machine/Screens/ScreenAmountSelect"
-import ScreenLogout from "./Machine/Screens/ScreenLogout"
-import ScreenInsert from "./Machine/Screens/ScreenInsert"
-import ScreenPrint from "./Machine/Screens/ScreenPrint"
+import ScreenWelcome from "./Machine/Screens/ScreenWelcome";
+import ScreenSignIn from "./Machine/Screens/ScreenSignIn";
+import ScreenCard from "./Machine/Screens/ScreenCard";
+import ScreenMobile from "./Machine/Screens/ScreenMobile";
+import ScreenHome from "./Machine/Screens/ScreenHome";
+import ScreenTransferMenu from "./Machine/Screens/ScreenTransferMenu";
+import ScreenETransferMenu from "./Machine/Screens/ScreenETransferMenu";
+import ScreenAmountSelect from "./Machine/Screens/ScreenAmountSelect";
+import ScreenLogout from "./Machine/Screens/ScreenLogout";
+import ScreenInsert from "./Machine/Screens/ScreenInsert";
+import ScreenPrint from "./Machine/Screens/ScreenPrint";
+import ScreenConfirm from "./Machine/Screens/ScreenConfirm";
 
 //var $ = require('jquery');
 
@@ -36,6 +37,7 @@ export default class Machine extends React.Component {
                 <Route path="/logout" exact render={props => <ScreenLogout {...props} />}/>
                 <Route path="/insert" exact render={props => <ScreenInsert {...props} />}/>
                 <Route path="/print" exact render={props => <ScreenPrint {...props} />}/>
+                <Route path="/amountselect/confirm" exact render={props => <ScreenConfirm text="Withdraw?" amt="$20" textalt="(this is optional alternate text)" {...props} />}/>
            </Switch>
         </BrowserRouter>
       </div>

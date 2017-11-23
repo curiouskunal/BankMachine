@@ -240,12 +240,26 @@ span{
 }
 /** Amount Selected Page Ends **/
 
+/** Mobile Menu Page Start**/
+#screen-mobile #phone{
+	color: white;
+	font-size: 400px;
+	margin: 0 auto;
+}
+#screen-mobile p{
+	color: white;
+	font-size:30px; 
+}
+#screen-mobile img{
+	margin: 0 auto;
+}
+/** Mobile Page Menu End **/
 
 /**Welcome Page Start**/
-#screen-welcome .buttons-main span{
+#screen-welcome .buttons-main span, #screen-etransfermenu .buttons-main span{
     font-size: 35px
 }
-#screen-welcome .buttons-main{
+#screen-welcome .buttons-main, #screen-etransfermenu .buttons-main{
 	margin-top: 10% !important;
 	margin: 0 auto;
 }
@@ -263,6 +277,9 @@ span{
 
 /**Logout Page Ends**/
 
+
+
+
 /**Screen Card Page Start**/
 
 #screen-card img{
@@ -275,18 +292,13 @@ span{
 }
 
 .line{
+    height: 500px;
     margin-left: -20px;
     border-right-style: solid;
     border-right-color: white;
     border-right-width: 2px;
 }
 
-.line1{
-    height: 500px;
-    border-left-style: solid;
-    border-left-color: white;
-    border-left-width: 2px;
-}
 #arrowdown{
     margin-top: 35px;
     display: inline-block;
@@ -294,6 +306,9 @@ span{
     text-align: center;
 	color: white;
 	font-size: 300px;
+}
+.padCashInsert{
+    padding-right: 70px;
 }
 #screen-card p , #screen-insert p{
 	color: white;
@@ -317,8 +332,7 @@ span{
 }
 /**Screen Card Page End**/
 
-
-/*dropdown*/
+/**Dropdown**/
 .Dropdown-root{
 	position:relative;}
 
@@ -370,4 +384,28 @@ span{
 	width:100%;
 	z-index:1000;
 	-webkit-overflow-scrolling:touch;
+}
+/** END dropdown**/
+
+/** TESTING Stuff **/
+
+#screen-test .buttons-main span{
+    margin: 0 auto;
+    font-size: 40px;
+}
+#screen-test .buttons-main .boutton{
+    height: 100px;
+    width: 175px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+   
+    
+}
+#screen-test .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-test .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
 }

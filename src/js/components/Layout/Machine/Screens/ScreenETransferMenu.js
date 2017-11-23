@@ -24,7 +24,7 @@ export default class ScreenETransferMenu extends React.Component {
     
      
       <div class="buttons-main">
-        <div class="col-md-5 ">
+        <div class="col-md-offset-2 col-md-4 ">
             <div class='bouttons'>
                 <JButton text="Request Transfer" buttonclass="boutton" img="/img/cash-payment-icon-5-f.png"  nav="/transfermenu/etransfermenu/etransfer/request" {...this.props}/>
             </div>

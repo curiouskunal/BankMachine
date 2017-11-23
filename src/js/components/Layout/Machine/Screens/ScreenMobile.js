@@ -8,6 +8,13 @@ export default class ScreenMobile extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
+    nav(){
+		console.log(window.location.pathname);
+		if (window.location.pathname == "/signin/mobile"){
+			window.location.href = '/home';
+		}
+		
+	}
 
   render() {
       console.log(this.props);
@@ -22,9 +29,24 @@ export default class ScreenMobile extends React.Component {
           </div>
         </div>
         
-        <Title title="Insert Card" />
+        <div class="buttons-main">
         
-      </div>
+        <Title title=""/>
+        <div class="col-sm-5">
+
+        
+        <i id="phone" class="fa fa-mobile" aria-hidden="false"></i>
+            <p> Tap phone here </p>
+        </div>
+        <div class="col-md-4">
+            
+                    <img src="/img/qrcode.png" onClick={(e) => {this.nav();}}/>
+                    <p align = 'center'> Open app and scan code </p>
+
+          </div>
+        </div>
+
+    </div>
     );
   }
 }

@@ -5,14 +5,13 @@ import JButton from "../JButton";
 //var $ = require('jquery');
 
 export default class ScreenETransferMenu extends React.Component {
-//    componentWillMount(){
-//        this.props.history.push('/welcome?ijustgotpushed=true');
+//    componentWillMount(   //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
 ß
   render() {
       console.log(this.props);
     return (
-      <div id="screen-welcome">
+      <div id="screen-etransfermenu">
       <Title title="Welcome to TD Canada Trust" />
       <div class="buttons-secondary">
         <JButton buttonclass= "smallButton" text="More Languages" icon="fa-globe" nav="/french" {...this.props}/>

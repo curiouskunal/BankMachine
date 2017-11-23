@@ -27,7 +27,7 @@ export default class Machine extends React.Component {
                 <Route path="/signin/number" exact render={props => <ScreenSignIn {...props} />}/>
                 <Route path="/home" exact render={props => <ScreenHome {...props} />}/>
                 <Route path="/transfermenu" exact render={props => <ScreenTransferMenu {...props} />}/>
-                <Route path="/etransfermenu" exact render={props => <ScreenETransferMenu {...props} />}/>
+                <Route path="/transfermenu/etransfermenu" exact render={props => <ScreenETransferMenu {...props} />}/>
                 
         
            </Switch>

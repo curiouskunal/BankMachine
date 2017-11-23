@@ -275,18 +275,21 @@ span{
 }
 
 .line{
+    height: 500px;
     margin-left: -20px;
     border-right-style: solid;
     border-right-color: white;
     border-right-width: 2px;
 }
 
+/*
 .line1{
     height: 500px;
     border-left-style: solid;
     border-left-color: white;
     border-left-width: 2px;
 }
+*/
 #arrowdown{
     margin-top: 35px;
     display: inline-block;
@@ -294,6 +297,9 @@ span{
     text-align: center;
 	color: white;
 	font-size: 300px;
+}
+.padCashInsert{
+    padding-right: 70px;
 }
 #screen-card p , #screen-insert p{
 	color: white;

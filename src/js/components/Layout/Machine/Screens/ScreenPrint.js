@@ -4,7 +4,7 @@ import JButton from "../JButton";
 
 //var $ = require('jquery');
 
-export default class ScreenConfirm extends React.Component {
+export default class ScreenPrint extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
@@ -12,7 +12,7 @@ export default class ScreenConfirm extends React.Component {
   render() {
       console.log(this.props);
     return (
-      <div id="screen-confirm">
+      <div id="screen-print">
       <Title title="Welcome to TD Canada Trust" />
       <div class="buttons-secondary">
         <JButton buttonclass= "smallButton" text="More Languages" icon="fa-globe" nav="/french" {...this.props}/>
@@ -30,6 +30,7 @@ export default class ScreenConfirm extends React.Component {
             </div>
         </div>
     </div>
+    
     </div>
     );
   }

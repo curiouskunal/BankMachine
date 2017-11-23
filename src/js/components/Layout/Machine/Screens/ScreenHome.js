@@ -23,8 +23,7 @@ export default class ScreenHome extends React.Component {
           </div>
         </div>
         
-        <Title title="Home" />
-        
+        <Title title="Home" />        
          <div class="buttons-main">
           <div class="col-md-4">
              <div class='bouttons'>
@@ -56,10 +55,6 @@ export default class ScreenHome extends React.Component {
                   <JButton buttonclass="boutton" text="Account number sign in" icon="fa-hashtag" nav="/signin/mobile" {...this.props}/>
             </div>         
             </div>
-      
-    
-
-        </div>
       </div>
     );
   }

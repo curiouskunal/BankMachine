@@ -11,10 +11,17 @@ body{
 	font-family: 'Dosis', sans-serif;
 	background-color: var(--machine);
 }
-h1{
+h2{
 	font-family: 'Dosis', sans-serif;
 	text-align: center;
 	font-weight: bold;
+}
+h1{
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
 	color: var(--primary);
 }
 
@@ -98,7 +105,7 @@ span{
 
 /** Main Button Container **/
 .buttons-main{
-	margin-top: 15% !important;
+	margin-top: 15%;
 	margin: 0 auto;
 }
 
@@ -145,8 +152,18 @@ span{
 }
 /**  General Button End **/
 
+/** General Title **/
+.generalTitle{
+    color: pink;
+}
+
+
 
 /** SignIn Page Start **/
+#screen-signin .buttons-main{
+	margin-top: 10% !important;
+	margin: 0 auto;
+}
 #screen-signin .buttons-main span{
     margin-top: 40px;
     font-size: 25px;
@@ -155,9 +172,24 @@ span{
 
 
 /** Home Page Start **/
-#screen-signin .buttons-main span{
-    margin-top: 40px;
+#screen-home .buttons-main span{
+    margin-top: 10px;
     font-size: 25px;
+}
+#screen-home .buttons-main .boutton{
+    height: 215px;
+    width: 300px;
+}
+#screen-home .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-home .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+#screen-home .left{
+    visibility: hidden;
 }
 /** Home Page Ends **/
 

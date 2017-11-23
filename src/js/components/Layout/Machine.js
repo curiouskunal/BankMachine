@@ -9,6 +9,7 @@ import ScreenCard from "./Machine/Screens/ScreenCard"
 import ScreenMobile from "./Machine/Screens/ScreenMobile"
 import ScreenHome from "./Machine/Screens/ScreenHome"
 import ScreenTransferMenu from "./Machine/Screens/ScreenTransferMenu"
+import ScreenETransferMenu from "./Machine/Screens/ScreenETransferMenu"
 import ScreenAmountSelect from "./Machine/Screens/ScreenAmountSelect"
 
 //var $ = require('jquery');

@@ -194,18 +194,36 @@ span{
 }
 /** Home Page Ends **/
 
+/** Transfer Menu Page Start **/
+#screen-transfermenu .buttons-main span{
+    margin-top: 10px;
+    font-size: 25px;
+}
+#screen-transfermenu .buttons-main .boutton{
+    height: 215px;
+    width: 300px;
+}
+#screen-transfermenu .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-transfermenu .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+
+/** Transfer Menu Page Ends **/
+
 /**Screen Card Page Start**/
 #screen-card #arrow{
 	color: white;
 	font-size: 300px;
 	margin: 0 auto;
 }
-
 #screen-card p{
 	color: white;
 	font-size:30px; 
 }
-
 #screen-card img{
 	margin: 0 auto;
 }
@@ -215,7 +233,6 @@ span{
 		margin-left: auto;
 	margin-right: auto;
 }
-
 #machine img{
 	margin-left: auto;
 	margin-right: auto;

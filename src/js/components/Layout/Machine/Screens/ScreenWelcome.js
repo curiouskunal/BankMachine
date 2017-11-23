@@ -26,7 +26,6 @@ export default class ScreenWelcome extends React.Component {
                 <JButton text="Français" buttonclass="boutton" nav="/french" {...this.props}/>
             </div>
         </div>
-
     </div>
     <div class="buttons-secondary">
         <JButton buttonclass= "smallButton" text="More Languages" icon="fa-globe" nav="/french" {...this.props}/>

@@ -26,69 +26,7 @@ export default class ScreenHome extends React.Component {
         <Title title="Home" />
         
          <div class="buttons-main">
-          <div class="col-md-2 col-md-offset-3">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="1" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
-          <div class="col-md-2">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="2" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
-          <div class="col-md-2">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="3" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
           
-          
-          
-          <div class="col-md-2 col-md-offset-3">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="4" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
-          <div class="col-md-2">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="5" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
-          <div class="col-md-2">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="6" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
-         
-          
-          
-          <div class="col-md-2 col-md-offset-3">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="7" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
-          <div class="col-md-2">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="8" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
-          <div class="col-md-2">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="9" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
-          
-          
-          <div class="col-md-2 col-md-offset-3">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="BKSP" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
-          <div class="col-md-2">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="0" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
-            </div>
-          </div>
           <div class="col-md-2">
              <div class='bouttons'>
                 <JButton buttonclass="boutton" text="CLEAR" nav="/transfermenu/betweenacct/confirm" {...this.props}/>

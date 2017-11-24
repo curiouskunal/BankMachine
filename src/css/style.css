@@ -87,6 +87,11 @@ button{
     margin: 10px;
 }
 
+.headerButton:focus{
+    color: white;
+    background-color: darkgray;
+    outline: none;
+}
 /** ICONS **/
 i{
 	margin: 5px;
@@ -132,8 +137,7 @@ span{
 
 
 .bouttons {
-  text-align: center;
-  margin 
+  text-align: center; 
 }
 
 .boutton {
@@ -152,15 +156,17 @@ span{
   color: var(--primary);
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
   border-radius: 40px;
+    outline: none;
 }
 
-/* May screw things? */
-/*
-#mobile{
-    margin-left: -15px;
-    margin-right: -15px;
+.boutton:focus{
+    background-color: darkgray;
+    outline: none;
 }
-*/
+.boutton span:focus{
+    background-color: aqua;
+    color: aqua;
+}
 
 .boutton span{
 	color: var(--bg);
@@ -586,11 +592,11 @@ table.center{
 
 /** TEST page for Keyboard **/
 
-#screen-test .buttons-main span{
+#screen-textinput .buttons-main span{
     margin: 0 auto;
     font-size: 30px;
 }
-#screen-test .buttons-main .boutton{
+#screen-textinput .buttons-main .boutton{
     margin-left: -20px;
     height: 55px;
     width: 80px; 
@@ -598,45 +604,45 @@ table.center{
     margin-bottom: -10px; 
     outline: none;
 }
-#screen-test .buttons-main .boutton:focus{
+#screen-textinput .buttons-main .boutton:focus{
     background-color: gray;
 }
-#screen-test .buttons-main i{
+#screen-textinput .buttons-main i{
     font-size: 75px;
     color: var(--bg);
 }
-#screen-test .buttons-main{
+#screen-textinput .buttons-main{
 	margin-top: 5% !important;
 	margin: 0 auto;
 }
 
-#screen-test .secondRow{
+#screen-textinput .secondRow{
     margin-left: 40px; !important
 }
-#screen-test .boutton.thirdRow{
+#screen-textinput .boutton.thirdRow{
     margin-left: 20px; !important
 }
-#screen-test .boutton.shiftKey{
+#screen-textinput .boutton.shiftKey{
     width: 120px;
 }
-#screen-test .boutton.backspaceKey{
+#screen-textinput .boutton.backspaceKey{
     width: 125px;
 }
-#screen-test .boutton.enterKey{
+#screen-textinput .boutton.enterKey{
     width: 165px;
 }
-#screen-test .boutton.space{
+#screen-textinput .boutton.space{
     margin-left: -20px;
     width: 510px;
 }
-#screen-test .numericInput{
+#screen-textinput .numericInput{
     width: 650px;
     height: 55px;
     font-size: 30px;
     margin-top: inherit;
     border-radius: 10px;
 }
-#screen-test p{
+#screen-textinput p{
     margin: 0 auto;
     margin-top: 7px;
     font-size: 30px;
@@ -644,17 +650,17 @@ table.center{
     text-align: right;
 }
 
-#screen-test p.inputDiv1{
+#screen-textinput p.inputDiv1{
     margin-top: 27px;
 }
-#screen-test p.inputDiv2{
+#screen-textinput p.inputDiv2{
     margin-top: 17px;
     margin-bottom: 20px;
 }
-#screen-test .numericInput.inputDiv1{
+#screen-textinput .numericInput.inputDiv1{
     margin-top: 20px;
 }
-#screen-test .numericInput.inputDiv2{
+#screen-textinput .numericInput.inputDiv2{
     margin-top: 10px;
     margin-bottom: 20px;
 }

@@ -269,7 +269,7 @@ span{
 	font-size:30px;
 }
 #screen-mobile p.tap{
-    margin-top: -55px;
+    margin-top: -22px;
 	color: white;
 	font-size:30px;
     text-align: center;
@@ -619,13 +619,42 @@ table.center{
 }
 #screen-test .boutton.backspaceKey{
     width: 125px;
-/*    background-color: red; */
 }
-
+#screen-test .boutton.enterKey{
+    width: 165px;
+}
 #screen-test .boutton.space{
     margin-left: -20px;
     width: 510px;
-/*    background-color: red; */
+}
+#screen-test .numericInput{
+    width: 650px;
+    height: 55px;
+    font-size: 30px;
+    margin-top: inherit;
+    border-radius: 10px;
+}
+#screen-test p{
+    margin: 0 auto;
+    margin-top: 7px;
+    font-size: 30px;
+    color: white;
+    text-align: right;
+}
+
+#screen-test p.inputDiv1{
+    margin-top: 27px;
+}
+#screen-test p.inputDiv2{
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+#screen-test .numericInput.inputDiv1{
+    margin-top: 20px;
+}
+#screen-test .numericInput.inputDiv2{
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 /** End Keyboard test page **/

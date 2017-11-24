@@ -22,10 +22,28 @@ export default class Test extends React.Component {
       <Title title="Test Keyboard" />
       <div class="buttons-main">
       
+         
+          <div class="col-md-3">
+              <p class="inputDiv1">ACCOUNT NUMBER</p>
+          </div>
+          <div class="col-md-9">
+             <input class="numericInput inputDiv1" type="number" min="0"/>
+          </div>
+ 
+
+          <div class="col-md-3">
+              <p class="inputDiv2">PASSWORD</p>
+          </div>
+          <div class="col-md-9">
+             <input class="numericInput inputDiv2" type="text" min="0"/>
+          </div>
+   
       
       
       
-             <div class="col-md-12">
+      
+      
+        <div class="col-md-12">
            <div class="col-md-1 col-md-offset-1">
              <div class='bouttons'>
                 <JButton buttonclass="boutton" text="0" {...this.props}/>
@@ -195,7 +213,7 @@ export default class Test extends React.Component {
         <div class="col-md-12 ">
            <div class="col-md-1 col-md-offset-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton shiftKey" text="SHIFT" {...this.props}/>
+                <JButton buttonclass="boutton shiftKey" text="shift" {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
@@ -235,7 +253,7 @@ export default class Test extends React.Component {
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton thirdRow backspaceKey" text="DEL" {...this.props}/>
+                <JButton buttonclass="boutton thirdRow backspaceKey" text="delete" {...this.props}/>
             </div>
         </div>
         
@@ -265,14 +283,10 @@ export default class Test extends React.Component {
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="_" {...this.props}/>
+                <JButton buttonclass="boutton enterKey" text="enter" {...this.props}/>
             </div>
         </div>
-        <div class="col-md-1">
-             <div class='bouttons'>
-                <JButton buttonclass="boutton" text="#" {...this.props}/>
-            </div>
-        </div>
+        
         
        </div>
         

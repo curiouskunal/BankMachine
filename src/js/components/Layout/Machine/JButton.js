@@ -14,12 +14,19 @@ export default class JButton extends React.Component {
         console.log(this.props);
         
         if(this.props.click!=null){
-            
             this.props.args==null ? this.props.click() : this.props.click.apply(this,this.props.args);
         }
         
-        else if(this.props.nav!=null)
-            this.navigate();
+        if(this.props.nav!=null)
+            if(this.props.navdelay==null)
+                this.navigate();
+            else{
+                
+                setTimeout(()=>{
+                    
+                    this.navigate();
+                },this.props.navdelay);
+            }
     }
     
   navigate(){

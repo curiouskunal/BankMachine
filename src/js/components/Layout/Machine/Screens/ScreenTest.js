@@ -1,30 +1,17 @@
 import React from "react";
-import Title from "../Title";
-import JButton from "../JButton";
 
 //var $ = require('jquery');
 
-export default class ScreenHome extends React.Component {
-//    componentWillMount(){
-//        this.props.history.push('/welcome?ijustgotpushed=true');
-//    }
+export default class Test extends React.Component {
+
 
   render() {
-      console.log(this.props);
+      console.log(this.props.title);
     return (
-      <div id="screen-test">
+      <div >
+        
+        
 
-        <div>
-         <div class = "left">
-            <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
-          </div>
-          <div class = "right">
-            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
-          </div>
-        </div>
-        
-        <Title title="Home" />
-        
          <div class="buttons-main">
           
           <div class="col-md-2">
@@ -35,6 +22,7 @@ export default class ScreenHome extends React.Component {
           
       
         </div>
+
       </div>
     );
   }

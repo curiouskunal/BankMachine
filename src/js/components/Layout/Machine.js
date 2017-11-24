@@ -22,7 +22,7 @@ import ScreenBalance from "./Machine/Screens/ScreenBalance";
 import ScreenNumKey from "./Machine/Screens/ScreenNumKey";
 import ScreenLanguages from "./Machine/Screens/ScreenLanguages";
 import ScreenLoading from "./Machine/Screens/ScreenLoading";
-import ScreenSettings from "./Machine/Screens/Settings";
+import ScreenSettings from "./Machine/Screens/ScreenSettings";
 
 //var $ = require('jquery');
 

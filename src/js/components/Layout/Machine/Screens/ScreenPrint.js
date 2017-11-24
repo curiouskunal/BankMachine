@@ -34,7 +34,7 @@ export default class ScreenPrint extends React.Component {
             <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
           </div>
           <div class = "right">
-            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
+            <JButton buttonclass="headerButton" text="HOME" icon="fa-times-circle" nav="/home" {...this.props}/>
           </div>
         </div>
         

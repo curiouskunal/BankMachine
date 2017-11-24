@@ -24,6 +24,7 @@ import ScreenLanguages from "./Machine/Screens/ScreenLanguages";
 import ScreenLoading from "./Machine/Screens/ScreenLoading";
 import ScreenSettings from "./Machine/Screens/ScreenSettings";
 import ScreenTextInput from "./Machine/Screens/ScreenTextInput";
+import ScreenAccountSelect from "./Machine/Screens/ScreenAccountSelect";
 
 //var $ = require('jquery');
 
@@ -62,6 +63,7 @@ export default class Machine extends React.Component {
                 <Route path="/pass" exact render={props => <ScreenTextInput {...props} />}/>
                 <Route path="/deposit" exact render={props => <ScreenAmountSelect type="deposit" {...props} />}/>
                 <Route path="/deposit/confirm" exact render={props => <ScreenConfirm text="Deposit?" to="undefined" no="/home" yes="/print" {...props} />}/>
+                <Route path="/accountselect" exact render={props => <ScreenAccountSelect {...props} />}/>
            </Switch>
         
       </div>

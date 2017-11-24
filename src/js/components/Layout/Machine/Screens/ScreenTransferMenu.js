@@ -18,7 +18,7 @@ export default class TransferMenu extends React.Component {
             <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
           </div>
           <div class = "right">
-            <JButton buttonclass="headerButton" text="HOME" icon="fa-home" nav="/" {...this.props}/>
+            <JButton buttonclass="headerButton" text="HOME" icon="fa-home" nav="/home" {...this.props}/>
           </div>
 		</div>
         

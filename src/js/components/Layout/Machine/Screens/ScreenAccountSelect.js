@@ -20,62 +20,36 @@ export default class ScreenAccountSelect extends React.Component {
                <table class="table-fill">
                 <tbody class="table-hover">
                     <tr>
-                        <td>Dutch</td>
+                        <td>Chequing</td> <td>$112.32</td>
                     </tr>
                     <tr>
-                        <td>Chinese</td>
+                        <td>Chequing</td> <td>$112.32</td>
                     </tr>
                     <tr>
-                        <td>Spanish</td>
+                        <td>Chequing</td> <td>$112.32</td>
                     </tr>
                     <tr>
-                        <td>Spanish</td>
+                        <td>Chequing</td> <td>$112.32</td>
                     </tr>
                     <tr>
-                        <td>Spanish</td>
+                        <td>Chequing</td> <td>$112.32</td>
                     </tr>
                     <tr>
-                        <td>Spanish</td>
+                        <td>Chequing</td> <td>$112.32</td>
                     </tr>
                     <tr>
-                        <td>Spanish</td>
+                        <td>Chequing</td> <td>$112.32</td>
                     </tr>
                     <tr>
-                        <td>Spanish</td>
+                        <td>Chequing</td> <td>$112.32</td>
                     </tr>
                     <tr>
-                        <td>Spanish</td>
+                        <td>Chequing</td> <td>$112.32</td>
                     </tr>
                     <tr>
-                        <td>Spanish</td>
+                        <td>Chequing</td> <td>$112.32</td>
                     </tr>
-                    <tr>
-                        <td>Spanish</td>
-                    </tr>
-                    <tr>
-                        <td>Spanish</td>
-                    </tr>
-                    <tr>
-                        <td>Spanish</td>
-                    </tr>
-                    <tr>
-                        <td>Spanish</td>
-                    </tr>
-                    <tr>
-                        <td>Spanish</td>
-                    </tr>
-                    <tr>
-                        <td>Spanish</td>
-                    </tr>
-                    <tr>
-                        <td>Spanish</td>
-                    </tr>
-                    <tr>
-                        <td>Spanish</td>
-                    </tr>
-                    <tr>
-                        <td>Spanish</td>
-                    </tr>
+                    
                 </tbody>
                 </table>
            </div>

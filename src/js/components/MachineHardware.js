@@ -5,7 +5,7 @@ export default class MachineHardware extends React.Component {
 
 	navCard(){
 		if (window.location.pathname == "/signin/card"){
-			window.location.href = '/home';
+			window.location.href = '/pin';
 		}		
 	}
 

@@ -39,7 +39,7 @@ export default class ScreenNumKey extends React.Component {
           </div>
         </div>
         
-        <Title title="Enter" />
+        <Title title={this.props.title} />
         
          <div class="buttons-main">
         

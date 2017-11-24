@@ -31,7 +31,6 @@ export default class Machine extends React.Component {
   render() { 
     return (
       <div id="content-wrapper">
-        <BrowserRouter>
            <Switch>
                 <Route path="/" exact render={props => <ScreenWelcome {...props} />}/>
                 <Route path="/signin" exact render={props => <ScreenSignIn {...props} />}/>
@@ -55,11 +54,12 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu/etransfermenu/etransfer/request" exact render={props => <ScreenETransfer {...props} />}/>
                 <Route path="/balance" exact render={props => <ScreenBalance {...props} />}/>           
                 <Route path="/languages" exact render={props => <ScreenLanguages {...props} />}/> 
-                <Route path="/signin/account" exact render={props => <ScreenNumKey redirects={["/home"]} {...props} />}/>
+                <Route path="/signin/account" exact render={props => <ScreenNumKey title="Enter your PIN" redirects={["/home"]} {...props} />}/>
                 <Route path="/loading" exact render={props => <ScreenLoading redirects={["/home"]} {...props} />}/>
                 <Route path="/settings" exact render={props => <ScreenSettings {...props} />}/>
+                <Route path="/pin" exact render={props => <ScreenNumKey title="Enter your PIN" redirects={["/home"]} {...props} />}/>
            </Switch>
-        </BrowserRouter>
+        
       </div>
     );
   }

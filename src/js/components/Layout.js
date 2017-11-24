@@ -1,5 +1,6 @@
 import React from "react";
-
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
+        
 import Footer from "./Footer";
 import Header from "./Header";
 import Machine from "./Layout/Machine";
@@ -20,10 +21,14 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
-        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
-        <Machine />
-        <MachineHardware />
-        <Footer />
+       <BrowserRouter>
+       <div>
+            <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
+            <Machine />
+            <MachineHardware />
+            <Footer />
+        </div>
+        </BrowserRouter>
       </div>
     );
   }

@@ -37,7 +37,7 @@ export default class ScreenMobile extends React.Component {
             <p class="scan">Open app and scan code</p>
           </div>
         <div class="col-md-3 col-md-offset-1">
-            <i id="mobile" class="fa fa-mobile" aria-hidden="false"></i>s
+            <i id="mobile" class="fa fa-mobile" aria-hidden="false" onClick={(e) => {this.nav();}}></i>
             <p class="tap">Tap phone here</p>
           </div>
         </div>

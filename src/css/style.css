@@ -66,9 +66,19 @@ button{
 	color: var(--bg);
 	font-weight: bold;
 	background-color: var(--ternary);
+/*
 	position: absolute;
 	top: 59%;
 	left: 69%;
+*/
+    height: 40px;
+	width: 150px;
+    border-radius: 10px;
+}
+.smallButton:focus{
+    color: white;
+    background-color: darkgray;
+    outline: none;
 }
 #otherLanguages{
 	height: 100px;

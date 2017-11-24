@@ -15,7 +15,7 @@ export default class ScreenWelcome extends React.Component {
       <Title title="Welcome to TD Canada Trust" />
       <div class="buttons-secondary">
 
-        <JButton buttonclass= "smallButton" text="Other Languages" icon="fa-globe" nav="/test" {...this.props}/>
+        
 
     </div>
       <div class="buttons-main">
@@ -29,6 +29,11 @@ export default class ScreenWelcome extends React.Component {
             <div class='bouttons'>
                 <JButton text="Français" buttonclass="boutton" nav="/french" {...this.props}/>
             </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-2 col-md-offset-10">
+            <JButton buttonclass= "smallButton" text="Other Languages" icon="fa-globe" nav="/languages" {...this.props}/>
         </div>
     </div>
     

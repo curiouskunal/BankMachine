@@ -20,7 +20,7 @@ export default class ScreenFrench extends React.Component {
             <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
           </div>
         </div>
-      <Title title="French UI Same as English Interface." />
+      <Title title="UI Same as English Interface." />
       <div class="buttons-main">
         <div class="col-md-12">
             <div class='bouttons'>

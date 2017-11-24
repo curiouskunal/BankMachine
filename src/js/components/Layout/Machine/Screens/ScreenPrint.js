@@ -5,10 +5,18 @@ import JButton from "../JButton";
 //var $ = require('jquery');
 
 export default class ScreenPrint extends React.Component {
-//    componentWillMount(){
-//        this.props.history.push('/welcome?ijustgotpushed=true');
-//    }
-ß
+    buttonClicked(type){
+        var text="";
+        if(type=='paper')
+            text="Printing Paper Receipt";
+        else if (type=='email')
+            text="Emailing you a Copy";
+        else
+            text="No Receipt Selected"
+            
+        console.log(text);
+    }
+
   render() {
       console.log(this.props);
     return (
@@ -26,17 +34,17 @@ export default class ScreenPrint extends React.Component {
          <div class="buttons-main">
           <div class="col-md-4">
              <div class='bouttons'>
-                 <JButton buttonclass="boutton" text="Paper Copy" icon="fa-file-text-o" nav="/home" {...this.props}/>
+                 <JButton buttonclass="boutton" text="Paper Copy" icon="fa-file-text-o" nav="/home" navdelay='5000' click={this.buttonClicked.bind(this)} args={['paper']} {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Email" icon="fa-envelope-o" nav="/home" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Email" icon="fa-envelope-o" nav="/home" navdelay='2000' click={this.buttonClicked.bind(this)} args={['email']} {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="No Receipt" icon="fa-times-circle-o" nav="/home" {...this.props}/>
+                  <JButton buttonclass="boutton" text="No Receipt" icon="fa-times-circle-o" nav="/home" navdelay='7000' click={this.buttonClicked.bind(this)} args={['none']} {...this.props}/>
             </div>         
             </div>
       

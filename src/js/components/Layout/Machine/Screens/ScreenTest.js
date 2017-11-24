@@ -285,18 +285,9 @@ export default class Test extends React.Component {
              <div class='bouttons'>
                 <JButton buttonclass="boutton enterKey" text="enter" {...this.props}/>
             </div>
-        </div>
-        
-        
+        </div>        
        </div>
-        
-        
-        
-        
-        
-        
-        
-        
+
     </div>
     
     </div>

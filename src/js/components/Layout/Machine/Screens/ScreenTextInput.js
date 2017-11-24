@@ -147,7 +147,7 @@ export default class ScreenTextInput extends React.Component {
           </div>
         </div>
       
-      
+          <Title title="Account Number Sign In" />
         <div class="buttons-main">
           <div class="col-md-3">
               <p class="inputDiv1">ACCOUNT NUMBER</p>

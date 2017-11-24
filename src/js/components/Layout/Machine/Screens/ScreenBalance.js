@@ -66,6 +66,21 @@ export default class ScreenBalance extends React.Component {
                         <td>McMaster</td>
                         <td>$128</td>
                     </tr>
+                    <tr>
+                        <td>11/07/17</td>
+                        <td>McMaster</td>
+                        <td>$128</td>
+                    </tr>
+                    <tr>
+                        <td>11/07/17</td>
+                        <td>McMaster</td>
+                        <td>$128</td>
+                    </tr>
+                    <tr>
+                        <td>11/07/17</td>
+                        <td>McMaster</td>
+                        <td>$128</td>
+                    </tr>
                 </tbody>
                 </table>
            </div>

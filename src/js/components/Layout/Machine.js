@@ -52,7 +52,8 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu/etransfermenu/etransfer/send" exact render={props => <ScreenETransfer {...props} />}/> 
                 <Route path="/transfermenu/etransfermenu/etransfer/request" exact render={props => <ScreenETransfer {...props} />}/>
                 <Route path="/balance" exact render={props => <ScreenBalance {...props} />}/>           
-                <Route path="/languages" exact render={props => <ScreenLanguages {...props} />}/>   
+                <Route path="/languages" exact render={props => <ScreenLanguages {...props} />}/> 
+                <Route path="/signin/account" exact render={props => <ScreenNumKey {...props} />}/>  
            </Switch>
         </BrowserRouter>
       </div>

@@ -248,7 +248,6 @@ span{
     border:2px solid white;
     border-radius: 40px;
 }
-
 .line2{
     height: 620px;
     margin-left: -20px;
@@ -256,7 +255,6 @@ span{
     border-right-color: white;
     border-right-width: 2px;
 }
-
 #mobile{
     margin-top: 0px;
     display: inline-block;
@@ -265,13 +263,11 @@ span{
 	color: white;
 	font-size: 500px;
 }
-
 #screen-mobile p.scan{
     margin-top: 85px;
 	color: white;
 	font-size:30px;
 }
-
 #screen-mobile p.tap{
     margin-top: -55px;
 	color: white;
@@ -283,40 +279,13 @@ span{
 	margin: 0 auto;
     margin-top: 100px; !important
 }
+/** Mobile Menu Page End **/
 
-
-
-
-/*
-#screen-mobile #phone{
-	color: white;
-	font-size: 400px;
-	margin: 0 auto;
-}
-#screen-mobile p{
-    margin-top: 55px;
-	color: white;
-	font-size: 30px; 
-}
-
-#screen-mobile p.phoneIcon{
-    margin-top: 0px;
-	color: white;
-	font-size: 30px; 
-}
-
-#screen-mobile img{
-    background-color: whitesmoke; 
-	margin: 0 auto;
-}
-*/
-/** Mobile Page Menu End **/
-
-/**Welcome Page Start**/
-#screen-welcome .buttons-main span, #screen-etransfermenu .buttons-main span{
+/**Welcome Page (Formatting applies to transfers and french pages) Start**/
+#screen-welcome .buttons-main span, #screen-etransfermenu .buttons-main span, #screen-french .buttons-main span{
     font-size: 35px
 }
-#screen-welcome .buttons-main, #screen-etransfermenu .buttons-main{
+#screen-welcome .buttons-main, #screen-etransfermenu .buttons-main, #screen-french .buttons-main{
 	margin-top: 10% !important;
 	margin: 0 auto;
 }
@@ -424,7 +393,6 @@ table.center{
 	margin-right: auto;
 }
 #machine img{
-	
 	display: block;
 	height: 313px;
     width: 100%;
@@ -533,6 +501,7 @@ table.center{
 	margin-top: 5% !important;
 	margin: 0 auto;
 }
+/** END **/
 
 /** e-Transfer stuff **/
 
@@ -575,7 +544,7 @@ table.center{
 	margin-top: 5% !important;
 	margin: 0 auto;
 }
-
+/** END **/
 
 
 

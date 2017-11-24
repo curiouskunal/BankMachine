@@ -54,7 +54,7 @@ export default class ScreenTextInput extends React.Component {
               <p class="inputDiv2">PASSWORD</p>
           </div>
           <div class="col-md-9">
-             <input class="numericInput inputDiv2" type="text" onClick={this.inputHandle.bind(this)} min="0"/>
+             <input class="numericInput inputDiv2" type="password" onClick={this.inputHandle.bind(this)} min="0"/>
           </div>
    
 

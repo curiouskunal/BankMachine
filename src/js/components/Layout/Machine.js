@@ -58,8 +58,7 @@ export default class Machine extends React.Component {
                 <Route path="/loading" exact render={props => <ScreenLoading redirects={["/home"]} {...props} />}/>
                 <Route path="/settings" exact render={props => <ScreenSettings {...props} />}/>
                 <Route path="/pin" exact render={props => <ScreenNumKey title="Enter your PIN" redirects={["/home"]} {...props} />}/>
-                <Route path="/amountselect/custom" exact render={props => <ScreenNumKey title="Enter an Amount to Withdraw" redirects={["/transaction/confirm?type=withdraw&amt="]}{...props} />}/>
-                <Route path="/withdraw/confirm" exact render={props => <ScreenConfirm text="Withdraw?" no="/home" yes="/home" {...props} />}/>
+                <Route path="/withdraw/confirm" exact render={props => <ScreenConfirm text="Withdraw?" no="/home" yes="/print" {...props} />}/>
                 <Route path="/pass" exact render={props => <ScreenTextInput {...props} />}/>
            </Switch>
         

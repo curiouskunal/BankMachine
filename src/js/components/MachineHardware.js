@@ -11,7 +11,7 @@ export default class MachineHardware extends React.Component {
 
 	navMoney(){
 		if (window.location.pathname == "/insert"){
-			window.location.href = '/home';
+			window.location.href = '/print';
 		}		
 	}
 

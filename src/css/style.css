@@ -59,6 +59,7 @@ button{
 
 /** Invisible Objects **/
 .invis{display: none;}
+.hide{visibility: hidden;}
  
 /** More Languages **/
 .smallButton{

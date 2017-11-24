@@ -17,13 +17,13 @@ export default class ScreenConfirm extends React.Component {
       <div class="buttons-main">
         <div class="col-md-offset-2 col-md-4 ">
             <div class='bouttons'>
-                <JButton {...this.props} text="Yes" buttonclass="boutton" icon="fa-check-circle" nav="/home" />
+                <JButton {...this.props} text="Yes" buttonclass="boutton" icon="fa-check-circle" nav={this.props.yes} />
             </div>
         </div>
 
         <div class="col-md-4">
             <div class='bouttons'>
-                <JButton {...this.props} text="No" buttonclass="boutton" icon="fa-times-circle" nav="/home" />
+                <JButton {...this.props} text="No" buttonclass="boutton" icon="fa-times-circle" nav={this.props.no} />
             </div>
         </div>
     </div>

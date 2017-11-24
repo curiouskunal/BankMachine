@@ -22,37 +22,37 @@ export default class ScreenAmountSelect extends React.Component {
           </div>
         </div>
         
-        <Title title="Select an Amount" />
+        <Title title={"Select an Amount to " + this.props.type} />
         
          <div class="buttons-main">
           <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="$20" nav="/amountselect/confirm" {...this.props}/>
+                <JButton buttonclass="boutton" text="$20" nav={"/" + this.props.type + "/confirm?amt=20"} {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="$40" nav="/deposit" {...this.props}/>
+                  <JButton buttonclass="boutton" text="$40" nav={"/" + this.props.type + "/confirm?amt=40"} {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="$60" nav="/transfermenu" {...this.props}/>
+                  <JButton buttonclass="boutton" text="$60" nav={"/" + this.props.type + "/confirm?amt=60"} {...this.props}/>
             </div>         
             </div>
             <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="$80" nav="/signin/card" {...this.props}/>
+                <JButton buttonclass="boutton" text="$80" nav={"/" + this.props.type + "/confirm?amt=80"} {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="$100" nav="/signin/mobile" {...this.props}/>
+                  <JButton buttonclass="boutton" text="$100" nav={"/" + this.props.type + "/confirm?amt=100"} {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Custom" nav="/test" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Custom" nav={"/" + this.props.type + "/custom"} {...this.props}/>
             </div>         
             </div>
       

@@ -689,10 +689,11 @@ table.center{
 /** LOADING **/ 
 #screen-test i.spinningIcon{
     display: inline-block;
-    width: 100%;
+    width: 90%;
     text-align: center;
     font-size: 100px;
     color: white;
+/*    margin: 0 auto;*/
     margin-top: 140px;
 }
 #screen-test h3{

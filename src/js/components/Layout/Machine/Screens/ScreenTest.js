@@ -295,8 +295,11 @@ export default class Test extends React.Component {
          
          
         
-         <div class="col-md-2 col-md-offset-5">
+         
+         <div class="col-md-12">
+             <div class="col-md-2 col-md-offset-5">
              <i class="fa fa-spinner fa-pulse spinningIcon"></i>
+         </div>
          </div>
          <div class="col-md-12">
              <div class="col-md-2 col-md-offset-5">

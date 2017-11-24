@@ -44,7 +44,9 @@ export default class ScreenTextInput extends React.Component {
         this.state.active=$('#screen-textinput input').get(0);
     }
     inputHandle(e){
+        $('#screen-textinput input').removeClass('active');
         this.state.active=e.target;
+        $(e.target).addClass('active');
     }
     
     shiftMod(e){

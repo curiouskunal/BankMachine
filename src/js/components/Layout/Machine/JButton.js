@@ -38,7 +38,19 @@ export default class JButton extends React.Component {
            this.props.history.replace("/");
           return;
       }
-      this.props.history.push(this.props.nav.toString());
+//     Querying
+      var querystring="";
+      if(this.props.query!=null){
+          querystring="?";
+      var i;
+      for(i in this.props.query)
+          if(typeof(this.props.query[i]) == "function")
+            querystring+= i + "=" + this.props.query[i]() + "&";
+          else if(typeof(this.props.query[i]) == "number")
+            querystring+= i + "=" + this.props.query[i]() + "&";
+        }
+      querystring = querystring.substr(0,querystring.length-1);
+      this.props.history.push(this.props.nav.toString() + querystring);
   }
 
   render() { 

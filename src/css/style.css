@@ -560,7 +560,7 @@ table.center{
 /** e-Transfer stuff **/
 
 /*search button*/
-#screen-etransfer .buttons-main .boutton.tester1{
+#screen-transfer .buttons-main .boutton.tester1{
     
     margin: 0 auto;
     margin-top: 25px;
@@ -570,7 +570,7 @@ table.center{
 }
 
 /*numeric input*/
-#screen-etransfer .numericInput{
+#screen-transfer .numericInput{
     margin: 0 auto;
     margin-top: 25px;
     width: 490px;
@@ -579,22 +579,22 @@ table.center{
 }
 
 
-#screen-etransfer .buttons-main span{
+#screen-transfer .buttons-main span{
     margin: 0 auto;
     font-size: 40px;
 }
-#screen-etransfer .buttons-main .boutton{
+#screen-transfer .buttons-main .boutton{
     margin-left: -20px;
     height: 75px;
     width: 175px;
     border-radius: 10px;
     margin-bottom: -10px; 
 }
-#screen-etransfer .buttons-main i{
+#screen-transfer .buttons-main i{
     font-size: 75px;
     color: var(--bg);
 }
-#screen-etransfer .buttons-main{
+#screen-transfer .buttons-main{
 	margin-top: 5% !important;
 	margin: 0 auto;
 }

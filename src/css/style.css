@@ -40,6 +40,12 @@ footer{
 	text-align: center;
 	color: var(--primary);
 }
+
+#download{
+ margin-left:470px;
+    font-size: 30px;
+}
+
 button{
 	display: block;
 }
@@ -701,7 +707,4 @@ table.center{
 }
 
 /*DEBUG*/
-.active input{
-     color: red;
-    background: red;
-}
+

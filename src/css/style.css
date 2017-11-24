@@ -141,7 +141,7 @@ span{
   margin-right: -15px;
   display: inline-block;
   background: var(--primary);
-  min-width: 110px;
+  min-width: 50px;
   width: 250px;
   height: 400px;
   margin: 15px 5px;
@@ -307,16 +307,21 @@ span{
 
 /**Balance Page Start**/
 
+/*
 #screen-balance .table-fill{
     width: 400px;
-    height: 200px;
-    overflow: auto;
+    height: 100px;
+    overflow-y: scroll; !important
     color: white;
     text-align: center;
 }
 table.center{
     margin-left:auto;
     margin-right:auto;
+}
+#screen-balance td{
+    color: royalblue;
+    font-size: 35px;
 }
 #screen-balance h1{
     color:white;
@@ -345,6 +350,36 @@ table.center{
 #screen-balance .th{
     text-align: center;
 }
+*/
+
+
+#table-wrapper {
+  position:relative;
+}
+#table-scroll {
+  height:150px;
+  overflow:auto;  
+  margin-top:20px;
+}
+#table-wrapper table {
+  width:100%;
+    
+}
+#table-wrapper table * {
+  background:yellow;
+  color:black;
+}
+#table-wrapper table thead th .text {
+  position:absolute;   
+  top:-20px;
+  z-index:2;
+  height:20px;
+  width:35%;
+  border:1px solid red;
+}
+
+
+
 /**Balance Page Ends**/
 
 
@@ -481,8 +516,6 @@ table.center{
     height: 65px;
     font-size: 50px;
 }
-
-
 #screen-numkey .buttons-main span{
     margin: 0 auto;
     font-size: 40px;
@@ -547,6 +580,56 @@ table.center{
 }
 /** END **/
 
+
+
+
+
+/** TEST page for Keyboard **/
+
+#screen-test .buttons-main span{
+    margin: 0 auto;
+    font-size: 30px;
+}
+#screen-test .buttons-main .boutton{
+    margin-left: -20px;
+    height: 55px;
+    width: 80px; 
+    border-radius: 10px;
+    margin-bottom: -10px; 
+}
+#screen-test .buttons-main .boutton:focus{
+    background-color: gray;
+}
+#screen-test .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-test .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+
+#screen-test .secondRow{
+    margin-left: 40px; !important
+}
+#screen-test .boutton.thirdRow{
+    margin-left: 20px; !important
+}
+#screen-test .boutton.shiftKey{
+    width: 120px;
+}
+#screen-test .boutton.backspaceKey{
+    width: 125px;
+/*    background-color: red; */
+}
+
+#screen-test .boutton.space{
+    margin-left: -20px;
+    width: 510px;
+/*    background-color: red; */
+}
+
+/** End Keyboard test page **/
 
 
 /*DEBUG*/

@@ -29,8 +29,8 @@ export default class ScreenBalance extends React.Component {
            <div class="balancetransactions">
                <h3>This Month's Transactions</h3>
                <style>{`table{border:1px solid white;}`}</style>
-        <table class="table-fill center scroll" id="inquiry">
-                <tbody class="table-hover">
+        <table class="table-fill center" id="inquiry">
+                <tbody>
                     <tr>
                         <th>Date</th>
                         <th>Transaction Description</th>

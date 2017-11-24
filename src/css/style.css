@@ -690,3 +690,8 @@ table.center{
     border-radius: 30px;
 }
 
+/*DEBUG*/
+.active input{
+     color: red;
+    background: red;
+}

@@ -23,7 +23,7 @@ import ScreenNumKey from "./Machine/Screens/ScreenNumKey";
 import ScreenLanguages from "./Machine/Screens/ScreenLanguages";
 import ScreenLoading from "./Machine/Screens/ScreenLoading";
 import ScreenSettings from "./Machine/Screens/ScreenSettings";
-import ScreenTextInput from "./Machine/Screens/ScreenSettings";
+import ScreenTextInput from "./Machine/Screens/ScreenTextInput";
 
 //var $ = require('jquery');
 
@@ -54,7 +54,7 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu/etransfermenu/etransfer/request" exact render={props => <ScreenETransfer {...props} />}/>
                 <Route path="/balance" exact render={props => <ScreenBalance {...props} />}/>           
                 <Route path="/languages" exact render={props => <ScreenLanguages {...props} />}/> 
-                <Route path="/signin/account" exact render={props => <ScreenNumKey title="Enter your PIN" redirects={["/home"]} {...props} />}/>
+                <Route path="/signin/account" exact render={props => <ScreenTextInput title="Enter your PIN" redirects={["/home"]} {...props} />}/>
                 <Route path="/loading" exact render={props => <ScreenLoading redirects={["/home"]} {...props} />}/>
                 <Route path="/settings" exact render={props => <ScreenSettings {...props} />}/>
                 <Route path="/pin" exact render={props => <ScreenNumKey title="Enter your PIN" redirects={["/home"]} {...props} />}/>

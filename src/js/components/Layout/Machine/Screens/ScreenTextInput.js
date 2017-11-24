@@ -7,14 +7,115 @@ var $ = require('jquery');
 export default class ScreenTextInput extends React.Component {
     constructor(){
      super();
-        this.state={active: null};
+        this.state={active: null,
+                    shift: false,
+                   q: 'q',
+                   w: 'w',
+                    e: 'e',
+                    r: 'r',
+                    t: 't',
+                    y: 'y',
+                    u: 'u',
+                    i: 'i',
+                    o: 'o',
+                    p: 'p',
+                    a: 'a',
+                    s: 's',
+                    d: 'd',
+                    f: 'f',
+                    g: 'g',
+                    h: 'h',
+                    j: 'j',
+                    k: 'k',
+                    l: 'l',
+                    z: 'z',
+                    x: 'x',
+                    c: 'c',
+                    v: 'v',
+                    b: 'b',
+                    n: 'n',
+                    m: 'm'
+                   };
     }
+    
+    
     
     componentDidMount(){
         this.state.active=$('#screen-textinput input').get(0);
     }
     inputHandle(e){
         this.state.active=e.target;
+    }
+    
+    shiftMod(e){
+        var i;
+        for(i in this.state)
+            if(this.state.hasOwnProperty(i) && i!='active' && i!='shift')
+            {
+                console.log (i + " - " + this.state[i]);
+            }
+        this.state.shift=!this.state.shift;
+        var lcase = {active: this.state.active,
+                    shift: this.state.shift,
+                   q: 'q',
+                   w: 'w',
+                    e: 'e',
+                    r: 'r',
+                    t: 't',
+                    y: 'y',
+                    u: 'u',
+                    i: 'i',
+                    o: 'o',
+                    p: 'p',
+                    a: 'a',
+                    s: 's',
+                    d: 'd',
+                    f: 'f',
+                    g: 'g',
+                    h: 'h',
+                    j: 'j',
+                    k: 'k',
+                    l: 'l',
+                    z: 'z',
+                    x: 'x',
+                    c: 'c',
+                    v: 'v',
+                    b: 'b',
+                    n: 'n',
+                    m: 'm'
+                   };
+        var ucase = {active: this.state.active,
+                    shift: this.state.shift,
+                   q: 'Q',
+                   w: 'W',
+                    e: 'E',
+                    r: 'R',
+                    t: 'T',
+                    y: 'Y',
+                    u: 'U',
+                    i: 'I',
+                    o: 'O',
+                    p: 'P',
+                    a: 'A',
+                    s: 'S',
+                    d: 'D',
+                    f: 'F',
+                    g: 'G',
+                    h: 'H',
+                    j: 'J',
+                    k: 'K',
+                    l: 'L',
+                    z: 'Z',
+                    x: 'X',
+                    c: 'C',
+                    v: 'V',
+                    b: 'B',
+                    n: 'N',
+                    m: 'M'
+                   };
+        
+        this.setState(this.state.shift ? ucase : lcase);
+        console.log(!this.state.shift);
     }
     
     removeDigit(){
@@ -127,52 +228,52 @@ export default class ScreenTextInput extends React.Component {
        <div class="col-md-12">
            <div class="col-md-1 col-md-offset-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="Q" click={this.enterDigit.bind(this)} args={['Q']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.q} click={this.enterDigit.bind(this)} args={[this.state.q]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="W" click={this.enterDigit.bind(this)} args={['W']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.w} click={this.enterDigit.bind(this)} args={[this.state.w]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="E" click={this.enterDigit.bind(this)} args={['E']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.e} click={this.enterDigit.bind(this)} args={[this.state.e]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="R" click={this.enterDigit.bind(this)} args={['R']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.r} click={this.enterDigit.bind(this)} args={[this.state.r]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="T" click={this.enterDigit.bind(this)} args={['T']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.t} click={this.enterDigit.bind(this)} args={[this.state.t]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="Y" click={this.enterDigit.bind(this)} args={['Y']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.y} click={this.enterDigit.bind(this)} args={[this.state.y]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="U" click={this.enterDigit.bind(this)} args={['U']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.u} click={this.enterDigit.bind(this)} args={[this.state.u]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="I" click={this.enterDigit.bind(this)} args={['I']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.i} click={this.enterDigit.bind(this)} args={[this.state.i]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="O" click={this.enterDigit.bind(this)} args={['O']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.o} click={this.enterDigit.bind(this)} args={[this.state.o]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="P" click={this.enterDigit.bind(this)} args={['P']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.p} click={this.enterDigit.bind(this)} args={[this.state.p]} {...this.props}/>
             </div>
         </div>
        </div>
@@ -182,47 +283,47 @@ export default class ScreenTextInput extends React.Component {
         <div class="col-md-12 secondRow">
            <div class="col-md-1 col-md-offset-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="A" click={this.enterDigit.bind(this)} args={['A']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.a} click={this.enterDigit.bind(this)} args={[this.state.a]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="S" click={this.enterDigit.bind(this)} args={['S']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.s} click={this.enterDigit.bind(this)} args={[this.state.s]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="D" click={this.enterDigit.bind(this)} args={['D']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.d} click={this.enterDigit.bind(this)} args={[this.state.d]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="F" click={this.enterDigit.bind(this)} args={['F']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.f} click={this.enterDigit.bind(this)} args={[this.state.f]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="G" click={this.enterDigit.bind(this)} args={['G']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.g} click={this.enterDigit.bind(this)} args={[this.state.g]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="H" click={this.enterDigit.bind(this)} args={['H']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.h} click={this.enterDigit.bind(this)} args={[this.state.h]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="J" click={this.enterDigit.bind(this)} args={['J']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.j} click={this.enterDigit.bind(this)} args={[this.state.j]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="K" click={this.enterDigit.bind(this)} args={['K']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.k} click={this.enterDigit.bind(this)} args={[this.state.k]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="L" click={this.enterDigit.bind(this)} args={['L']} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.l} click={this.enterDigit.bind(this)} args={[this.state.l]} {...this.props}/>
             </div>
         </div>
        </div>
@@ -234,42 +335,42 @@ export default class ScreenTextInput extends React.Component {
         <div class="col-md-12 ">
            <div class="col-md-1 col-md-offset-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton shiftKey" text="shift" {...this.props}/>
+                <JButton buttonclass="boutton shiftKey" text="shift" click={this.shiftMod.bind(this)} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton thirdRow" text="Z" click={this.enterDigit.bind(this)} args={['Z']} {...this.props}/>
+                <JButton buttonclass="boutton thirdRow" text={this.state.z} click={this.enterDigit.bind(this)} args={[this.state.z]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton thirdRow" text="X" click={this.enterDigit.bind(this)} args={['Z']} {...this.props}/>
+                <JButton buttonclass="boutton thirdRow" text={this.state.x} click={this.enterDigit.bind(this)} args={[this.state.x]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton thirdRow" text="C" click={this.enterDigit.bind(this)} args={['C']} {...this.props}/>
+                <JButton buttonclass="boutton thirdRow" text={this.state.c} click={this.enterDigit.bind(this)} args={[this.state.c]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton thirdRow" text="V" click={this.enterDigit.bind(this)} args={['V']} {...this.props}/>
+                <JButton buttonclass="boutton thirdRow" text={this.state.v} click={this.enterDigit.bind(this)} args={[this.state.v]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton thirdRow" text="B" click={this.enterDigit.bind(this)} args={['B']} {...this.props}/>
+                <JButton buttonclass="boutton thirdRow" text={this.state.b} click={this.enterDigit.bind(this)} args={[this.state.b]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton thirdRow" text="N" click={this.enterDigit.bind(this)} args={['N']} {...this.props}/>
+                <JButton buttonclass="boutton thirdRow" text={this.state.n} click={this.enterDigit.bind(this)} args={[this.state.n]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton thirdRow" text="M" click={this.enterDigit.bind(this)} args={['M']} {...this.props}/>
+                <JButton buttonclass="boutton thirdRow" text={this.state.m} click={this.enterDigit.bind(this)} args={[this.state.m]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">

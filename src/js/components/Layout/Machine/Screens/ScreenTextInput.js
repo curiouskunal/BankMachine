@@ -7,51 +7,30 @@ var $ = require('jquery');
 export default class ScreenTextInput extends React.Component {
     constructor(){
      super();
-        this.state={active: 0};
-    }
-    input1(){
-        
-        this.setState({active:0});
+        this.state={active: null};
     }
     
-    input2(){
-        this.setState({active:1});
+    componentDidMount(){
+        this.state.active=$('#screen-textinput input').get(0);
+    }
+    inputHandle(e){
+        this.state.active=e.target;
     }
     
     removeDigit(){
-        var inp;
-        if(this.state.active==0)
-            inp= '.inputDiv1 input';
-        else
-            inp='.inputDiv2 input';
-        $(inp).val($(inp).val().substr(0,$(inp).val().toString().length-1));
+        $(this.state.active).val($(this.state.active).val().substr(0,$(this.state.active).val().toString().length-1));
     }
     
     clearDigit(){
-        var inp;
-        if(this.state.active==0)
-            inp= '.inputDiv1 input';
-        else
-            inp='.inputDiv2 input';
-        $(inp).val(null);
+        $(this.state.active).val(null);
     }
     
     enterDigit(digit){
-        var inp;
-        if(this.state.active==0)
-            inp= '.inputDiv1 input';
-        else
-            inp='.inputDiv2 input';
-        $(inp).val($(inp).val() + digit);
+        $(this.state.active).val($(this.state.active).val() + digit);
     }
     
     submit(digit){
-        var inp;
-        if(this.state.active==0)
-            inp= '.inputDiv1 input';
-        else
-            inp='.inputDiv2 input';
-        $(inp).val($(inp).val() + digit);
+        $(this.state.active).val($(this.state.active).val() + digit);
     }
     
   render() {
@@ -67,7 +46,7 @@ export default class ScreenTextInput extends React.Component {
               <p class="inputDiv1">ACCOUNT NUMBER</p>
           </div>
           <div class="col-md-9">
-             <input class="numericInput inputDiv1 active" type="number" onClick={this.input1.bind(this)} min="0"/>
+             <input class="numericInput inputDiv1 active" type="number" onClick={this.inputHandle.bind(this)} min="0"/>
           </div>
  
 
@@ -75,7 +54,7 @@ export default class ScreenTextInput extends React.Component {
               <p class="inputDiv2">PASSWORD</p>
           </div>
           <div class="col-md-9">
-             <input class="numericInput inputDiv2" type="text" onClick={this.input2.bind(this)} min="0"/>
+             <input class="numericInput inputDiv2" type="text" onClick={this.inputHandle.bind(this)} min="0"/>
           </div>
    
 

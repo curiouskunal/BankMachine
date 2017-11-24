@@ -5,14 +5,14 @@ import ConfirmText from "./ScreenConfirm/ConfirmText"
 
 //var $ = require('jquery');
 
-export default class ScreenLanguages extends React.Component {
+export default class ScreenAccountSelect extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
   render() {
       console.log(this.props);
     return (
-      <div id="screen-languages">
+      <div id="screen-accountselect">
          <div class="tabletext">
             <h1>Other Languages</h1>
         </div>

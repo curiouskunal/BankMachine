@@ -2,9 +2,13 @@ import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
 
-//var $ = require('jquery');
+var $ = require('jquery');
 
 export default class ScreenPrint extends React.Component {
+    constructor(){
+     super();
+        this.state = {text1: "Would you Like a Receipt?", text2: ""}
+    }
     buttonClicked(type){
         var text="";
         if(type=='paper')
@@ -15,6 +19,10 @@ export default class ScreenPrint extends React.Component {
             text="No Receipt Selected"
             
         console.log(text);
+        text = text;
+        this.setState({text1: text, text2: "Returning to Home Screen"});
+        $('#screen-print button').css('display', 'none');
+        $('#screen-print h1').css('margin-bottom', '300px');
     }
 
   render() {
@@ -30,7 +38,8 @@ export default class ScreenPrint extends React.Component {
           </div>
         </div>
         
-        <Title title="Would you like a receipt?" />
+        <Title title={this.state.text1} />
+        <Title title={this.state.text2} />
          <div class="buttons-main">
           <div class="col-md-4">
              <div class='bouttons'>
@@ -39,12 +48,12 @@ export default class ScreenPrint extends React.Component {
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Email" icon="fa-envelope-o" nav="/home" navdelay='2000' click={this.buttonClicked.bind(this)} args={['email']} {...this.props}/>
+                  <JButton buttonclass="boutton" text="Email" icon="fa-envelope-o" nav="/home" navdelay='5000' click={this.buttonClicked.bind(this)} args={['email']} {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="No Receipt" icon="fa-times-circle-o" nav="/home" navdelay='7000' click={this.buttonClicked.bind(this)} args={['none']} {...this.props}/>
+                  <JButton buttonclass="boutton" text="No Receipt" icon="fa-times-circle-o" nav="/home" navdelay='5000' click={this.buttonClicked.bind(this)} args={['none']} {...this.props}/>
             </div>         
             </div>
       

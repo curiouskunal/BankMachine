@@ -678,6 +678,8 @@ table.center{
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+
 .content1{
     display: none;
 }
@@ -701,9 +703,19 @@ table.center{
 
 
 /* Languages */
-#screen-languages img{
+#screen-languages img, #screen-welcome img{
     width: 50%;
-    border-radius: 30px;
+    border-radius: 10px;
+}
+
+#screen-welcome img, #screen-french img{
+    width: 75%;
+    border-radius: 10px;
+}
+    
+
+.boutton.welcomeFlag span{
+    margin-top: 50px;
 }
 
 /*DEBUG*/

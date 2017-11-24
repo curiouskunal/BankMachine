@@ -13,10 +13,16 @@ export default class ScreenLanguages extends React.Component {
       console.log(this.props);
     return (
       <div id="screen-languages">
-         <div class="tabletext">
-            <h1>Other Languages</h1>
+         <div>
+          <div class = "left">
+            <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
+          </div>
+          <div class = "right">
+            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
+          </div>
         </div>
-                    
+                   
+        <Title title="Other Languages" />
            <div class="buttons-main">
           <div class="col-md-4">
              <div class='bouttons'>

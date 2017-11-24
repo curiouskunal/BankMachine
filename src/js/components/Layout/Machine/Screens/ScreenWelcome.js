@@ -21,13 +21,13 @@ export default class ScreenWelcome extends React.Component {
       <div class="buttons-main">
         <div class="col-md-offset-2 col-md-4 ">
             <div class='bouttons'>
-                <JButton text="English" buttonclass="boutton" nav="/signin" {...this.props}/>
+                <JButton text="English" buttonclass="boutton welcomeFlag" img="/img/flags/gb.svg" nav="/signin" {...this.props}/>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class='bouttons'>
-                <JButton text="Français" buttonclass="boutton" nav="/french" {...this.props}/>
+                <JButton text="Français" buttonclass="boutton welcomeFlag" img="/img/flags/france.svg" nav="/french" {...this.props}/>
             </div>
         </div>
     </div>

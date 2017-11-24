@@ -24,7 +24,7 @@ export default class ScreenFrench extends React.Component {
       <div class="buttons-main">
         <div class="col-md-12">
             <div class='bouttons'>
-                <JButton text="English" buttonclass="boutton" nav="/signin" {...this.props}/>
+                <JButton text="English" buttonclass="boutton welcomeFlag" img="/img/flags/gb.svg" nav="/signin" {...this.props}/>
             </div>
         </div>
     </div>

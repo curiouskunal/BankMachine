@@ -15,8 +15,11 @@ export default class JButton extends React.Component {
     return (
       <div class="confirmtext">
           <h2>{this.props.text}</h2>
-              <h1>{this.state.amt}</h1>
-          <h2 class={(this.props.to==null&&this.props.from==null ) ? 'invis' : null}>{"From " + this.props.from + " to " + this.props.to} </h2>
+              <h1>{'$'+this.state.amt}</h1>
+          <h2 class={(this.props.to==null&&this.props.from==null ) ? 'invis' : null}>
+              <span class={this.props.from==null ? 'invis' : null}>{"From " + this.props.from}</span>
+              <span class={this.props.to==null ? 'invis' : null}>{" to " + this.props.to}</span>
+          </h2>
     </div>
     );
   }

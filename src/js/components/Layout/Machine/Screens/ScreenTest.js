@@ -19,11 +19,12 @@ export default class Test extends React.Component {
             <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
           </div>
         </div>
-      <Title title="Test Keyboard" />
+      <Title title="l" />
       <div class="buttons-main">
       
-         
-          <div class="col-md-3">
+         <div class="content1">
+             
+                       <div class="col-md-3">
               <p class="inputDiv1">ACCOUNT NUMBER</p>
           </div>
           <div class="col-md-9">
@@ -287,6 +288,21 @@ export default class Test extends React.Component {
             </div>
         </div>        
        </div>
+
+         </div>
+         
+         
+         
+         
+        
+         <div class="col-md-2 col-md-offset-5">
+             <i class="fa fa-spinner fa-pulse spinningIcon"></i>
+         </div>
+         <div class="col-md-12">
+             <div class="col-md-2 col-md-offset-5">
+                 <h3>Loading...</h3>
+             </div>
+         </div>
 
     </div>
     

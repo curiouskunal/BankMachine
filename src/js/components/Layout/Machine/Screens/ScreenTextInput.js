@@ -33,11 +33,13 @@ export default class ScreenLanguages extends React.Component {
              <input class="numericInput inputDiv2" type="text" min="0"/>
           </div>
    
-      
-      
-      
-      
-      
+
+       
+       
+       
+       
+       
+       
         <div class="col-md-12">
            <div class="col-md-1 col-md-offset-1">
              <div class='bouttons'>

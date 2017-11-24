@@ -596,6 +596,7 @@ table.center{
     width: 80px; 
     border-radius: 10px;
     margin-bottom: -10px; 
+    outline: none;
 }
 #screen-test .buttons-main .boutton:focus{
     background-color: gray;
@@ -657,7 +658,25 @@ table.center{
     margin-top: 10px;
     margin-bottom: 20px;
 }
+.content1{
+    display: none;
+}
 
+
+
+/** LOADING **/ 
+#screen-test i.spinningIcon{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    margin-top: 140px;
+}
+#screen-test h3{
+    text-align: center;
+    color: white;
+}
 /** End Keyboard test page **/
 
 

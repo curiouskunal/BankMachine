@@ -687,3 +687,7 @@ table.center{
 
 
 /*DEBUG*/
+.active input{
+     color: red;
+    background: red;
+}

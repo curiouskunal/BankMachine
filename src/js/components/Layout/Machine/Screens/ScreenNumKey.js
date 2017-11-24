@@ -51,7 +51,7 @@ export default class ScreenNumKey extends React.Component {
           
           <div class="col-md-4 col-md-offset-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton tester1" text="SUBMIT" nav="/transfermenu/betweenacct/confirm" {...this.props}/>
+                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} {...this.props}/>
             </div>
           </div>
           

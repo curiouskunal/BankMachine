@@ -40,19 +40,13 @@
 			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">QWERTY Text</span>
 		</h2>
 		<input id="text" type="text" placeholder=" Enter something...">
-		<br>
-		<small>
-			* Placeholder (watermark).<br>
-			* <a href="https://github.com/Mottie/Keyboard/wiki/Extension-Autocomplete">Autocomplete</a> extension.
-		</small>
+		
+		
 		<div class="code ui-corner-all">
 			<h4>HTML</h4>
-			<pre class="prettyprint lang-html">&lt;input id="text" type="text" placeholder=" Enter something..."&gt;</pre>
+			&lt;input id="text" type="text" placeholder=" Enter something..."&gt;
 			<h4>Script</h4>
-			<pre class="prettyprint lang-js">// Autocomplete demo
-var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure",
-	"COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript",
-	"Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme" ];
+			
 
 $('#text')
 	.keyboard({ layout: 'qwerty' })
@@ -68,7 +62,7 @@ $('#text')
 			collision: 'flip'
 		}
 	})
-	.addTyping();</pre>
+	.addTyping();
 		</div>
 	</div>
 

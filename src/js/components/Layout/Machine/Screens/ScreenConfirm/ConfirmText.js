@@ -6,6 +6,8 @@ import React from "react";
 export default class JButton extends React.Component {
 
   render() { 
+      console.log("yghkkjn " );
+      console.log(this.props.location.search);
     return (
       <div class="confirmtext">
           <h2>{this.props.text}</h2>

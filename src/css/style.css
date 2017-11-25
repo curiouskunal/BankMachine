@@ -325,10 +325,7 @@ span{
 
 /**Balance Page Start**/
 
-#screen-balance h2{
-    display: inline !important;
-    background-color: red !important;
-}
+
 
 /*#screen-balance table{
     margin-left:auto;

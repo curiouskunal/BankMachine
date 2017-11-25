@@ -42,7 +42,7 @@ export default class TransferMenu extends React.Component {
             </div>
             <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Pay Bills" icon="fa-money" nav="/signin/card" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Pay Bills" icon="fa-money" nav="/transfermenu/paybills" {...this.props}/>
             </div>         
             </div>
       

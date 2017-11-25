@@ -60,8 +60,8 @@ export default class JButton extends React.Component {
   render() { 
     return (
        <div class={this.props.outerdiv ? null : this.props.outerdiv}>
-       <span class='tooltip-text'>{this.props.tooltip}</span>
-       <i class={this.props.tooltip==null ? 'invis' : 'fa fa-tooltip-icon' } aria-hidden="true"></i>
+       <span class={this.props.tooltip==null ? 'invis' : 'tooltip-text' }>{this.props.tooltip}</span>
+       <i class={this.props.tooltip==null ? 'invis' : 'fa fa-info-circle' } aria-hidden="true"></i>
         <button class={this.props.buttonclass==null? "" : this.props.buttonclass} onClick={(e) => {this.handleClick();}}>
             <img class={this.props.img == null? "invis":""} src={this.props.img == null? "": this.props.img} alt=""/>
             <i class={this.props.icon==null? "invis" : ("fa "+ this.props.icon) } aria-hidden="true"></i>

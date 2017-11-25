@@ -14,8 +14,12 @@ export default class ScreenHome extends React.Component {
     return (
       <div id="screen-home">
         <Title title="Home" />
-        
          <div class="buttons-main">
+         <div class="col-md-4 ">
+            <div class='bouttons'>
+                  <JButton buttonclass="boutton" text="My Common Transactions" icon="fa-star" nav="/common" {...this.props}/>
+            </div>         
+           </div>
           <div class="col-md-4">
              <div class='bouttons'>
                 <JButton buttonclass="boutton" text="Withdraw" icon="fa-money" nav="/withdraw" {...this.props}/>
@@ -36,11 +40,6 @@ export default class ScreenHome extends React.Component {
                 <JButton buttonclass="boutton" text="Check Account Balance" icon="fa-file-text-o" nav="/balance" {...this.props}/>
             </div>
           </div>
-          <div class="col-md-4 ">
-            <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Manage Accounts" icon="fa-cog" nav="/signin/mobile" {...this.props}/>
-            </div>         
-           </div>
           <div class="col-md-4">
             <div class='bouttons'>
                   <JButton buttonclass="boutton" text="Sign Out" icon="fa-sign-out" nav="/logout" {...this.props}/>

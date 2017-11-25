@@ -201,19 +201,19 @@ span{
 
 
 /** Home Page Start **/
-#screen-home .buttons-main span, #screen-languages .buttons-main span{
+#screen-home .buttons-main span, #screen-languages .buttons-main span, #screen-common .buttons-main span{
     margin-top: 10px;
     font-size: 25px;
 }
-#screen-home .buttons-main .boutton, #screen-languages .buttons-main .boutton{
+#screen-home .buttons-main .boutton, #screen-languages .buttons-main .boutton, #screen-common .buttons-main .boutton{
     height: 215px;
     width: 300px;
 }
-#screen-home .buttons-main i, #screen-languages .buttons-main i{
+#screen-home .buttons-main i, #screen-languages .buttons-main i, #screen-common .buttons-main i{
     font-size: 75px;
     color: var(--bg);
 }
-#screen-home .buttons-main, #screen-languages .buttons-main{
+#screen-home .buttons-main, #screen-languages .buttons-main, #screen-common .buttons-main{
 	margin-top: 5% !important;
 	margin: 0 auto;
 }

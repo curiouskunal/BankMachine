@@ -29,8 +29,8 @@ export default class ScreenBalance extends React.Component {
           </div>
         </div>
       <div class="balancetext">
-          <h2>Your {this.qparseAcct()} Balance</h2>
-            <h1>${this.qparseBal()}</h1>
+          <h2>{'Your ' +this.qparseAcct()+ ' Balance'}</h2>
+            <h1>{'$ '+this.qparseBal()}</h1>
         </div>
         <div class="balancetransactions">
             <h3>This Month's Transactions</h3>

@@ -926,11 +926,16 @@ span{
 .tooltip-text{
     background-color: red;
     position: absolute;
-    top: 5;
-    left: 15;
+    top: 5px;
+    left: 15px;
     width: 100px;
     height: 100px;
     
+}
+.tooltip-icon{
+    position: absolute;
+    top: 10px;
+    right: 25px;
 }
 
 

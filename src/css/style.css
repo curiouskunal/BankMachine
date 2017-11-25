@@ -324,37 +324,6 @@ span{
 
 
 /**Balance Page Start**/
-
-#screen-balance h2{
-    display: inline !important;
-    background-color: red !important;
-}
-
-/*#screen-balance table{
-    margin-left:auto;
-    margin-right:auto;
-}
-
-#screen-balance .table-container{
-    
-    margin: 0 auto;
-    display:table-cell;
-    text-align:left;
-    vertical-align:top;
-}
-
-#screen-accountselect .table-data{
-    height: 500px;
-    overflow-y:scroll;
-    margin: 0 auto;
-}*/
-
-
-
-/*#screen-balance td{
-    color: white;
-    font-size: 25px;
-}*/
 #screen-balance h1{
     color:white;
     padding-top: 8px;
@@ -380,80 +349,39 @@ span{
     font-size: 45px;
 }
 
-/*DELETE*/
-
-#screen-blance .tableholder{
-    width: 50px;
+#screen-balance .table-holder{
+    width: 699px;
+    height: 400px;
+    margin: 0 auto;
 }
 
-#screen-blance th{
-    text-align: center; !important
-    height: 70px; !important
-    color: white; !important
-}
-
-
-
-
-#screen-balance tbody thead{
-    display: block;
-}
-
-
-
-#screen-balance thead tr th{
-    height: 30px;
-    line-height: 30px;
-}
-
-
-#screen-balance tbody {
-    height: 200px;
-    overflow-y: auto !important;
-    overflow-x: hidden;
-
+#screen-balance .table-center{
+    display:block-inline;
 }
 
 #screen-balance table{
-    width: 100%
+    border-collapse;
+    width: 699px;
+    margin: 0 auto;
 }
 
-#screen-balance thead{
-    border-collapse:collapse;
-    border-spacing:0;
-    width:100%;
-}
-
-
-
-/*--------------*/
-
-
-/*#screen-balance table.scroll{
-    border-spacing: 0;
-}*/
-
-/*#screen-balancetable .scroll tbody,
-#screen-balance table.scroll thead{
+#screen-balance table tbody, #screen-balance table thead{
     display: block;
-}*/
+}
 
-/*#screen-balancetable thead tr th { 
-    height: 30px;
-    line-height: 30px;
-    /* text-align: left; */
-/*}*/
-
-/*#screen-balancetable table.scroll tbody {
-    height: 100px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}*/
+#screen-balance table tbody{
+   overflow-y: scroll;
+   height: 350px;
+   background-color: var(--bg);
+}
 
 
 #screen-balance th , #screen-balance td{
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    width: 233px;
 }
 #screen-balance tr:nth-child(even){
     color: black !important;
@@ -461,8 +389,10 @@ span{
 }
 
 #screen-balance th{
+    font-size: 20px !important;
     color: black !important;
     background-color: #EEF6EB !important;
+    height: 50px;
 }
 
 #screen-balance tr:nth-child(odd){

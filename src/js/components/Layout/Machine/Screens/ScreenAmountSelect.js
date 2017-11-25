@@ -1,13 +1,17 @@
 import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
-
+const queryString = require('query-string');
 //var $ = require('jquery');
 
 export default class ScreenAmountSelect extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
+    
+    qparseAcct(){
+        return queryString.parse(this.props.location.search).acct;
+    }
 
   render() {
       console.log(this.props);
@@ -27,27 +31,27 @@ export default class ScreenAmountSelect extends React.Component {
          <div class="buttons-main">
           <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="$20" nav={"/" + this.props.type + "/confirm?amt=20"} {...this.props}/>
+                <JButton buttonclass="boutton" text="$20" nav={"/" + this.props.type + "/confirm" } query={this.props.type=='withdraw' ? {amt:20,from:this.qparseAcct()} : {amt:20,to:this.qparseAcct()}} {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="$40" nav={"/" + this.props.type + "/confirm?amt=40"} {...this.props}/>
+                  <JButton buttonclass="boutton" text="$40" nav={"/" + this.props.type + "/confirm"} query={this.props.type=='withdraw' ? {amt:40,from:this.qparseAcct()} : {amt:40,to:this.qparseAcct()}} {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="$60" nav={"/" + this.props.type + "/confirm?amt=60"} {...this.props}/>
+                  <JButton buttonclass="boutton" text="$60" nav={"/" + this.props.type + "/confirm"} query={this.props.type=='withdraw' ? {amt:60,from:this.qparseAcct()} : {amt:60,to:this.qparseAcct()}} {...this.props}/>
             </div>         
             </div>
             <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="$80" nav={"/" + this.props.type + "/confirm?amt=80"} {...this.props}/>
+                <JButton buttonclass="boutton" text="$80" nav={"/" + this.props.type + "/confirm"} query={this.props.type=='withdraw' ? {amt:80,from:this.qparseAcct()} : {amt:80,to:this.qparseAcct()}} {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="$100" nav={"/" + this.props.type + "/confirm?amt=100"} {...this.props}/>
+                  <JButton buttonclass="boutton" text="$100" nav={"/" + this.props.type + "/confirm"} query={this.props.type=='withdraw' ? {amt:100,from:this.qparseAcct()} : {amt:100,to:this.qparseAcct()}} {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">

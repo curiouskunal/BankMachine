@@ -11,13 +11,21 @@ export default class ScreenConfirm extends React.Component {
         super();
     }
     
+    queryFromParse(){
+        return queryString.parse(this.props.location.search).from == null? this.props.from : queryString.parse(this.props.location.search).from;
+    }
+    
+    queryToParse(){
+        //alert(queryString.parse(this.props.location.search).to);
+        return queryString.parse(this.props.location.search).to == null? this.props.to : queryString.parse(this.props.location.search).to;
+    }
     
   render() {
       
       console.log(this.props);
     return (
       <div>
-          <ConfirmText {...this.props} from={queryString.parse(this.props.location.search).from == null? this.props.from : queryString.parse(this.props.location.search).from} to={queryString.parse(this.props.location.search).to == null? this.props.to : queryString.parse(this.props.location.search).to}/>
+          <ConfirmText {...this.props} from={this.queryFromParse()} to={this.queryToParse()}/>
       <div class="buttons-main">
         <div class="col-md-offset-2 col-md-4 ">
             <div class='bouttons'>

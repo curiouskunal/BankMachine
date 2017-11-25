@@ -8,6 +8,10 @@ export default class JButton extends React.Component {
      super();
         this.state = {amt:"0"};
     }
+    
+    componentDidMount(){
+        
+    }
 
   render() { 
        this.state.amt = queryString.parse(this.props.location.search).amt;

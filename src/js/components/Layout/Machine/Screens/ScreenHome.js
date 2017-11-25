@@ -17,17 +17,17 @@ export default class ScreenHome extends React.Component {
          <div class="buttons-main">
          <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="My Common Transactions" icon="fa-star" nav="/common" tooltip="sup" {...this.props}/>
+                  <JButton buttonclass="boutton" text="My Common Transactions" icon="fa-star" nav="/common"  {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="Withdraw" icon="fa-money" nav="/withdraw" {...this.props}/>
+                <JButton buttonclass="boutton" text="Withdraw" icon="fa-money" nav="/accountselect" query={{tr:'withdraw'}} {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Deposit" icon="fa-money" nav="/deposit" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Deposit" icon="fa-money" nav="/accountselect" query={{tr:'deposit'}} {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
@@ -37,7 +37,7 @@ export default class ScreenHome extends React.Component {
             </div>
             <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="Check Account Balance" icon="fa-file-text-o" nav="/balance" {...this.props}/>
+                <JButton buttonclass="boutton" text="Check Account Balance" icon="fa-file-text-o" nav="/accountselect" query={{tr:'balance'}} {...this.props}/>
             </div>
           </div>
           <div class="col-md-4">

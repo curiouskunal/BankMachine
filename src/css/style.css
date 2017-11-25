@@ -324,6 +324,7 @@ span{
 
 
 /**Balance Page Start**/
+
 #screen-balance h1{
     color:white;
     padding-top: 8px;
@@ -374,7 +375,6 @@ span{
    height: 350px;
    background-color: var(--bg);
 }
-
 
 #screen-balance th , #screen-balance td{
     text-align: center;

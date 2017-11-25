@@ -2,6 +2,7 @@ import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
 import ConfirmText from "./ScreenConfirm/ConfirmText"
+const queryString = require('query-string');
 
 //var $ = require('jquery');
 
@@ -9,6 +10,12 @@ export default class ScreenBalance extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
+    qparseAcct(){
+     return queryString.parse(this.props.location.search).acct;   
+    }
+    qparseBal(){
+     return queryString.parse(this.props.location.search).bal;   
+    }
   render() {
       console.log(this.props);
     return (
@@ -22,8 +29,8 @@ export default class ScreenBalance extends React.Component {
           </div>
         </div>
       <div class="balancetext">
-          <h2>Your {this.props.acct} Balance</h2>
-            <h1>{this.props.amt}</h1>
+          <h2>{'Your ' +this.qparseAcct()+ ' Balance'}</h2>
+            <h1>{'$ '+this.qparseBal()}</h1>
         </div>
         <div class="balancetransactions">
             <h3>This Month's Transactions</h3>

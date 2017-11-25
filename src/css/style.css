@@ -370,6 +370,11 @@ span{
     display: block;
 }
 
+#screen-balance tbody{
+    width: 718px;
+    padding-right: 10px;
+}
+
 #screen-balance table tbody{
    overflow-y: scroll;
    height: 350px;
@@ -781,14 +786,26 @@ span{
     background-color: #f1f1f1 !important;
 }
 */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+/*    border-radius: 10px;*/
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
 ::-webkit-scrollbar {
   -webkit-appearance: none;
-  width: 7px;
+  /*width: 7px;*/
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: rgba(255, 255, 255, .7);
-  /*-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);*/
 }
 
 

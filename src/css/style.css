@@ -172,7 +172,7 @@ span{
   color: var(--primary);
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
   border-radius: 40px;
-    outline: none;
+  outline: none;
 }
 
 .boutton:focus{
@@ -718,6 +718,138 @@ table.center{
 .boutton.welcomeFlag span{
     margin-top: 50px;
 }
+
+
+
+#screen-accountselect table{
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 auto;
+}
+
+#screen-accountselect .table-round{
+    width: 500px;
+    border:2px solid white;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 5% !important;
+}
+
+/*#screen-accountselect td {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+}
+*/
+#screen-accountselect td{
+   margin-top: 100px;
+}
+
+#screen-accountselect .table-data{
+    height: 500px;
+    overflow-y:scroll;
+    margin: 0 auto;
+}
+
+#screen-accountselect .boutton {
+  width: 400px;
+  height: 100px;
+}
+
+#screen-accountselect span{
+    display: inline !important;
+    font-size: 30px;
+/*    margin-left: 0% !important;
+    margin-right: 15% !important;
+    float: left;*/
+}
+
+.sym{
+    text-align: center;
+    margin: 0 auto !important;
+}
+
+#screen-accountselect .span2{
+/*    margin-left: 50px !important;
+    margin-right: 0% !important;
+    float: right !important;*/
+}
+
+#screen-accountselect tr:nth-child(odd){
+    color: #000 !important;
+    /*background-color: #f1f1f1 !important;*/
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, .7);
+  /*-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);*/
+}
+
+
+/** Blinking Cursor **/
+/*.blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: red;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: red;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: red;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: red;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: red;
+  }
+}*/
+
+/**End Blinking Curser**/
 
 /*DEBUG*/
 

@@ -67,7 +67,7 @@ export default class ScreenTransfer extends React.Component {
           
           
           <div class="col-md-6 col-md-offset-3">
-             <input class="numericInput" type="number"/>
+             <input class="numericInput" type="number" min="0" placeholder="$ Amount" />
           </div>
           
           <div class="col-md-4 col-md-offset-4">

@@ -11,6 +11,7 @@ export default class ScreenTransfer extends React.Component {
 //    }
   constructor(){
     super();
+      this.state={to:"", from:""}
   }
     
     removeDigit(){
@@ -29,8 +30,27 @@ export default class ScreenTransfer extends React.Component {
         $('#screen-transfer input').val($('#screen-transfer input').val() + digit);
     }
     
-    readVal(){
+    readInputVal(){
         return $('#screen-transfer input').val();
+    }
+    
+    readFromVal(){
+        return this.state.from
+    }
+    
+    readToVal(){
+        return this.state.to
+    }
+    
+    _onSelectFrom(e){
+        console.log(e);
+        this.state.from = e.value;
+        console.log(this.state.from)
+    }
+    
+    _onSelectTo(e){
+        console.log(e);
+        this.state.to = e.value;
     }
 
   render() {
@@ -51,11 +71,11 @@ export default class ScreenTransfer extends React.Component {
 
        <div class="col-md-12">
            <div class="col-md-5 col-md-offset-1">
-           <Dropdown options={this.props.from} onChange={this._onSelect} placeholder="Select an option" />
+           <Dropdown options={this.props.from} onChange={this._onSelectFrom.bind(this)} placeholder="Select an option" />
         </div>
 
           <div class="col-md-5">
-          <Dropdown options={this.props.to} onChange={this._onSelect} placeholder="Select an option" />
+          <Dropdown options={this.props.to} onChange={this._onSelectTo.bind(this)} placeholder="Select an option" />
           </div>
        </div>
         
@@ -72,7 +92,7 @@ export default class ScreenTransfer extends React.Component {
           
           <div class="col-md-4 col-md-offset-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} query={{amt:this.readVal.bind(this)}} {...this.props}/>
+                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} query={{amt:this.readInputVal.bind(this), to:this.readToVal.bind(this), from:this.readFromVal.bind(this)}} {...this.props}/>
             </div>
           </div>
           

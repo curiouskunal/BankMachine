@@ -180,8 +180,6 @@ span{
     background-color: darkgray;
     outline: none;
 }
-
-
 .boutton span{
 	color: var(--bg);
 }
@@ -326,11 +324,10 @@ span{
 
 
 /**Balance Page Start**/
-
 #screen-balance .table-fill{
     width: 400px;
     height: 100px;
-    overflow-y: scroll; !important
+    overflow-y: auto;
     color: white;
     text-align: center;
 }
@@ -339,8 +336,8 @@ table.center{
     margin-right:auto;
 }
 #screen-balance td{
-    color: royalblue;
-    font-size: 35px;
+    color: white;
+    font-size: 25px;
 }
 #screen-balance h1{
     color:white;
@@ -366,8 +363,10 @@ table.center{
 	font-weight: bold;
     font-size: 45px;
 }
-#screen-balance .th{
-    text-align: center;
+#screen-blance th{
+    text-align: center; !important
+    height: 70px; !important
+    color: white; !important
 }
 
 

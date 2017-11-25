@@ -17,7 +17,7 @@ export default class ScreenHome extends React.Component {
          <div class="buttons-main">
          <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="My Common Transactions" icon="fa-star" nav="/common" {...this.props}/>
+                  <JButton buttonclass="boutton" text="My Common Transactions" icon="fa-star" nav="/common" tooltip="sup" {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">

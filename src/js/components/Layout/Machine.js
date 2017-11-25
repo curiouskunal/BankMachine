@@ -26,7 +26,7 @@ import ScreenSettings from "./Machine/Screens/ScreenSettings";
 import ScreenTextInput from "./Machine/Screens/ScreenTextInput";
 import ScreenAccountSelect from "./Machine/Screens/ScreenAccountSelect";
 import ScreenCommon from "./Machine/Screens/ScreenCommon";
-
+import ScreenFailed from "./Machine/Screens/ScreenFailed";
 //var $ = require('jquery');
 
 export default class Machine extends React.Component {
@@ -69,6 +69,7 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu/paybills" exact render={props => <ScreenTransfer from={['Savings', 'Checking']} to={['McMaster', 'Landlord']} redirects={["/transfermenu/paybills/confirm"]} {...props} />}/>
                 <Route path="/transfermenu/paybills/confirm" exact render={props => <ScreenConfirm text="Transfer" amt="$20" from="chequing" to="savings" yes="/print" no="/home" {...props} />}/>
                 <Route path="/common" exact render={props => <ScreenCommon {...props} />}/>
+                <Route path="/failed" exact render={props => <ScreenFailed {...props} />}/>
            </Switch>
         
       </div>

@@ -2,18 +2,22 @@ import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
 import ConfirmText from "./ScreenConfirm/ConfirmText"
+const queryString = require('query-string');
 
 //var $ = require('jquery');
 
 export default class ScreenConfirm extends React.Component {
-//    componentWillMount(){
-//        this.props.history.push('/welcome?ijustgotpushed=true');
-//    }
+    constructor(){
+        super();
+    }
+    
+    
   render() {
+      
       console.log(this.props);
     return (
       <div>
-          <ConfirmText {...this.props}/>
+          <ConfirmText {...this.props} from={queryString.parse(this.props.location.search).from == null? this.props.from : queryString.parse(this.props.location.search).from} to={queryString.parse(this.props.location.search).to == null? this.props.to : queryString.parse(this.props.location.search).to}/>
       <div class="buttons-main">
         <div class="col-md-offset-2 col-md-4 ">
             <div class='bouttons'>

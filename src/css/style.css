@@ -327,6 +327,11 @@ span{
 
 /**Balance Page Start**/
 
+#screen-balance h2{
+    display: inline !important;
+    background-color: red !important;
+}
+
 #screen-balance .table-fill{
     width: 400px;
     height: 100px;
@@ -757,7 +762,7 @@ table.center{
   height: 100px;
 }
 
-#screen-accountselect span{
+#screen-accountselect .table-round span{
     display: inline !important;
     font-size: 30px;
 /*    margin-left: 0% !important;

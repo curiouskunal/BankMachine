@@ -13,6 +13,15 @@ export default class ScreenAccountSelect extends React.Component {
       console.log(this.props);
     return (
       <div id="screen-accountselect">
+        <div>
+          <div class = "left">
+            <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
+          </div>
+          <div class = "right">
+            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
+          </div>
+        </div>
+
          <div class="tabletext">
             <h1>Select Account</h1>
         </div>

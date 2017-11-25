@@ -27,22 +27,22 @@ export default class TransferMenu extends React.Component {
 
           <div class="col-md-4 col-md-offset-2">
              <div class='bouttons'>
-                 <JButton buttonclass="boutton" text="Between your Accounts" icon="fa-exchange" nav="/transfermenu/betweenacct" {...this.props}/>
+                 <JButton buttonclass="boutton" text="My Most Common Transfers" icon="fa-star" nav="/test" {...this.props}/>
             </div>
           </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="e-Transfer" icon="fa-envelope-o" nav="/transfermenu/etransfermenu" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Pay Bills" icon="fa-money" nav="/signin/card" {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4 col-md-offset-2">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="To another TD Member" icon="fa-user-o" nav="/test" {...this.props}/>
+                 <JButton buttonclass="boutton" text="Between your Accounts" icon="fa-exchange" nav="/transfermenu/betweenacct" {...this.props}/>
             </div>         
             </div>
             <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Pay Bills" icon="fa-money" nav="/signin/card" {...this.props}/>
+                 <JButton buttonclass="boutton" text="e-Transfer" icon="fa-envelope-o" nav="/transfermenu/etransfermenu" {...this.props}/>
             </div>         
             </div>
       

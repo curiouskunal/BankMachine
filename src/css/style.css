@@ -858,3 +858,16 @@ table.center{
 
 /*DEBUG*/
 
+.tooltip-text{
+    background-color: red;
+    position: absolute;
+    top: 5;
+    left: 15;
+    width: 100px;
+    height: 100px;
+    
+}
+
+
+
+

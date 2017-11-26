@@ -52,6 +52,46 @@ export default class ScreenTransfer extends React.Component {
         console.log(e);
         this.state.to = e.value;
     }
+    
+    shake(selector,t){
+            $(selector).addClass('shake-horizontal');
+            $(selector).addClass('shake-constant');
+            
+            setTimeout(()=>{
+                $(selector).removeClass('shake-constant');
+                $(selector).removeClass('shake-horizontal');
+            }, t);   
+    }
+    
+    requirements(){
+        var success = true;
+        if(this.props.from!=null && this.readFromVal()==null){ //blank entry 1
+            //$('.errmsg h1').text('Your pin cannot be blank. Try again.');
+            $('.errmsg h1').css('color', 'red');
+            $('.errmsg h1').text('You must select from the dropdown.');
+            
+            this.shake('.dd1',1000);
+            success=false;
+        }
+        
+        if(this.props.to!=null && this.readToVal()==null){ //blank entry 1
+            //$('.errmsg h1').text('Your pin cannot be blank. Try again.');
+            $('.errmsg h1').css('color', 'red');
+            $('.errmsg h1').text('You must select from the dropdown.');
+            
+            this.shake('.dd2',1000);
+            success=false;
+        }
+        
+        if(this.readInputVal()==""){ //blank entry
+            $('.errmsg h1').text('The amount cannot be blank. Try again.');
+            $('.errmsg h1').css('color', 'red');
+            this.shake('#screen-transfer input',1000);
+            success=false;
+        }
+        
+        return success;
+    }
 
   render() {
       console.log(this.props);
@@ -66,18 +106,18 @@ export default class ScreenTransfer extends React.Component {
           </div>
         </div>
         
-        <Title title="Transfer" />
+        <Title title="Transfer" className="errmsg" />
         
 
        <div class="col-md-12">
            <div class={ this.props.from==null? ' invis' : (this.props.to==null ? "col-6":"col-md-5 col-md-offset-1") }>
             <h2>From:</h2>
-           <Dropdown options={this.props.from} onChange={this._onSelectFrom.bind(this)} placeholder="Select an option" />
+           <Dropdown className="dd1" options={this.props.from} onChange={this._onSelectFrom.bind(this)} placeholder="Select an option" />
         </div>
 
           <div class={ this.props.to==null? ' invis' : (this.props.from==null ? "col-6":"col-md-5") }>
           <h2>To:</h2>
-          <Dropdown options={this.props.to} onChange={this._onSelectTo.bind(this)} placeholder="Select an option" />
+          <Dropdown className="dd2" options={this.props.to} onChange={this._onSelectTo.bind(this)} placeholder="Select an option" />
           </div>
        </div>
         
@@ -89,12 +129,12 @@ export default class ScreenTransfer extends React.Component {
           
           
           <div class="col-md-6 col-md-offset-3">
-             <input class="numericInput" type="number" min="0" placeholder="$ Amount" />
+             <input class="numericInput active" type="number" min="0" placeholder="$ Amount" />
           </div>
           
           <div class="col-md-4 col-md-offset-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} query={{amt:this.readInputVal.bind(this), to:this.readToVal.bind(this), from:this.readFromVal.bind(this)}} {...this.props}/>
+                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} query={{amt:this.readInputVal.bind(this), to:this.readToVal.bind(this), from:this.readFromVal.bind(this)}} requirements={this.requirements.bind(this)} {...this.props}/>
             </div>
           </div>
           

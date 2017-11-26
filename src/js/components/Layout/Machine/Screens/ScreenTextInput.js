@@ -180,6 +180,37 @@ export default class ScreenTextInput extends React.Component {
         return $.extend(queryString.parse(this.props.location.search), { input1: this.readInput1Val.bind(this), input2: this.readInput2Val.bind(this) } );
     }
     
+    shake(selector,t){
+            $(selector).addClass('shake-horizontal');
+            $(selector).addClass('shake-constant');
+            
+            setTimeout(()=>{
+                $(selector).removeClass('shake-constant');
+                $(selector).removeClass('shake-horizontal');
+            }, t);   
+    }
+    
+    requirements(){
+        var success = true;
+        if(this.props.input1!=null && this.readInput1Val()==""){ //blank entry 1
+            //$('.errmsg h1').text('Your pin cannot be blank. Try again.');
+            $('p.inputDiv1').css('color', 'red');
+            $('.errmsg h1').text('Your ' + (this.props.input1.text.toLowerCase()) +  ' cannot be blank.');
+            this.shake('p.inputDiv1',1000);
+            success=false;
+        }
+        
+        if(this.props.input2!=null && this.readInput2Val()==""){ //blank entry 1
+            //$('.errmsg h1').text('Your pin cannot be blank. Try again.');
+            $('p.inputDiv2').css('color', 'red');
+            $('.errmsg h1').text('Your password cannot be blank.');
+            this.shake('p.inputDiv2',1000);
+            success=false;
+        }
+        
+        return success;
+    }
+    
   render() {
       console.log(this.props);
     return (
@@ -193,7 +224,7 @@ export default class ScreenTextInput extends React.Component {
           </div>
         </div>
       
-          <Title title="Account Number Sign In" />
+          <Title title="Account Number Sign In" className="errmsg" />
         <div class="buttons-main">
          <div class={this.props.input1==null? 'invis' : null }>
               <div class="col-md-3">
@@ -460,7 +491,7 @@ export default class ScreenTextInput extends React.Component {
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton enterKey" text="enter" nav={this.props.redirects[0]} query={this.buildQuery.bind(this)} {...this.props}/>
+                <JButton buttonclass="boutton enterKey" text="enter" nav={this.props.redirects[0]} query={this.buildQuery.bind(this)} requirements={this.requirements.bind(this)} {...this.props}/>
             </div>
         </div>        
        </div>

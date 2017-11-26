@@ -879,6 +879,29 @@ span{
      color: white;   
 }
 
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.testin h1{
+
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s; 
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+  
+}
+
 .tooltip-text{
     background-color: red;
     position: absolute;
@@ -898,5 +921,28 @@ span{
 }
 
 
+input.shake-horizontal {
+    background-color: red;
+     margin: 0 auto;   
+}
+
+p.shake-horizontal {
+    color: red;
+    text-align: center;
+     margin: 0 auto;   
+}
+
+
+input{
+    -webkit-transition: all 1.0s ease-out;
+  -moz-transition: all 1.0s ease-out;
+  transition: all 1.0s ease-out;
+}
+
+input.active{
+    background-color: white;
+    border: 4px solid cyan;
+    border-radius: 15px;
+}
 
 

@@ -3,6 +3,7 @@ import Title from "../Title";
 import JButton from "../JButton";
 const queryString = require('query-string');
 var $ = require('jquery');
+//require('jquerykeyframes');
 
 //var $ = require('jquery');
 
@@ -33,6 +34,31 @@ export default class ScreenNumKey extends React.Component {
     buildQuery(){
         return $.extend(queryString.parse(this.props.location.search), { to: this.readInputVal.bind(this) } );
     }
+    
+    shake(selector,t){
+            $(selector).addClass('shake-horizontal');
+            $(selector).addClass('shake-constant');
+//            $(selector).animate(
+//                {
+//                    'background-color':'red'
+//                }, 500);
+            
+            setTimeout(()=>{
+                $(selector).removeClass('shake-constant');
+                $(selector).removeClass('shake-horizontal');
+            }, t);   
+    }
+    
+    requirements(){
+        if(!this.readInputVal()!=""){ //blank entry
+            $('.errmsg h1').text('The ' + (this.props.errmsgtarget==null ? 'number' : this.props.errmsgtarget ) + ' cannot be blank. Try again.');
+            $('.errmsg h1').css('color', 'red');
+            this.shake('#screen-numkey input',1000);
+            return false;
+        }
+        
+        return true;
+    }
 
   render() {
       console.log(this.props);
@@ -48,19 +74,19 @@ export default class ScreenNumKey extends React.Component {
           </div>
         </div>
         
-        <Title title={this.props.title} />
+        <Title title={this.props.title} className="errmsg" />
         
          <div class="buttons-main">
         
           
           
           <div class="col-md-6 col-md-offset-3">
-             <input class="numericInput" type="number"/>
+             <input class="numericInput" min="0" type="number"/>
           </div>
           
           <div class="col-md-4 col-md-offset-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} query={this.buildQuery.bind(this)} {...this.props}/>
+                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} query={this.buildQuery.bind(this)} requirements={this.requirements.bind(this)} {...this.props}/>
             </div>
           </div>
           

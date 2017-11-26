@@ -42,7 +42,6 @@ footer{
 }
 
 #download{
- margin-left:40vw;
     font-size: 30px;
 }
 
@@ -767,48 +766,37 @@ span{
   height: 100px;
 }
 
-#screen-accountselect .table-round span{
-    display: inline !important;
-    font-size: 30px;
-/*    margin-left: 0% !important;
-    margin-right: 15% !important;
-    float: left;*/
-}
-
-.sym{
-    text-align: center;
-    margin: 0 auto !important;
-}
-
 #screen-accountselect .span2{
-/*    margin-left: 50px !important;
-    margin-right: 0% !important;
-    float: right !important;*/
+    width: 50%;
+    float: right;
+    border-left: 2px solid var(--bg);
+    height: 60px;
+    margin: 0;
 }
-/*
-#screen-accountselect tr:nth-child(odd){
-    color: #000 !important;
-    background-color: #f1f1f1 !important;
-}
-*/
 
-::-webkit-scrollbar {
+#screen-accountselect .table-round span{
+    line-height:60px;
+    display: inline !important;
+}
+
+
+body ::-webkit-scrollbar {
     width: 12px;
 }
-::-webkit-scrollbar-track {
+body ::-webkit-scrollbar-track {
     /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
 /*    border-radius: 10px;*/
 }
  
-::-webkit-scrollbar-thumb {
+body ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
-::-webkit-scrollbar {
+body ::-webkit-scrollbar {
   -webkit-appearance: none;
   /*width: 7px;*/
 }
-::-webkit-scrollbar-thumb {
+body ::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: rgba(255, 255, 255, .7);
 }
@@ -876,7 +864,8 @@ span{
 /*DEBUG*/
 
 #screen-transfer h2{
-     color: white;   
+     color: white; 
+    margin-top: -5px;
 }
 
 .testin h1{

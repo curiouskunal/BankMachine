@@ -51,51 +51,43 @@ export default class ScreenAccountSelect extends React.Component {
               
                
                 <tr> <td>
-                            <JButton buttonclass="boutton" text="Chequing" sym="||" texttwo="$99999.000" nav={this.queryTrParse()} query={{acct:'Chequing',bal:150}} {...this.props}/>
-                </td> </tr>
-                <tr> <td>
-                            <JButton buttonclass="boutton" text="Savings" sym="||" texttwo="$234.99" nav={this.queryTrParse()} query={{acct:'Savings',bal:150}} {...this.props}/>
 
-                </td> </tr>
-                <tr> <td>
-
-                            <JButton buttonclass="boutton" text="Ninety Nine" sym="||" texttwo="$0.99" nav={this.queryTrParse()} query={{acct:'Ninety Nine',bal:150}} {...this.props}/>
+                            <JButton buttonclass="boutton" text="Chequing" texttwo="$759.98" nav={this.queryTrParse()} query={{acct:'Chequing',bal:759.98}} {...this.props}/>
 
                 </td> </tr>
 
                 <tr> <td>
+                            <JButton buttonclass="boutton" text="Savings" texttwo="$234.95" nav={this.queryTrParse()} query={{acct:'Savings',bal:234.95}} {...this.props}/>
+                </td> </tr>
 
-                            <JButton buttonclass="boutton" text="Master Saver" sym="||" texttwo="$1930.99" nav={this.queryTrParse()} query={{acct:'Master Saver',bal:150}} {...this.props}/>
+                <tr> <td>
+
+                            <JButton buttonclass="boutton" text="Ninety Nine Cents" texttwo="$0.99" nav={this.queryTrParse()} query={{acct:'Ninety Nine Cents',bal:0.99}} {...this.props}/>
 
                 </td> </tr>
 
                 <tr> <td>
 
-                            <JButton buttonclass="boutton" text="Damnnn You Poor" sym="||" texttwo="$0.00" nav={this.queryTrParse()} query={{acct:'Damnnn You Poor',bal:0}} {...this.props}/>
+                           <JButton buttonclass="boutton" text="Master Saver" texttwo="$1930.69" nav={this.queryTrParse()} query={{acct:'Master Saver',bal:1930.69}} {...this.props}/>
+
+                </td> </tr>
+
+                <tr> <td>
+
+                            <JButton buttonclass="boutton" text="Empty Account" texttwo="$0.01" nav={this.queryTrParse()} query={{acct:'Empty Account',bal:0.01}} {...this.props}/>
 
                 </td> </tr>
 
                 <tr> <td>
 
 
-                            <JButton buttonclass="boutton" text="TrippleCommaClub" sym="||" texttwo="$1000000000.00" nav={this.queryTrParse()} query={{acct:'TrippleCommaClub',bal:150}} {...this.props}/>
-
-                </td> </tr>
-
-                <tr> <td>
-
-                            <JButton buttonclass="boutton" text="legitaccount" sym="||" texttwo="$12" nav={this.queryTrParse()} query={{acct:'legitaccount'}} {...this.props}/>
-
-                </td> </tr>
-
-                <tr> <td>
-
-                            <JButton buttonclass="boutton" text="StudentSaver" sym="||" texttwo="$5.00" nav={this.queryTrParse()} query={{acct:'Chequing'}} {...this.props}/>
+                            <JButton buttonclass="boutton" text="Legit Account" texttwo="$12" nav={this.queryTrParse()} query={{acct:'Legit Account', bal:12.00}} {...this.props}/>
 
                 </td> </tr>
 
            
               
+
             </tbody>
             </table>
             

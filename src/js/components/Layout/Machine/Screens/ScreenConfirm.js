@@ -12,12 +12,12 @@ export default class ScreenConfirm extends React.Component {
     }
     
     queryFromParse(){
-        return queryString.parse(this.props.location.search).from == null? this.props.from : queryString.parse(this.props.location.search).from;
+        return queryString.parse(this.props.location.search).from == null? (queryString.parse(this.props.location.search).input1==null ? this.props.from : queryString.parse(this.props.location.search).input1) : queryString.parse(this.props.location.search).from;
     }
     
     queryToParse(){
         //alert(queryString.parse(this.props.location.search).to);
-        return queryString.parse(this.props.location.search).to == null? this.props.to : queryString.parse(this.props.location.search).to;
+        return queryString.parse(this.props.location.search).to == null? (queryString.parse(this.props.location.search).input1==null ? this.props.from : queryString.parse(this.props.location.search).input1) : queryString.parse(this.props.location.search).to;
     }
     
   render() {

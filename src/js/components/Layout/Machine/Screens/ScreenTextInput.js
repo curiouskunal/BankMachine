@@ -10,8 +10,18 @@ export default class ScreenTextInput extends React.Component {
      super();
         this.state={active: null,
                     shift: false,
-                   q: 'q',
-                   w: 'w',
+                    one: '1',
+                    two: '2',
+                    three: '3',
+                    four: '4',
+                    five: '5',
+                    six: '6',
+                    seven: '7',
+                    eight: '8',
+                    nine: '9',
+                    zero: '0',
+                    q: 'q',
+                    w: 'w',
                     e: 'e',
                     r: 'r',
                     t: 't',
@@ -60,8 +70,18 @@ export default class ScreenTextInput extends React.Component {
         this.state.shift=!this.state.shift;
         var lcase = {active: this.state.active,
                     shift: this.state.shift,
-                   q: 'q',
-                   w: 'w',
+                    one: '1',
+                    two: '2',
+                    three: '3',
+                    four: '4',
+                    five: '5',
+                    six: '6',
+                    seven: '7',
+                    eight: '8',
+                    nine: '9',
+                    zero: '0',
+                    q: 'q',
+                    w: 'w',
                     e: 'e',
                     r: 'r',
                     t: 't',
@@ -89,8 +109,18 @@ export default class ScreenTextInput extends React.Component {
                    };
         var ucase = {active: this.state.active,
                     shift: this.state.shift,
-                   q: 'Q',
-                   w: 'W',
+                    one: '!',
+                    two: '@',
+                    three: '#',
+                    four: '$',
+                    five: '%',
+                    six: '^',
+                    seven: '&',
+                    eight: '*',
+                    nine: '(',
+                    zero: ')',
+                    q: 'Q',
+                    w: 'W',
                     e: 'E',
                     r: 'R',
                     t: 'T',
@@ -137,6 +167,19 @@ export default class ScreenTextInput extends React.Component {
         $(this.state.active).val($(this.state.active).val() + digit);
     }
     
+    readInput1Val(){
+        return $('#screen-textinput input')[0].value;
+    }
+    
+    readInput2Val(){
+        return $('#screen-textinput input')[1].value;
+    }
+    
+    buildQuery(){
+        console.log($('#screen-textinput input')[1].value == "");
+        return $.extend(queryString.parse(this.props.location.search), { input1: this.readInput1Val.bind(this), input2: this.readInput2Val.bind(this) } );
+    }
+    
   render() {
       console.log(this.props);
     return (
@@ -152,20 +195,23 @@ export default class ScreenTextInput extends React.Component {
       
           <Title title="Account Number Sign In" />
         <div class="buttons-main">
-          <div class="col-md-3">
-              <p class="inputDiv1">ACCOUNT NUMBER</p>
-          </div>
-          <div class="col-md-9">
-             <input class="numericInput inputDiv1 active" type="number" onClick={this.inputHandle.bind(this)} min="0"/>
-          </div>
- 
-
-          <div class="col-md-3">
-              <p class="inputDiv2">PASSWORD</p>
-          </div>
-          <div class="col-md-9">
-             <input class="numericInput inputDiv2" type="password" onClick={this.inputHandle.bind(this)} min="0"/>
-          </div>
+         <div class={this.props.input1==null? 'invis' : null }>
+              <div class="col-md-3">
+                  <p class="inputDiv1">{this.props.input1==null? '' : this.props.input1.text}</p>
+              </div>
+              <div class="col-md-9">
+                 <input class="numericInput inputDiv1 active" type={this.props.input1==null? 'text' : this.props.input1.type} onClick={this.inputHandle.bind(this)} min="0"/>
+              </div>
+         </div>
+         
+            <div class={this.props.input2==null? 'invis' : null }>
+              <div class="col-md-3">
+                  <p class="inputDiv2">{this.props.input2==null? '' : this.props.input2.text}</p>
+              </div>
+              <div class="col-md-9">
+                 <input class="numericInput inputDiv2" type={this.props.input2==null? '' : this.props.input2.type} onClick={this.inputHandle.bind(this)} min="0"/>
+              </div>
+            </div>
    
 
        
@@ -177,52 +223,52 @@ export default class ScreenTextInput extends React.Component {
         <div class="col-md-12">
            <div class="col-md-1 col-md-offset-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="0" click={this.enterDigit.bind(this)} args={[0]} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.one} click={this.enterDigit.bind(this)} args={[this.state.one]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="1" click={this.enterDigit.bind(this)} args={[1]} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.two} click={this.enterDigit.bind(this)} args={[this.state.two]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="2" click={this.enterDigit.bind(this)} args={[2]} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.three} click={this.enterDigit.bind(this)} args={[this.state.three]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="3" click={this.enterDigit.bind(this)} args={[3]} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.four} click={this.enterDigit.bind(this)} args={[this.state.four]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="4" click={this.enterDigit.bind(this)} args={[4]} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.five} click={this.enterDigit.bind(this)} args={[this.state.five]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="5" click={this.enterDigit.bind(this)} args={[5]} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.six} click={this.enterDigit.bind(this)} args={[this.state.six]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="6" click={this.enterDigit.bind(this)} args={[6]} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.seven} click={this.enterDigit.bind(this)} args={[this.state.seven]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="7" click={this.enterDigit.bind(this)} args={[7]} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.eight} click={this.enterDigit.bind(this)} args={[this.state.eight]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="8" click={this.enterDigit.bind(this)} args={[8]} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.nine} click={this.enterDigit.bind(this)} args={[this.state.nine]} {...this.props}/>
             </div>
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="9" click={this.enterDigit.bind(this)} args={[9]} {...this.props}/>
+                <JButton buttonclass="boutton" text={this.state.zero} click={this.enterDigit.bind(this)} args={[this.state.ten]} {...this.props}/>
             </div>
         </div>
        </div>
@@ -414,7 +460,7 @@ export default class ScreenTextInput extends React.Component {
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton enterKey" text="enter" nav={this.props.redirects[0]} query={'pass'} {...this.props}/>
+                <JButton buttonclass="boutton enterKey" text="enter" nav={this.props.redirects[0]} query={this.buildQuery.bind(this)} {...this.props}/>
             </div>
         </div>        
        </div>

@@ -53,7 +53,7 @@ export default class Machine extends React.Component {
                 <Route path="/french" exact render={props => <ScreenFrench {...props} />}/>        
                 <Route path="/balance" exact render={props => <ScreenBalance {...props} />}/>           
                 <Route path="/languages" exact render={props => <ScreenLanguages {...props} />}/> 
-                <Route path="/signin/account" exact render={props => <ScreenTextInput title="Enter your PIN" redirects={["/home"]} {...props} />}/>
+                <Route path="/signin/account" exact render={props => <ScreenTextInput title="Enter your PIN" redirects={["/home"]} input1={{text:"ACCOUNT NUMBER",type:"number"}} input2={{text:"PASSWORD",type:"password"}} {...props} />}/>
                 <Route path="/loading" exact render={props => <ScreenLoading redirects={["/home"]} {...props} />}/>
                 <Route path="/settings" exact render={props => <ScreenSettings {...props} />}/>
                 <Route path="/pin" exact render={props => <ScreenNumKey title="Enter your PIN" redirects={["/home"]} {...props} />}/>
@@ -68,9 +68,11 @@ export default class Machine extends React.Component {
                 <Route path="/common" exact render={props => <ScreenCommon {...props} />}/>
                 <Route path="/failed" exact render={props => <ScreenFailed {...props} />}/>
                 <Route path="/transfermenu/etransfermenu/send" exact render={props => <ScreenTransfer from={['Savings', 'Checking']} redirects={["/transfermenu/etransfermenu/send/email"]} {...props} />}/> 
-                <Route path="/transfermenu/etransfermenu/request" exact render={props => <ScreenTransfer to={['Savings', 'Checking']} redirects={["/transfermenu/etransfermenu/send/email"]} {...props} />}/> 
-                <Route path="/transfermenu/etransfermenu/send/email" exact render={props => <ScreenTextInput title="Enter the email to send to" redirects={["/home"]} {...props} />}/>
-                <Route path="/transfermenu/etransfermenu/request/email" exact render={props => <ScreenTextInput title="Enter the email to send a request to" redirects={["/home"]} {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/request" exact render={props => <ScreenTransfer to={['Savings', 'Checking']} redirects={["/transfermenu/etransfermenu/request/email"]} {...props} />}/> 
+                <Route path="/transfermenu/etransfermenu/send/email" exact render={props => <ScreenTextInput title="Enter the email to send to" input1={{text:"EMAIL",type:"email"}} redirects={["/transfermenu/etransfermenu/send/confirm"]} {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/request/email" exact render={props => <ScreenTextInput title="Enter the email to send a request to" input1={{text:"EMAIL",type:"email"}} redirects={["/transfermenu/etransfermenu/request/confirm"]} {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/send/confirm" exact render={props => <ScreenConfirm text="Would you like to send" to="undefined" no="/home" yes="/print" {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/request/confirm" exact render={props => <ScreenConfirm text="Would you like to send a request for" to="undefined" no="/home" yes="/print" {...props} />}/>
            </Switch>
         
       </div>

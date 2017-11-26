@@ -41,26 +41,28 @@ export default class JButton extends React.Component {
 //     Querying
       var querystring="";
       if(this.props.query!=null){
+           var query = this.props.query;
+          if(typeof(this.props.query)=='function')//existing query
+              query = this.props.query();
+          
           querystring="?";
           var i;
-          for(i in this.props.query){
-//              console.log("nullcehck: " + (this.props.query[i]()!=null && this.props.query[i]!="") );
-//              console.log("val: " + typeof(this.props.query[i]) );
-              if(this.props.query[i]!=null && this.props.query[i]!="") //nullcheck
-              if(typeof(this.props.query[i]) == "function" && this.props.query[i]()!=null){
-                querystring+= i + "=" + this.props.query[i]() + "&";
+          for(i in query){
+              if(query[i]!=null && query[i]!="") //nullcheck
+              if(typeof(query[i]) == "function" && query[i]()!=null && query[i]()!=""){
+                querystring+= i + "=" + query[i]() + "&";
               }
-              else if(typeof(this.props.query[i]) == "number")
-                querystring+= i + "=" + this.props.query[i] + "&";
-              else if(typeof(this.props.query[i]) == "string")
-                querystring+= i + "=" + this.props.query[i] + "&";
+              else if(typeof(query[i]) == "number")
+                querystring+= i + "=" + query[i] + "&";
+              else if(typeof(query[i]) == "string" && query[i]!="" ){
+                querystring+= i + "=" + query[i] + "&";
+              }
+              
 
           }
         
       }
       querystring = querystring.substr(0,querystring.length-1);
-      if(this.props.query=='pass')
-          querystring = this.props.location.search;
       this.props.history.push(this.props.nav.toString() + querystring);
   }
 

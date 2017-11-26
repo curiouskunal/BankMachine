@@ -69,15 +69,15 @@ export default class Machine extends React.Component {
                 <Route path="/failed" exact render={props => <ScreenFailed {...props} />}/>
                 <Route path="/transfermenu/etransfermenu/send" exact render={props => <ScreenTransfer from={['Savings', 'Checking']} redirects={["/transfermenu/etransfermenu/send/email"]} {...props} />}/> 
                 <Route path="/transfermenu/etransfermenu/request" exact render={props => <ScreenTransfer to={['Savings', 'Checking']} redirects={["/transfermenu/etransfermenu/request/email"]} {...props} />}/> 
-                <Route path="/transfermenu/etransfermenu/send/email" exact render={props => <ScreenTextInput title="Enter the email to send to" input1={{text:"EMAIL",type:"email"}} redirects={["/transfermenu/etransfermenu/send/confirm"]} {...props} />}/>
-                <Route path="/transfermenu/etransfermenu/request/email" exact render={props => <ScreenTextInput title="Enter the email to send a request to" input1={{text:"EMAIL",type:"email"}} redirects={["/transfermenu/etransfermenu/request/confirm"]} {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/send/email" exact render={props => <ScreenTextInput title="Enter the email to send to" input1={{text:"EMAIL",type:"email"}} headerbutton="home" redirects={["/transfermenu/etransfermenu/send/confirm"]} {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/request/email" exact render={props => <ScreenTextInput title="Enter the email to send a request to" input1={{text:"EMAIL",type:"email"}} headerbutton="home" redirects={["/transfermenu/etransfermenu/request/confirm"]} {...props} />}/>
                 <Route path="/transfermenu/etransfermenu/send/confirm" exact render={props => <ScreenConfirm text="Would you like to send" to="undefined" no="/home" yes="/print" {...props} />}/>
                 <Route path="/transfermenu/etransfermenu/request/confirm" exact render={props => <ScreenConfirm text="Would you like to send a request for" to="undefined" no="/home" yes="/print" {...props} />}/>
                 <Route path="/transfermenu/othermember" exact render={props => <ScreenTransfer from={['Savings', 'Checking']} redirects={["/transfermenu/othermember/number"]} {...props} />}/> 
-                <Route path="/transfermenu/othermember/number" exact render={props => <ScreenNumKey title="Enter the account number of the recipient" errmsgtarget="account number" redirects={["/transfermenu/othermember/confirm"]} {...props} />}/>
+                <Route path="/transfermenu/othermember/number" exact render={props => <ScreenNumKey title="Enter the account number of the recipient" headerbutton="home" errmsgtarget="account number" redirects={["/transfermenu/othermember/confirm"]} {...props} />}/>
                 <Route path="/transfermenu/othermember/confirm" exact render={props => <ScreenConfirm text="Would you like to send " to="undefined" no="/home" yes="/print" {...props} />}/>
-                <Route path="/withdraw/custom" exact render={props => <ScreenNumKey output="amt" title="Enter the withdrawal amount" redirects={["/withdraw/confirm"]} errmsgtarget='amount' {...props} />}/>
-                <Route path="/deposit/custom" exact render={props => <ScreenNumKey output="amt" title="Enter the deposit amount" redirects={["/deposit/confirm"]} errmsgtarget='amount' {...props} />}/>
+                <Route path="/withdraw/custom" exact render={props => <ScreenNumKey output="amt" title="Enter the withdrawal amount" headerbutton="home" redirects={["/withdraw/confirm"]} errmsgtarget='amount' {...props} />}/>
+                <Route path="/deposit/custom" exact render={props => <ScreenNumKey output="amt" title="Enter the deposit amount" headerbutton="home" redirects={["/deposit/confirm"]} errmsgtarget='amount' {...props} />}/>
                 
             </Switch>
         

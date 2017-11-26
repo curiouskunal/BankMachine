@@ -222,7 +222,7 @@ export default class ScreenTextInput extends React.Component {
             <JButton buttonclass="headerButton" text="BACK" icon="fa-arrow-circle-left" nav="../" {...this.props}/>
           </div>
           <div class = "right">
-            <JButton buttonclass="headerButton" text="EXIT" icon="fa-times-circle" nav="/" {...this.props}/>
+            <JButton buttonclass="headerButton" text={this.props.headerbutton=='home' ? 'HOME' : 'EXIT'} icon={this.props.headerbutton=='home' ? 'fa-home' : 'fa-times-circle'} nav={this.props.headerbutton=='home' ? '/home' : '/'} {...this.props}/>
           </div>
         </div>
       

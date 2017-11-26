@@ -11,7 +11,7 @@ export default class ScreenTransfer extends React.Component {
 //    }
   constructor(){
     super();
-      this.state={to:"", from:""}
+      this.state={to:null, from:null}
   }
     
     removeDigit(){
@@ -67,14 +67,16 @@ export default class ScreenTransfer extends React.Component {
         </div>
         
         <Title title="Transfer" />
-        <div class="buttons-main">
+        
 
        <div class="col-md-12">
-           <div class="col-md-5 col-md-offset-1">
+           <div class={ this.props.from==null? ' invis' : (this.props.to==null ? "col-6":"col-md-5 col-md-offset-1") }>
+            <h2>From:</h2>
            <Dropdown options={this.props.from} onChange={this._onSelectFrom.bind(this)} placeholder="Select an option" />
         </div>
 
-          <div class="col-md-5">
+          <div class={ this.props.to==null? ' invis' : (this.props.from==null ? "col-6":"col-md-5") }>
+          <h2>To:</h2>
           <Dropdown options={this.props.to} onChange={this._onSelectTo.bind(this)} placeholder="Select an option" />
           </div>
        </div>
@@ -174,7 +176,7 @@ export default class ScreenTransfer extends React.Component {
           
           
 
-        </div>
+        
       </div>
     );
   }

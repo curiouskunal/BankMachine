@@ -51,8 +51,6 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu/etransfermenu/etransfer/request/confirm" exact render={props => <ScreenConfirm text="Request eTransfer of" to="savings" {...props} />}/>
                 <Route path="/test" exact render={props => <ScreenTest {...props} />}/>
                 <Route path="/french" exact render={props => <ScreenFrench {...props} />}/>        
-                <Route path="/transfermenu/etransfermenu/etransfer/send" exact render={props => <ScreenTransfer to={['email1', 'email2']} from={['Savings', 'Checking']} redirects={["/transfermenu/etransfermenu/etransfer/send/confirm"]} {...props} />}/> 
-                <Route path="/transfermenu/etransfermenu/etransfer/request" exact render={props => <ScreenTransfer to={['Savings', 'Checking']} from={['email1', 'email2']} redirects={["/transfermenu/etransfermenu/etransfer/request/confirm"]} {...props} />}/>
                 <Route path="/balance" exact render={props => <ScreenBalance {...props} />}/>           
                 <Route path="/languages" exact render={props => <ScreenLanguages {...props} />}/> 
                 <Route path="/signin/account" exact render={props => <ScreenTextInput title="Enter your PIN" redirects={["/home"]} {...props} />}/>
@@ -60,7 +58,6 @@ export default class Machine extends React.Component {
                 <Route path="/settings" exact render={props => <ScreenSettings {...props} />}/>
                 <Route path="/pin" exact render={props => <ScreenNumKey title="Enter your PIN" redirects={["/home"]} {...props} />}/>
                 <Route path="/withdraw/confirm" exact render={props => <ScreenConfirm text="Withdraw?" from="undefined" no="/home" yes="/print" {...props} />}/>
-                <Route path="/pass" exact render={props => <ScreenTextInput {...props} />}/>
                 <Route path="/deposit" exact render={props => <ScreenAmountSelect type="deposit" {...props} />}/>
                 <Route path="/deposit/confirm" exact render={props => <ScreenConfirm text="Deposit?" to="undefined" no="/home" yes="/insert" {...props} />}/>
                 <Route path="/accountselect" exact render={props => <ScreenAccountSelect {...props} />}/>
@@ -70,6 +67,10 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu/paybills/confirm" exact render={props => <ScreenConfirm text="Transfer" amt="$20" from="chequing" to="savings" yes="/print" no="/home" {...props} />}/>
                 <Route path="/common" exact render={props => <ScreenCommon {...props} />}/>
                 <Route path="/failed" exact render={props => <ScreenFailed {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/send" exact render={props => <ScreenTransfer from={['Savings', 'Checking']} redirects={["/transfermenu/etransfermenu/send/email"]} {...props} />}/> 
+                <Route path="/transfermenu/etransfermenu/request" exact render={props => <ScreenTransfer to={['Savings', 'Checking']} redirects={["/transfermenu/etransfermenu/send/email"]} {...props} />}/> 
+                <Route path="/transfermenu/etransfermenu/send/email" exact render={props => <ScreenTextInput title="Enter the email to send to" redirects={["/home"]} {...props} />}/>
+                <Route path="/transfermenu/etransfermenu/request/email" exact render={props => <ScreenTextInput title="Enter the email to send a request to" redirects={["/home"]} {...props} />}/>
            </Switch>
         
       </div>

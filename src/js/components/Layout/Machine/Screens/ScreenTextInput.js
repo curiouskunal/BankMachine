@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
+const queryString = require('query-string');
 
 var $ = require('jquery');
 
@@ -413,7 +414,7 @@ export default class ScreenTextInput extends React.Component {
         </div>
         <div class="col-md-1">
              <div class='bouttons'>
-                <JButton buttonclass="boutton enterKey" text="enter" nav={this.props.redirects[0]} {...this.props}/>
+                <JButton buttonclass="boutton enterKey" text="enter" nav={this.props.redirects[0]} query={'pass'} {...this.props}/>
             </div>
         </div>        
        </div>

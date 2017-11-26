@@ -110,7 +110,7 @@ export default class ScreenTextInput extends React.Component {
         var ucase = {active: this.state.active,
                     shift: this.state.shift,
                     one: '!',
-                    two: '@',
+                    two: '_',
                     three: '#',
                     four: '$',
                     five: '%',

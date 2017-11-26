@@ -350,6 +350,11 @@ span{
     font-size: 45px;
 }
 
+#screen-balance .balancetransactions h3{
+    text-decoration: underline;
+    font-size: 30px;
+}
+
 #screen-balance .table-holder{
     width: 699px;
     height: 400px;

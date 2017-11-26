@@ -196,6 +196,11 @@ span{
     margin-top: 40px;
     font-size: 25px;
 }
+
+#screen-signin .span2 span{
+    margin: 0;
+}
+
 /** SignIn and Print Page Ends **/
 
 

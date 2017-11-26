@@ -865,7 +865,8 @@ body ::-webkit-scrollbar-thumb {
 /*DEBUG*/
 
 #screen-transfer h2{
-     color: white;   
+     color: white; 
+    margin-top: -5px;
 }
 
 .testin h1{

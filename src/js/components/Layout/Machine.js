@@ -76,6 +76,9 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu/othermember" exact render={props => <ScreenTransfer from={['Savings', 'Checking']} redirects={["/transfermenu/othermember/number"]} {...props} />}/> 
                 <Route path="/transfermenu/othermember/number" exact render={props => <ScreenNumKey title="Enter the account number of the recipient" errmsgtarget="account number" redirects={["/transfermenu/othermember/confirm"]} {...props} />}/>
                 <Route path="/transfermenu/othermember/confirm" exact render={props => <ScreenConfirm text="Would you like to send " to="undefined" no="/home" yes="/print" {...props} />}/>
+                <Route path="/withdraw/custom" exact render={props => <ScreenNumKey output="amt" title="Enter the withdrawal amount" redirects={["/withdraw/confirm"]} errmsgtarget='amount' {...props} />}/>
+                <Route path="/deposit/custom" exact render={props => <ScreenNumKey output="amt" title="Enter the deposit amount" redirects={["/deposit/confirm"]} errmsgtarget='amount' {...props} />}/>
+                
             </Switch>
         
       </div>

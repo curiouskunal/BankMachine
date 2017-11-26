@@ -32,7 +32,10 @@ export default class ScreenNumKey extends React.Component {
     }
     
     buildQuery(){
-        return $.extend(queryString.parse(this.props.location.search), { to: this.readInputVal.bind(this) } );
+        var obj={}
+        if(this.props.output!=null)
+            obj[this.props.output]=this.readInputVal.bind(this)
+        return $.extend(queryString.parse(this.props.location.search), this.props.output==null ? {to: this.readInputVal.bind(this)} : obj );
     }
     
     shake(selector,t){
@@ -81,7 +84,7 @@ export default class ScreenNumKey extends React.Component {
           
           
           <div class="col-md-6 col-md-offset-3">
-             <input class="numericInput" min="0" type="number"/>
+             <input class="numericInput active" min="0" type="number"/>
           </div>
           
           <div class="col-md-4 col-md-offset-4">

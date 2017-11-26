@@ -5,8 +5,7 @@ const queryString = require('query-string');
 //var $ = require('jquery');
 
 export default class ScreenAmountSelect extends React.Component {
-//    componentWillMount(){
-//        this.props.history.push('/welcome?ijustgotpushed=true');
+//    componentDidMount(){
 //    }
     
     qparseAcct(){
@@ -56,7 +55,7 @@ export default class ScreenAmountSelect extends React.Component {
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Custom" nav={"/" + this.props.type + "/custom"} {...this.props}/>
+                  <JButton buttonclass="boutton" text="Custom" nav={"/" + this.props.type + "/custom"} query={this.props.type=='withdraw' ? {from:this.qparseAcct()} : {to:this.qparseAcct()}} {...this.props}/>
             </div>         
             </div>
       

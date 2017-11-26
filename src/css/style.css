@@ -42,7 +42,7 @@ footer{
 }
 
 #download{
- margin-left:470px;
+ margin-left:40vw;
     font-size: 30px;
 }
 
@@ -907,7 +907,9 @@ span{
 }
 
 
-
+#machine a{
+ margin: 0 auto;   
+}
 
 p.shake-horizontal {
     color: red;

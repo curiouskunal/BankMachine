@@ -192,6 +192,8 @@ export default class ScreenTextInput extends React.Component {
     
     requirements(){
         var success = true;
+        $('p.inputDiv1').css('color', 'white');
+        $('p.inputDiv2').css('color', 'white');
         if(this.props.input1!=null && this.readInput1Val()==""){ //blank entry 1
             //$('.errmsg h1').text('Your pin cannot be blank. Try again.');
             $('p.inputDiv1').css('color', 'red');

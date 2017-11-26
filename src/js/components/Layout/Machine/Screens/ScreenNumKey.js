@@ -53,6 +53,8 @@ export default class ScreenNumKey extends React.Component {
     }
     
     requirements(){
+        $('p.inputDiv1').css('color', 'white');
+        $('p.inputDiv2').css('color', 'white');
         if(!this.readInputVal()!=""){ //blank entry
             $('.errmsg h1').text('The ' + (this.props.errmsgtarget==null ? 'number' : this.props.errmsgtarget ) + ' cannot be blank. Try again.');
             $('.errmsg h1').css('color', 'red');

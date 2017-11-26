@@ -10,6 +10,11 @@ export default class Header extends React.Component {
     return (
       <div>
         <h2>{this.props.title}</h2>
+
+       	<div id="MobileMsg">
+       		<h1>Bank Machine UI Demo Only Viewable on Desktop</h1>
+	    </div>
+
       </div>
     );
   }

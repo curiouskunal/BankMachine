@@ -11,6 +11,13 @@ body{
 	font-family: 'Dosis', sans-serif;
 	background-color: var(--machine);
 }
+
+#MobileMsg{
+    display: none;
+    width: 80%;
+    margin: 50px auto;
+}
+
 h2{
 	font-family: 'Dosis', sans-serif;
 	text-align: center;
@@ -928,6 +935,15 @@ input.shake-horizontal {
      margin: 0 auto;   
 }
 
+
+@media screen and (max-width: 1000px) {
+    #MobileMsg{
+        display: block;
+    }
+    #content-wrapper , #machine{
+        display: none;
+    }
+}
 
 
 

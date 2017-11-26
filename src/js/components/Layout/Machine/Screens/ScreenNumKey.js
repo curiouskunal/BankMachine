@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
+const queryString = require('query-string');
 var $ = require('jquery');
 
 //var $ = require('jquery');
@@ -23,6 +24,14 @@ export default class ScreenNumKey extends React.Component {
     
     submit(digit){
         $('#screen-numkey input').val($('#screen-numkey input').val() + digit);
+    }
+    
+    readInputVal(){
+        return $('#screen-numkey input').val();
+    }
+    
+    buildQuery(){
+        return $.extend(queryString.parse(this.props.location.search), { to: this.readInputVal.bind(this) } );
     }
 
   render() {
@@ -51,7 +60,7 @@ export default class ScreenNumKey extends React.Component {
           
           <div class="col-md-4 col-md-offset-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} {...this.props}/>
+                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} query={this.buildQuery.bind(this)} {...this.props}/>
             </div>
           </div>
           

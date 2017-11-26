@@ -875,6 +875,10 @@ span{
 
 /*DEBUG*/
 
+#screen-transfer h2{
+     color: white;   
+}
+
 .tooltip-text{
     background-color: red;
     position: absolute;

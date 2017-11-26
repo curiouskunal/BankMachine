@@ -22,7 +22,7 @@ export default class JButton extends React.Component {
               <h1>{'$'+this.state.amt}</h1>
           <h2 class={(this.props.to==null&&this.props.from==null ) ? 'invis' : null}>
               <span class={this.props.from==null ? 'invis' : null}>{"From " + this.props.from}</span>
-              <span class={this.props.to==null ? 'invis' : null}>{" to " + this.props.to}</span>
+              <span class={(this.props.to==null || this.props.to==undefined ) ? 'invis' : null}>{" to " + this.props.to}</span>
           </h2>
     </div>
     );

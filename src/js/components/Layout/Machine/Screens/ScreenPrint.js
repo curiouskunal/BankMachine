@@ -7,7 +7,7 @@ var $ = require('jquery');
 export default class ScreenPrint extends React.Component {
     constructor(){
      super();
-        this.state = {text1: "Would you Like a Receipt?", text2: ""}
+        this.state = {text1: "Success! Would you Like a Receipt?", text2: ""}
     }
     buttonClicked(type){
         var text="";

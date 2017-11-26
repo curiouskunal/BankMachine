@@ -73,7 +73,10 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu/etransfermenu/request/email" exact render={props => <ScreenTextInput title="Enter the email to send a request to" input1={{text:"EMAIL",type:"email"}} redirects={["/transfermenu/etransfermenu/request/confirm"]} {...props} />}/>
                 <Route path="/transfermenu/etransfermenu/send/confirm" exact render={props => <ScreenConfirm text="Would you like to send" to="undefined" no="/home" yes="/print" {...props} />}/>
                 <Route path="/transfermenu/etransfermenu/request/confirm" exact render={props => <ScreenConfirm text="Would you like to send a request for" to="undefined" no="/home" yes="/print" {...props} />}/>
-           </Switch>
+                <Route path="/transfermenu/othermember" exact render={props => <ScreenTransfer from={['Savings', 'Checking']} redirects={["/transfermenu/othermember/number"]} {...props} />}/> 
+                <Route path="/transfermenu/othermember/number" exact render={props => <ScreenNumKey title="Enter the account number of the recipient" redirects={["/transfermenu/othermember/confirm"]} {...props} />}/>
+                <Route path="/transfermenu/othermember/confirm" exact render={props => <ScreenConfirm text="Would you like to send " to="undefined" no="/home" yes="/print" {...props} />}/>
+            </Switch>
         
       </div>
     );

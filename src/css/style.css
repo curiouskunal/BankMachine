@@ -767,30 +767,19 @@ span{
   height: 100px;
 }
 
-#screen-accountselect .table-round span{
-    display: inline !important;
-    font-size: 30px;
-/*    margin-left: 0% !important;
-    margin-right: 15% !important;
-    float: left;*/
-}
-
-.sym{
-    text-align: center;
-    margin: 0 auto !important;
-}
-
 #screen-accountselect .span2{
-/*    margin-left: 50px !important;
-    margin-right: 0% !important;
-    float: right !important;*/
+    width: 50%;
+    float: right;
+    border-left: 2px solid var(--bg);
+    height: 60px;
+    margin: 0;
 }
-/*
-#screen-accountselect tr:nth-child(odd){
-    color: #000 !important;
-    background-color: #f1f1f1 !important;
+
+#screen-accountselect .table-round span{
+    line-height:60px;
+    display: inline !important;
 }
-*/
+
 
 ::-webkit-scrollbar {
     width: 12px;

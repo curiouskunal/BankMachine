@@ -37,46 +37,41 @@ export default class ScreenBalance extends React.Component {
         </div>
 
 
-<div class="table-holder">
-<div class="table-center">
-            <table>
-                <thead>
-                    <tr>
-                       <th>Date</th><th>Transaction Description</th><th>Transaction Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                    <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
-                </tbody>
-            </table>
-</div>
-</div>
-
-
-
-
-
+        <div class="table-holder">
+            <div class="table-center">
+                <table>
+                    <thead>
+                        <tr>
+                           <th>Date</th><th>Transaction Description</th><th>Transaction Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                        <tr><td>11/07/17</td><td>McMaster</td><td>$128</td></tr>              
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     );
   }

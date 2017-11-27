@@ -27,7 +27,7 @@ export default class ScreenInsert extends React.Component {
           <div class="col-md-5 center line">
           <div class="padCashInsert">
            <i id="arrowdown" class="fa fa-long-arrow-down"></i>s
-            <p> Insert Cash or Cheque Below </p>
+            <p> Click On Deposit Slot Below To Insert Cash Or Cheque </p>
             </div>
           </div>
         <div class="col-md-3 col-md-offset-1">

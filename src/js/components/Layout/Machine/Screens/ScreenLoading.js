@@ -13,8 +13,8 @@ export default class Test extends React.Component {
       },2000);
       console.log(this.props.title);
     return (
-     <div id="screen-test">
-      <Title title="l" />
+     <div id="screen-loading">
+      <Title title="" />
       <div class="buttons-main">
          
          <div class="col-md-12">

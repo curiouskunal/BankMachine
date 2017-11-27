@@ -704,16 +704,16 @@ span{
 
 
 /** LOADING **/ 
-#screen-test i.spinningIcon{
+#screen-loading i.spinningIcon{
     display: inline-block;
     width: 90%;
     text-align: center;
     font-size: 100px;
     color: white;
 /*    margin: 0 auto;*/
-    margin-top: 140px;
+    margin-top: 240px;
 }
-#screen-test h3{
+#screen-loading h3{
     text-align: center;
     color: white;
 }

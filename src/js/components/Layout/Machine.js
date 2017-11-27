@@ -33,7 +33,7 @@ export default class Machine extends React.Component {
     
     constructor(){
         super();
-        this.state={accounts: [{name: 'chequing', balance: 250}, {name: 'savings', balance: 1}, {name: 'student', balance: 1337}, {name: 'RRSP', balance: 1900}, {name: 'RESP', balance: 1000}, {name: 'Nigerian Prince Savings', balance: 90000}]};
+        this.state={accounts: [{name: 'chequing', balance: 250}, {name: 'savings', balance: 1}, {name: 'student', balance: 1337}, {name: 'RRSP', balance: 1900}, {name: 'RESP', balance: 1000}, {name: 'Zero', balance: 0}, {name: 'Nigerian Prince Savings', balance: 90000}]};
     }
     
     confirmTransaction(account, deltabalance){

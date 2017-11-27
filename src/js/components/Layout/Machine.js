@@ -100,7 +100,7 @@ export default class Machine extends React.Component {
                 <Route path="/loading" exact render={props => <ScreenLoading redirects={["/home"]} {...props} />}/>
                 <Route path="/settings" exact render={props => <ScreenSettings {...props} />}/>
                 <Route path="/pin" exact render={props => <ScreenNumKey title="Enter your PIN" redirects={["/home"]} errmsgtarget='pin' {...props} />}/>
-                <Route path="/withdraw/confirm" exact render={props => <ScreenConfirm text="Withdraw?" from="undefined" no="/home" yes="/print" update={this.updateWithdraw.bind(this)} {...props} />}/>
+                <Route path="/withdraw/confirm" exact render={props => <ScreenConfirm text="Withdraw?" from="undefined" no="/home" yes="/withdraw/loading" update={this.updateWithdraw.bind(this)} {...props} />}/>
                 <Route path="/deposit" exact render={props => <ScreenAmountSelect type="deposit" {...props} />}/>
                 <Route path="/deposit/confirm" exact render={props => <ScreenConfirm text="Deposit?" to="undefined" no="/home" yes="/insert" update={this.updateDeposit.bind(this)} {...props} />}/>
                 <Route path="/accountselect" exact render={props => <ScreenAccountSelect accounts={this.state.accounts} {...props} />}/>
@@ -122,6 +122,8 @@ export default class Machine extends React.Component {
                 <Route path="/withdraw/custom" exact render={props => <ScreenNumKey output="amt" title="Enter the withdrawal amount" headerbutton="home" redirects={["/withdraw/confirm"]} errmsgtarget='amount' confirm={this.confirmTransaction.bind(this)} {...props} />}/>
                 <Route path="/deposit/custom" exact render={props => <ScreenNumKey output="amt" title="Enter the deposit amount" headerbutton="home" redirects={["/deposit/confirm"]} errmsgtarget='amount' {...props} />}/>
                 <Route path="/take" exact render={props => <ScreenTake {...props} />}/>
+                <Route path="/withdraw/loading" exact render={props => <ScreenLoading redirects={["/take"]} {...props} />}/>
+                <Route path="/deposit/loading" exact render={props => <ScreenLoading redirects={["/print"]} {...props} />}/>
             </Switch>
         
       </div>

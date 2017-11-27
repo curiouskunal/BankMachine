@@ -55,10 +55,9 @@ export default class JButton extends React.Component {
               if(typeof(query[i]) == "function" && query[i]()!=null && query[i]()!=""){
                 querystring+= i + "=" + query[i]() + "&";
               }
-              else if(typeof(query[i]) == "number"){
-                  alert(query[i]);
+              else if(typeof(query[i]) == "number")
                 querystring+= i + "=" + query[i] + "&";
-              }
+              
               else if(typeof(query[i]) == "string" && query[i]!="" ){
                 querystring+= i + "=" + query[i] + "&";
               }

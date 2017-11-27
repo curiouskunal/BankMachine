@@ -52,25 +52,24 @@ export default class Machine extends React.Component {
     
     updateWithdraw(account, deltabalance){
         var i;
-        for (i=0; i<this.state.accounts.length; i++){
+        for (i=0; i<this.state.accounts.length; i++)
             if(this.state.accounts[i].name==account){
                 this.state.accounts[i].balance -= deltabalance;
                 return true;
             }
-        }
+        
         return false;
     }
     
     updateDeposit(account, deltabalance){
         
         var i;
-        for (i=0; i<this.state.accounts.length; i++){
+        for (i=0; i<this.state.accounts.length; i++)
             if(this.state.accounts[i].name==account){
-                alert(account + " -- " + deltabalance + " -- " + this.state.accounts[i].name);
-                //this.state.accounts[i].balance += deltabalance;
+                this.state.accounts[i].balance = parseFloat(this.state.accounts[i].balance) + parseFloat(deltabalance);
                 return true;
             }
-        }
+        
         return false;
     }
     

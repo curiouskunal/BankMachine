@@ -40,12 +40,14 @@ export default class Machine extends React.Component {
         var i;
         for (i=0; i<this.state.accounts.length; i++){
             console.log(this.state.accounts[i].name);
-            if(this.state.accounts[i].name==account)
+            if(this.state.accounts[i].name==account){
+                
                 if(this.state.accounts[i].balance >= deltabalance)
                     return true;
+            }
             
         }
-                
+               
         return false;
     }
     

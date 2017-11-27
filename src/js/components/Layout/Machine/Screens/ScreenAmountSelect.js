@@ -22,7 +22,7 @@ export default class ScreenAmountSelect extends React.Component {
     }
     
     requirements(val){
-        if(this.props.confirm!=null && !this.props.confirm(queryString.parse(this.props.location.search).from, val) ){
+        if(this.props.confirm!=null && !this.props.confirm(queryString.parse(this.props.location.search).acct, val) ){
             $('.errmsg h1').text('The account has insufficient funds.');
             $('.errmsg h1').css('color', 'red');
             this.shake('#screen-amountselect span:contains("'+'$'+val+'")',1000);

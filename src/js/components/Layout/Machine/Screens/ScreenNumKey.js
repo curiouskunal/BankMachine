@@ -35,7 +35,7 @@ export default class ScreenNumKey extends React.Component {
         var obj={}
         if(this.props.output!=null)
             obj[this.props.output]=this.readInputVal.bind(this)
-        return $.extend(queryString.parse(this.props.location.search), this.props.output==null ? {to: this.readInputVal.bind(this)} : obj );
+        return $.extend( queryString.parse(this.props.location.search), this.props.output==null ? {to: this.readInputVal.bind(this)} : obj );
     }
     
     shake(selector,t){
@@ -58,6 +58,13 @@ export default class ScreenNumKey extends React.Component {
             $('.errmsg h1').css('color', 'red');
             this.shake('#screen-numkey input',1000);
             return false;
+        }
+        
+        if(this.props.confirm!=null && !this.props.confirm(queryString.parse(this.props.location.search).from, this.readInputVal()) ){
+            $('.errmsg h1').text('The account has insufficient funds.');
+            $('.errmsg h1').css('color', 'red');
+            this.shake('#screen-numkey input',1000);
+            return false
         }
         
         return true;

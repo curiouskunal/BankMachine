@@ -3,7 +3,7 @@ const queryString = require('query-string');
 
 //var $ = require('jquery');
 
-export default class JButton extends React.Component {
+export default class ConfirmText extends React.Component {
     constructor(){
      super();
         this.state = {amt:"0"};

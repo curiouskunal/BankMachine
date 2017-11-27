@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
-import ConfirmText from "./ScreenConfirm/ConfirmText"
+import DynamicTable from "./ScreenAccountSelect/DynamicTable"
 const queryString = require('query-string');
 
 //var $ = require('jquery');
@@ -9,17 +9,8 @@ const queryString = require('query-string');
 export default class ScreenAccountSelect extends React.Component {
     constructor(){
         super();
-        //this.state = {};
+        
     }
-    
-    queryTrParse(){
-        var q = queryString.parse(this.props.location.search).tr;
-        var redirect = null;
-        if(q==null)
-            return null;
-        return '/' + q;
-    }
-    
     
   render() {
       console.log(this.props);
@@ -45,51 +36,15 @@ export default class ScreenAccountSelect extends React.Component {
                         <div class='bouttons'>
            
            
-            <table>
-            <tbody>
+            
               
               
                
-                <tr> <td>
-
-                            <JButton buttonclass="boutton" text="Chequing" texttwo="$759.98" nav={this.queryTrParse()} query={{acct:'Chequing',bal:759.98}} {...this.props}/>
-
-                </td> </tr>
-
-                <tr> <td>
-                            <JButton buttonclass="boutton" text="Savings" texttwo="$234.95" nav={this.queryTrParse()} query={{acct:'Savings',bal:234.95}} {...this.props}/>
-                </td> </tr>
-
-                <tr> <td>
-
-                            <JButton buttonclass="boutton" text="Ninety Nine Cents" texttwo="$0.99" nav={this.queryTrParse()} query={{acct:'Ninety Nine Cents',bal:0.99}} {...this.props}/>
-
-                </td> </tr>
-
-                <tr> <td>
-
-                           <JButton buttonclass="boutton" text="Master Saver" texttwo="$1930.69" nav={this.queryTrParse()} query={{acct:'Master Saver',bal:1930.69}} {...this.props}/>
-
-                </td> </tr>
-
-                <tr> <td>
-
-                            <JButton buttonclass="boutton" text="Empty Account" texttwo="$0.01" nav={this.queryTrParse()} query={{acct:'Empty Account',bal:0.01}} {...this.props}/>
-
-                </td> </tr>
-
-                <tr> <td>
-
-
-                            <JButton buttonclass="boutton" text="Legit Account" texttwo="$12" nav={this.queryTrParse()} query={{acct:'Legit Account', bal:12.00}} {...this.props}/>
-
-                </td> </tr>
-
+            <DynamicTable  {...this.props} /> 
            
               
 
-            </tbody>
-            </table>
+           
             
             </div>
                     </div>

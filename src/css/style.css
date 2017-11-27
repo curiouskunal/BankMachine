@@ -935,6 +935,10 @@ input.shake-horizontal {
      margin: 0 auto;   
 }
 
+span.shake-horizontal {
+      
+      color: red;  
+}
 
 @media screen and (max-width: 1000px) {
     #MobileMsg{

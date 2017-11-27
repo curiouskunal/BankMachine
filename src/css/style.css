@@ -431,7 +431,7 @@ span{
     border:2px solid white;
     border-radius: 40px;
 }
-#screen-insert img{
+#screen-insert img, #screen-take img{
     border:2px solid white;
     border-radius: 40px;
 }
@@ -455,7 +455,7 @@ span{
 .padCashInsert{
     padding-right: 70px;
 }
-#screen-card p , #screen-insert p{
+#screen-card p , #screen-insert p , #screen-take p{
 	color: white;
 	font-size:30px;
     text-align: center;

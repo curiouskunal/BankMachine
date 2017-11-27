@@ -22,11 +22,11 @@ export default class ScreenTake extends React.Component {
           </div>
         </div>
         
-        <Title title="Insert Cash or Cheque" />
+        <Title title="Withdraw Cash" />
         <div class="buttons-main">
           <div class="col-md-5 center line">
           <div class="padCashInsert">
-           <i id="arrowdown" class="fa fa-long-arrow-down"></i>s
+           <i id="arrowdown" class="fa fa-long-arrow-down"></i>
             <p> Take Out Cash Below </p>
             </div>
           </div>

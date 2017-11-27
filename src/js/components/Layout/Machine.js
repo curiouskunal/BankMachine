@@ -39,7 +39,6 @@ export default class Machine extends React.Component {
     confirmTransaction(account, deltabalance){
         var i;
         for (i=0; i<this.state.accounts.length; i++){
-            console.log(this.state.accounts[i].name);
             if(this.state.accounts[i].name==account){
                 
                 if(this.state.accounts[i].balance >= deltabalance)
@@ -51,8 +50,28 @@ export default class Machine extends React.Component {
         return false;
     }
     
-    updateAccount(name, deltabalance){
+    updateWithdraw(account, deltabalance){
+        var i;
+        for (i=0; i<this.state.accounts.length; i++){
+            if(this.state.accounts[i].name==account){
+                this.state.accounts[i].balance -= deltabalance;
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    updateDeposit(account, deltabalance){
         
+        var i;
+        for (i=0; i<this.state.accounts.length; i++){
+            if(this.state.accounts[i].name==account){
+                alert(account + " -- " + deltabalance + " -- " + this.state.accounts[i].name);
+                //this.state.accounts[i].balance += deltabalance;
+                return true;
+            }
+        }
+        return false;
     }
     
   render() { 
@@ -81,9 +100,9 @@ export default class Machine extends React.Component {
                 <Route path="/loading" exact render={props => <ScreenLoading redirects={["/home"]} {...props} />}/>
                 <Route path="/settings" exact render={props => <ScreenSettings {...props} />}/>
                 <Route path="/pin" exact render={props => <ScreenNumKey title="Enter your PIN" redirects={["/home"]} errmsgtarget='pin' {...props} />}/>
-                <Route path="/withdraw/confirm" exact render={props => <ScreenConfirm text="Withdraw?" from="undefined" no="/home" yes="/print" {...props} />}/>
+                <Route path="/withdraw/confirm" exact render={props => <ScreenConfirm text="Withdraw?" from="undefined" no="/home" yes="/print" update={this.updateWithdraw.bind(this)} {...props} />}/>
                 <Route path="/deposit" exact render={props => <ScreenAmountSelect type="deposit" {...props} />}/>
-                <Route path="/deposit/confirm" exact render={props => <ScreenConfirm text="Deposit?" to="undefined" no="/home" yes="/insert" {...props} />}/>
+                <Route path="/deposit/confirm" exact render={props => <ScreenConfirm text="Deposit?" to="undefined" no="/home" yes="/insert" update={this.updateDeposit.bind(this)} {...props} />}/>
                 <Route path="/accountselect" exact render={props => <ScreenAccountSelect accounts={this.state.accounts} {...props} />}/>
                 <Route path="/transfermenu/betweenacct" exact render={props => <ScreenTransfer from={['Savings', 'Checking']} to={['Checking', 'Savings']} redirects={["/transfermenu/betweenacct/confirm"]} {...props} />}/>
                 <Route path="/transfermenu/betweenacct/confirm" exact render={props => <ScreenConfirm text="Transfer" amt="$20" from="chequing" to="savings" yes="/print" no="/home" {...props} />}/>

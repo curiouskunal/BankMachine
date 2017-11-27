@@ -27,6 +27,7 @@ import ScreenTextInput from "./Machine/Screens/ScreenTextInput";
 import ScreenAccountSelect from "./Machine/Screens/ScreenAccountSelect";
 import ScreenCommon from "./Machine/Screens/ScreenCommon";
 import ScreenFailed from "./Machine/Screens/ScreenFailed";
+import ScreenTake from "./Machine/Screens/ScreenTake";
 //var $ = require('jquery');
 
 export default class Machine extends React.Component {
@@ -120,7 +121,7 @@ export default class Machine extends React.Component {
                 <Route path="/transfermenu/othermember/confirm" exact render={props => <ScreenConfirm text="Would you like to send " to="undefined" no="/home" yes="/print" {...props} />}/>
                 <Route path="/withdraw/custom" exact render={props => <ScreenNumKey output="amt" title="Enter the withdrawal amount" headerbutton="home" redirects={["/withdraw/confirm"]} errmsgtarget='amount' confirm={this.confirmTransaction.bind(this)} {...props} />}/>
                 <Route path="/deposit/custom" exact render={props => <ScreenNumKey output="amt" title="Enter the deposit amount" headerbutton="home" redirects={["/deposit/confirm"]} errmsgtarget='amount' {...props} />}/>
-                
+                <Route path="/take" exact render={props => <ScreenTake {...props} />}/>
             </Switch>
         
       </div>

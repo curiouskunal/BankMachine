@@ -17,16 +17,51 @@ export default class MachineHardware extends React.Component {
 	}
 
   render() {
+      console.log(this.props);
     return (
         <div id="machine">
-        	<div class="col-md-6">
-        	<Link to="/print">  <img src="/img/MoneyHole.jpg" onClick={(e) => {this.navMoney();}}/> </Link>
-        	</div>
-        	<div class="col-md-6">         	
-        	<Link to="/pin">  <img src="/img/IMG_7768.jpeg" onClick={(e) => {this.navCard();}}/>    </Link>
-        	</div>
+        <Switch>
+               
+                <Route path="/signin/card" exact render={props =>                   
+                    <div> 
+                    <div class="col-md-6">
+        	            <img src="/img/MoneyHole.jpg" />
+        	        </div>
+                    <div class="col-md-6">         	
+        	            <Link to="/pin">  <img src="/img/IMG_7768.jpeg" />    </Link>
+        	        </div>
+        	        </div>                                                
+                }/>
+                                                        
+                <Route path="/insert" exact render={props =>        
+                    <div>
+                    <div class="col-md-6">
+        	            <Link to="/print">  <img src="/img/MoneyHole.jpg" /> </Link>
+                    </div>
+                    <div class="col-md-6">         	
+        	            <img src="/img/IMG_7768.jpeg" />
+        	        </div>                                                      
+        	        </div>                                                      
+                }/>
+                
+                <Route render={props => 
+                    <div>
+                    <div class="col-md-6">
+        	            <img src="/img/MoneyHole.jpg" />
+                    </div>
+                    <div class="col-md-6">         	
+        	            <img src="/img/IMG_7768.jpeg" />
+        	        </div>  
+        	        </div>  
+                }/>
+                
+        </Switch>
+        
+        	
         </div>         
       
     );
   }
 }
+
+

@@ -30,7 +30,6 @@ export default class JButton extends React.Component {
     }
     
   navigate(){
-      alert(window.root);
       if(this.props.requirements!=null && !this.props.requirements.apply(this, this.props.reqargs))
           return;
       
@@ -79,7 +78,7 @@ export default class JButton extends React.Component {
            <i class={this.props.tooltip==null ? 'invis' : 'fa fa-info-circle' } aria-hidden="true"></i>
        </div>
         <button class={this.props.buttonclass==null? "" : this.props.buttonclass} onClick={(e) => {this.handleClick();}}>
-            <img class={this.props.img == null? "invis":""} src={this.props.img == null? "": this.props.img} alt=""/>
+            <img class={this.props.img == null? "invis":""} src={this.props.img == null? "": (window.root+this.props.img)} alt=""/>
             <i class={this.props.icon==null? "invis" : ("fa "+ this.props.icon) } aria-hidden="true"></i>
             <span>{this.props.text == null? "default button": this.props.text}</span>
             <p class={this.props.texttwo == null? "invis":"span2"}> {this.props.texttwo == null? "": this.props.texttwo}</p>

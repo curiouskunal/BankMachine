@@ -9,7 +9,7 @@ import MachineHardware from "./MachineHardware";
 export default class Layout extends React.Component {
     
     componentWillMount(){
-        window.root="";
+        window.root="src/";
     }
     
   constructor() {

@@ -22,7 +22,7 @@ export default class ScreenLogout extends React.Component {
         <Title title="Thank you for banking with TD" />
         <div class="buttons-main">
             <div class="logoutIMG">
-               <img src="/img/TDguy.jpg"/>
+               <img src={window.root+"/img/TDguy.jpg"}/>
             </div>
         </div>
        </div>

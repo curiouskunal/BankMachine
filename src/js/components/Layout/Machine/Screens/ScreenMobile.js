@@ -27,7 +27,7 @@ export default class ScreenMobile extends React.Component {
         <Title title=""/>
         <div class="buttons-main">
           <div class="col-md-5 center line2">
-            <Link to="/home"> <img src="/img/qrcode.png" /></Link>
+            <Link to="/home"> <img src={window.root+"/img/qrcode.png"} /></Link>
                <p class="scan">Open app and scan code</p> 
           </div>
         <div class="col-md-3 col-md-offset-1">

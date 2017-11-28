@@ -31,7 +31,7 @@ export default class ScreenInsert extends React.Component {
             </div>
           </div>
         <div class="col-md-3 col-md-offset-1">
-            <img src="/img/Image-3.GIF"/>
+            <img src={window.root+"/img/Image-3.GIF"}/>
           </div>
         </div>
         

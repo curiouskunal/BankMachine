@@ -31,7 +31,7 @@ export default class ScreenTake extends React.Component {
             </div>
           </div>
         <div class="col-md-3 col-md-offset-1">
-            <img src="/img/Image-4.GIF"/>
+            <img src={window.root+"/img/Image-4.GIF"}/>
           </div>
         </div>
         

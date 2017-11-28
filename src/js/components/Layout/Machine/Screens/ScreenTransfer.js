@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
 import Dropdown from 'react-dropdown'
-
+const queryString = require('query-string');
 var $ = require('jquery');
 
 export default class ScreenTransfer extends React.Component {
@@ -44,13 +44,19 @@ export default class ScreenTransfer extends React.Component {
     
     _onSelectFrom(e){
         console.log(e);
-        this.state.from = e.value;
+        if(e.value.indexOf('-')!=-1)
+            this.state.from = e.value.substr(0,e.value.indexOf(' '));
+        else 
+            this.state.from=e.value;
         console.log(this.state.from)
     }
     
     _onSelectTo(e){
         console.log(e);
-        this.state.to = e.value;
+        if(e.value.indexOf('-')!=-1)
+            this.state.to = e.value.substr(0,e.value.indexOf(' '));
+        else
+            this.state.to = e.value;
     }
     
     shake(selector,t){
@@ -61,6 +67,10 @@ export default class ScreenTransfer extends React.Component {
                 $(selector).removeClass('shake-constant');
                 $(selector).removeClass('shake-horizontal');
             }, t);   
+    }
+    
+    buildQuery(){
+        return $.extend(queryString.parse(this.props.location.search), {amt:this.readInputVal.bind(this), to:this.readToVal.bind(this), from:this.readFromVal.bind(this)} );
     }
     
     requirements(){
@@ -90,8 +100,18 @@ export default class ScreenTransfer extends React.Component {
             success=false;
         }
         
+        if(this.props.confirm!=null && !this.props.confirm(this.readFromVal(), this.readInputVal()) ){
+            $('.errmsg h1').text('The account has insufficient funds.');
+            $('.errmsg h1').css('color', 'red');
+            this.shake('.dd1',1000);
+            return false
+        }
+        
         return success;
     }
+    
+    
+    
 
   render() {
       console.log(this.props);
@@ -134,7 +154,7 @@ export default class ScreenTransfer extends React.Component {
           
           <div class="col-md-4 col-md-offset-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} query={{amt:this.readInputVal.bind(this), to:this.readToVal.bind(this), from:this.readFromVal.bind(this)}} requirements={this.requirements.bind(this)} {...this.props}/>
+                <JButton buttonclass="boutton tester1" text="SUBMIT" nav={this.props.redirects[0]} query={this.buildQuery.bind(this)} requirements={this.requirements.bind(this)} {...this.props}/>
             </div>
           </div>
           

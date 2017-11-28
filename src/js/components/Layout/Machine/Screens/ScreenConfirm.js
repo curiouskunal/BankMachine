@@ -20,7 +20,8 @@ export default class ScreenConfirm extends React.Component {
     }
     
     requirements(){
-        var result = this.props.update.apply(this, [ ( queryString.parse(this.props.location.search).from==null?queryString.parse(this.props.location.search).to:queryString.parse(this.props.location.search).from ), queryString.parse(this.props.location.search).amt ] ); //TODO MUST CHANGE FOR SUPPORT OF TWO WAY TRANSACTION
+        var result = this.props.update(this.props.type); //TODO MUST CHANGE FOR SUPPORT OF TWO WAY TRANSACTION
+//        var result = this.props.update.apply(this, [ ( queryString.parse(this.props.location.search).from==null?queryString.parse(this.props.location.search).to:queryString.parse(this.props.location.search).from ), queryString.parse(this.props.location.search).amt ] ); //TODO MUST CHANGE FOR SUPPORT OF TWO WAY TRANSACTION
             if(!result){
                 alert('If you have reached this message you are quite the debugger ;)');
                 $('.confirmtext h2').addClass('hide');

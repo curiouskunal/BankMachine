@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 
 //var $ = require('jquery');
 
@@ -8,13 +9,6 @@ export default class ScreenMobile extends React.Component {
 //    componentWillMount(){
 //        this.props.history.push('/welcome?ijustgotpushed=true');
 //    }
-    nav(){
-		console.log(window.location.pathname);
-		if (window.location.pathname == "/signin/mobile"){
-			window.location.href = '/home';
-		}
-		
-	}
 
   render() {
       console.log(this.props);
@@ -33,11 +27,11 @@ export default class ScreenMobile extends React.Component {
         <Title title=""/>
         <div class="buttons-main">
           <div class="col-md-5 center line2">
-            <img src="/img/qrcode.png" onClick={(e) => {this.nav();}}/>
-            <p class="scan">Open app and scan code</p>
+            <Link to="/home"> <img src="/img/qrcode.png" /></Link>
+               <p class="scan">Open app and scan code</p> 
           </div>
         <div class="col-md-3 col-md-offset-1">
-            <i id="mobile" class="fa fa-mobile" aria-hidden="false" onClick={(e) => {this.nav();}}></i>
+            <Link to="/home"> <i id="mobile" class="fa fa-mobile" aria-hidden="false" ></i> </Link>
             <p class="tap">Tap phone here</p>
           </div>
         </div>

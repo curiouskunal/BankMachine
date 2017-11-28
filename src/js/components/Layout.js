@@ -24,7 +24,11 @@ export default class Layout extends React.Component {
        <BrowserRouter>
        <div>
             <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
-            <Machine />
+            
+            <Switch>
+                <Route render={props => <Machine {...props}/> }/>
+            </Switch>
+        
             <MachineHardware />
             <Footer />
         </div>

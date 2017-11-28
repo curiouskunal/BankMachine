@@ -35,7 +35,7 @@ export default class ScreenTransfer extends React.Component {
     }
     
     readFromVal(){
-        return this.state.from
+        return this.state.from 
     }
     
     readToVal(){

@@ -7,6 +7,11 @@ import Machine from "./Layout/Machine";
 import MachineHardware from "./MachineHardware";
 
 export default class Layout extends React.Component {
+    
+    componentWillMount(){
+        window.root="";
+    }
+    
   constructor() {
     super();
     this.state = {

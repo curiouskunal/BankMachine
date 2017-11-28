@@ -30,6 +30,7 @@ export default class JButton extends React.Component {
     }
     
   navigate(){
+      alert(window.root);
       if(this.props.requirements!=null && !this.props.requirements.apply(this, this.props.reqargs))
           return;
       

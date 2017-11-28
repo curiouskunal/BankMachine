@@ -25,7 +25,7 @@ export default class ScreenCard extends React.Component {
         <Title title="Insert Card" />
         <div class="buttons-main">
           <div class="col-md-5 center line">
-            <img src={window.root+"img/IMG_7764.GIF"}/>
+            <img src={"/"+window.root+"img/IMG_7764.GIF"}/>
           </div>
         <div class="col-md-3 col-md-offset-1">
             <i id="arrowdown" class="fa fa-long-arrow-down"></i>s

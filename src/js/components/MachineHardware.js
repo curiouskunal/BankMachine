@@ -58,10 +58,10 @@ export default class MachineHardware extends React.Component {
                 <Route render={props => 
                     <div>
                     <div class="col-md-6">
-        	            <img src="/img/MoneyHole.jpg" />
+        	            <img src="img/MoneyHole.jpg" />
                     </div>
                     <div class="col-md-6">         	
-        	            <img src="/img/IMG_7768.jpeg" />
+        	            <img src="img/IMG_7768.jpeg" />
         	        </div>  
         	        </div>  
                 }/>

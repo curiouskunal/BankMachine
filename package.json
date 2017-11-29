@@ -35,10 +35,8 @@
   },
     "scripts": {
     "dev": "webpack-dev-server --content-base src --inline --hot",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.conf.js",
-    "deploy": "npm run build && gh-pages -d build",
-    "start": "webpack-dev-server"
+    "build": "webpack --config webpack.config.js --progress",
+    "deploy": "git push origin :gh-pages && git subtree push --prefix src origin gh-pages"
   },
   "author": "",
   "license": "ISC"

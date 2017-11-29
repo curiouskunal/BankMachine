@@ -36,8 +36,8 @@
     "scripts": {
     "dev": "webpack-dev-server --content-base src --inline --hot",
     "build": "webpack",
-    "publish": "git subtree push --prefix output src gh-pages",
-    "force-publish": "git push origin `git subtree split --prefix output gh-pages`:gh-pages --force",
+    "publish": "git subtree push --prefix src origin gh-pages",
+    "force-publish": "git push origin `git subtree split --prefix src gh-pages`:gh-pages --force",
 
   },
   "author": "",

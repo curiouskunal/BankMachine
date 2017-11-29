@@ -1,0 +1,949 @@
+/*must explicitly simulate inserting a card and entering acount **/
+:root{
+    --primary: white;
+    --secondary: white;
+    --ternary: white;
+    --bg: #12412A;
+    --machine:black;
+}
+/*Outside Bank Machine*/
+body{
+	font-family: 'Dosis', sans-serif;
+	background-color: var(--machine);
+}
+
+#MobileMsg{
+    display: none;
+    width: 80%;
+    margin: 50px auto;
+}
+
+h2{
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+}
+.confirmtext h2{
+	color: var(--primary);
+}
+
+h1{
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
+	color: var(--primary);
+}
+h3{
+    text-align: center;
+}
+.confirmtext h1{
+	font-size: 60px;
+}
+
+footer{
+	clear: both;
+	text-align: center;
+	color: var(--primary);
+}
+
+#download{
+    font-size: 30px;
+}
+
+button{
+	display: block;
+}
+
+/** The Bank Machine Box **/
+#content-wrapper{
+	width: 1060px;
+	height: 660px;
+	background-color: var(--bg);
+	margin: 0 auto;
+}
+
+/*Direction Floats*/
+.left{float: left;}
+.center{margin: 0 auto;}
+.right{float: right;}
+
+/** Invisible Objects **/
+.invis{display: none;}
+.hide{visibility: hidden;}
+ 
+/** More Languages **/
+.smallButton{
+	color: var(--bg);
+	font-weight: bold;
+	background-color: var(--ternary);
+/*
+	position: absolute;
+	top: 59%;
+	left: 69%;
+*/
+    height: 40px;
+	width: 150px;
+    border-radius: 10px;
+}
+.smallButton:focus{
+    color: white;
+    background-color: darkgray;
+    outline: none;
+}
+#otherLanguages{
+	height: 100px;
+	width: 250px;
+}
+
+/*Exit and Home Buttons*/
+.headerButton{
+	color: var(--bg);
+	font-weight: bold;
+	background-color: var(--secondary);
+	height: 50px;
+	width: 100px;
+	border: 1px solid var(--secondary);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.headerButton:focus{
+    color: white;
+    background-color: darkgray;
+    outline: none;
+}
+/** ICONS **/
+i{
+	margin: 5px;
+}
+
+.buttons-main i{
+    font-size: 125px;
+    color: var(--bg);
+
+}
+
+/** General Span CSS **/
+.buttons-main span{
+    font-size: 20px;
+    color: var(--bg);
+}
+span{
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	display: block;
+}
+.headerButton span{
+	display: inline !important;
+}
+.smallButton span{
+	display: inline !important;
+}
+
+/** Main Button Container **/
+.buttons-main{
+	margin-top: 15%;
+	margin: 0 auto;
+}
+
+/**  General Button Start  **/
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.bouttons {
+  text-align: center; 
+}
+
+.boutton {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: inline-block;
+  background: var(--primary);
+  min-width: 50px;
+  width: 250px;
+  height: 400px;
+  margin: 15px 5px;
+  padding: 10px 15px 12px;
+  font: 700 12px/1 'Dosis', sans-serif;
+  box-shadow: inset 0 -1px 0 1px rgba(0,0,0,.1), inset 0 -10px 20px rgba(0,0,0,.1);
+  cursor: pointer;
+  color: var(--primary);
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+  border-radius: 40px;
+  outline: none;
+}
+
+.boutton:focus{
+    color: white;
+    background-color: darkgray;
+    outline: none;
+}
+.boutton span{
+	color: var(--bg);
+}
+/**  General Button End **/
+
+
+
+
+/** SignIn and Print Page Start **/
+#screen-signin .buttons-main , #screen-print .buttons-main{
+	margin-top: 10% !important;
+	margin: 0 auto;
+}
+#screen-signin .buttons-main span, #screen-print .buttons-main span{
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+#screen-signin .span2 span{
+    margin: 0;
+}
+
+/** SignIn and Print Page Ends **/
+
+
+/** Home Page Start **/
+#screen-home .buttons-main span, #screen-languages .buttons-main span, #screen-common .buttons-main span{
+    margin-top: 10px;
+    font-size: 25px;
+}
+#screen-home .buttons-main .boutton, #screen-languages .buttons-main .boutton, #screen-common .buttons-main .boutton{
+    height: 215px;
+    width: 300px;
+}
+#screen-home .buttons-main i, #screen-languages .buttons-main i, #screen-common .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-home .buttons-main, #screen-languages .buttons-main, #screen-common .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+#screen-home .left{
+    visibility: hidden;
+}
+/** Home Page Ends **/
+
+/** Transfer Menu Page Start **/
+#screen-transfermenu .buttons-main span{
+    margin-top: 10px;
+    font-size: 25px;
+}
+#screen-transfermenu .buttons-main .boutton{
+    height: 215px;
+    width: 300px;
+}
+#screen-transfermenu .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-transfermenu .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+/** Transfer Menu Page Ends **/
+
+/** Amount Selected Page Start **/
+#screen-amountselect .buttons-main span{
+    margin: 0 auto;
+    font-size: 50px;
+}
+#screen-amountselect .buttons-main .boutton{
+    height: 215px;
+    width: 300px;
+}
+#screen-amountselect .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-amountselect .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+/** Amount Selected Page Ends **/
+
+/** Mobile Menu Page Start**/
+
+
+#screen-mobile img{
+    border:2px solid white;
+    border-radius: 40px;
+}
+.line2{
+    height: 620px;
+    margin-left: -20px;
+    border-right-style: solid;
+    border-right-color: white;
+    border-right-width: 2px;
+}
+#mobile{
+    margin-top: 0px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+	color: white;
+	font-size: 500px;
+}
+#screen-mobile p.scan{
+    margin-top: 85px;
+	color: white;
+	font-size:30px;
+}
+#screen-mobile p.tap{
+    margin-top: -22px;
+	color: white;
+	font-size:30px;
+    text-align: center;
+}
+#screen-mobile img{
+    background-color: white;
+	margin: 0 auto;
+    margin-top: 100px; !important
+}
+/** Mobile Menu Page End **/
+
+/**Welcome Page (Formatting applies to transfers and french pages) Start**/
+#screen-welcome .buttons-main span, #screen-etransfermenu .buttons-main span, #screen-french .buttons-main span{
+    font-size: 35px
+}
+#screen-welcome .buttons-main, #screen-etransfermenu .buttons-main, #screen-french .buttons-main{
+	margin-top: 10% !important;
+	margin: 0 auto;
+}
+/**Welcome Page Ends**/
+
+/**Logout Page Start**/
+.logoutIMG{
+    width: 400px;
+    height: 500px;
+    margin: 40px auto;
+}
+#screen-logout img{
+    height: 500px;
+}
+
+/**Logout Page Ends**/
+
+
+/**Balance Page Start**/
+
+#screen-balance h1{
+    color:white;
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
+}
+#screen-balance h2{
+    color:white;
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
+}
+#screen-balance h3{
+    color:white;
+    padding-top: 8px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+    font-size: 45px;
+}
+
+#screen-balance .balancetransactions h3{
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+#screen-balance .table-holder{
+    width: 699px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#screen-balance .table-center{
+    display:block-inline;
+}
+
+#screen-balance table{
+    border-collapse;
+    width: 699px;
+    margin: 0 auto;
+}
+
+#screen-balance table tbody, #screen-balance table thead{
+    display: block;
+}
+
+#screen-balance tbody{
+    width: 721px;
+    padding-right: 10px;
+}
+
+#screen-balance table tbody{
+   overflow-y: scroll;
+   height: 350px;
+   background-color: var(--bg);
+}
+
+#screen-balance th , #screen-balance td{
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    width: 233px;
+}
+#screen-balance tr:nth-child(even){
+    color: black !important;
+    background-color: #EEF6EB !important;
+}
+
+#screen-balance th{
+    font-size: 20px !important;
+    color: black !important;
+    background-color: #EEF6EB !important;
+    height: 50px;
+}
+
+#screen-balance tr:nth-child(odd){
+    color: var(--bg) !important;
+    background-color: white !important;
+}
+
+/**Balance Page Ends**/
+
+
+
+/**Screen Card Page Start**/
+
+#screen-card img{
+    border:2px solid white;
+    border-radius: 40px;
+}
+#screen-insert img, #screen-take img{
+    border:2px solid white;
+    border-radius: 40px;
+}
+
+.line{
+    height: 500px;
+    margin-left: -20px;
+    border-right-style: solid;
+    border-right-color: white;
+    border-right-width: 2px;
+}
+
+#arrowdown{
+    margin-top: 35px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+	color: white;
+	font-size: 300px;
+}
+.padCashInsert{
+    padding-right: 70px;
+}
+#screen-card p , #screen-insert p , #screen-take p{
+	color: white;
+	font-size:30px;
+    text-align: center;
+}
+#screen-card img{
+	margin: 0 auto;
+}
+#machine{
+	width: 1060px;
+	/*margin: 0 ;*/
+    margin-left: auto;
+	margin-right: auto;
+}
+#machine img{
+	display: block;
+	height: 313px;
+    width: 100%;
+}
+/**Screen Card Page End**/
+
+
+/** TESTING STUFF **/
+
+
+/**Dropdown**/
+.Dropdown-root{
+	position:relative;}
+
+.Dropdown-control{
+	position:relative;
+	overflow:hidden;
+	background-color:white;
+	border:1px solid #ccc;
+	border-radius:2px;
+	box-sizing:border-box;
+	color:#333;
+	cursor:default;
+	outline:none;
+	padding:8px 52px 8px 10px;
+	transition: all 200ms ease;
+}
+
+.Dropdown-control:hover{
+	box-shadow:0 1px 0 rgba(0,0,0,0.06);}
+
+.Dropdown-arrow{
+	border-color:#999 transparent transparent;
+	border-style:solid;
+	border-width:5px 5px 0;
+	content:' ';
+	display:block;
+	height:0;
+	margin-top:-ceil(2.5);
+	position:absolute;
+	right:10px;
+	top:14px;
+	width}
+
+.is-open .Dropdown-arrow{
+	border-color:transparent transparent #999;
+	border-width:0 5px 5px;
+}
+
+.Dropdown-menu{
+	background-color:white;
+	border:1px solid #ccc;
+	box-shadow:0 1px 0 rgba(0,0,0,0.06);
+	box-sizing:border-box;
+	margin-top:-1px;
+	max-height:200px;
+	overflow-y:auto;
+	position:absolute;
+	top:100%;
+	width:100%;
+	z-index:1000;
+	-webkit-overflow-scrolling:touch;
+}
+/** END dropdown**/
+
+
+
+/** TESTING Stuff (stuff that is literally in 'test') **/
+
+/*search button*/
+#screen-numkey .buttons-main .boutton.tester1{
+    
+    margin: 0 auto;
+    margin-top: 25px;
+    background-color: lightgrey;
+    height: 60px;
+    width: 300px; !important
+}
+
+/*numeric input*/
+.numericInput{
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 490px;
+    height: 65px;
+    font-size: 50px;
+}
+#screen-numkey .buttons-main span{
+    margin: 0 auto;
+    font-size: 40px;
+}
+#screen-numkey .buttons-main .boutton{
+    margin-left: -20px;
+    height: 75px;
+    width: 175px;
+    border-radius: 10px;
+    margin-bottom: -10px; 
+}
+#screen-numkey .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-numkey .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+/** END **/
+
+/** e-Transfer stuff **/
+
+/*search button*/
+#screen-transfer .buttons-main .boutton.tester1{
+    
+    margin: 0 auto;
+    margin-top: 25px;
+    background-color: lightgrey;
+    height: 60px;
+    width: 300px; !important
+}
+
+/*numeric input*/
+#screen-transfer .numericInput{
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 490px;
+    height: 55px;
+    font-size: 50px;
+}
+
+
+#screen-transfer .buttons-main span{
+    margin: 0 auto;
+    font-size: 40px;
+}
+#screen-transfer .buttons-main .boutton{
+    margin-left: -20px;
+    height: 75px;
+    width: 175px;
+    border-radius: 10px;
+    margin-bottom: -10px; 
+}
+#screen-transfer .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-transfer .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+/** END **/
+
+
+
+
+
+/** TEST page for Keyboard **/
+
+#screen-textinput .buttons-main span{
+    margin: 0 auto;
+    font-size: 30px;
+}
+#screen-textinput .buttons-main .boutton{
+    margin-left: -20px;
+    height: 55px;
+    width: 80px; 
+    border-radius: 10px;
+    margin-bottom: -10px; 
+    outline: none;
+}
+#screen-textinput .buttons-main .boutton:focus{
+    background-color: gray;
+}
+#screen-textinput .buttons-main i{
+    font-size: 75px;
+    color: var(--bg);
+}
+#screen-textinput .buttons-main{
+	margin-top: 5% !important;
+	margin: 0 auto;
+}
+
+#screen-textinput .secondRow{
+    margin-left: 40px; !important
+}
+#screen-textinput .boutton.thirdRow{
+    margin-left: 20px; !important
+}
+#screen-textinput .boutton.shiftKey{
+    width: 120px;
+}
+#screen-textinput .boutton.backspaceKey{
+    width: 125px;
+}
+#screen-textinput .boutton.enterKey{
+    width: 165px;
+}
+#screen-textinput .boutton.space{
+    margin-left: -20px;
+    width: 510px;
+}
+#screen-textinput .numericInput{
+    width: 650px;
+    height: 55px;
+    font-size: 30px;
+    margin-top: inherit;
+    border-radius: 10px;
+}
+#screen-textinput p{
+    margin: 0 auto;
+    margin-top: 7px;
+    font-size: 30px;
+    color: white;
+    text-align: right;
+}
+
+#screen-textinput p.inputDiv1{
+    margin-top: 27px;
+}
+#screen-textinput p.inputDiv2{
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+#screen-textinput .numericInput.inputDiv1{
+    margin-top: 20px;
+}
+#screen-textinput .numericInput.inputDiv2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+
+/** LOADING **/ 
+#screen-loading i.spinningIcon{
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+/*    margin: 0 auto;*/
+    margin-top: 240px;
+}
+#screen-loading h3{
+    text-align: center;
+    color: white;
+}
+/** End Keyboard test page **/
+
+
+/* Languages */
+#screen-languages img, #screen-welcome img{
+    width: 50%;
+    border-radius: 10px;
+}
+
+#screen-welcome img, #screen-french img{
+    width: 75%;
+    border-radius: 10px;
+}
+    
+
+.boutton.welcomeFlag span{
+    margin-top: 50px;
+}
+
+
+
+#screen-accountselect table{
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 auto;
+}
+
+#screen-accountselect .table-round{
+    width: 500px;
+    border:2px solid white;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 5% !important;
+}
+
+/*#screen-accountselect td {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+}
+*/
+#screen-accountselect td{
+   margin-top: 100px;
+}
+
+#screen-accountselect .table-data{
+    height: 500px;
+    overflow-y:scroll;
+    margin: 0 auto;
+}
+
+#screen-accountselect .boutton {
+  width: 400px;
+  height: 100px;
+}
+
+#screen-accountselect .span2{
+    width: 50%;
+    float: right;
+    border-left: 2px solid var(--bg);
+    height: 60px;
+    margin: 0;
+}
+
+#screen-accountselect .table-round span{
+    line-height:60px;
+    display: inline !important;
+}
+
+
+body ::-webkit-scrollbar {
+    width: 12px;
+}
+body ::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+/*    border-radius: 10px;*/
+}
+ 
+body ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+body ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  /*width: 7px;*/
+}
+body ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, .7);
+}
+
+
+/** Blinking Cursor **/
+/*.blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: red;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: red;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: red;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: red;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: red;
+  }
+}*/
+
+/**End Blinking Curser**/
+
+/*DEBUG*/
+
+#screen-transfer h2{
+     color: white; 
+    margin-top: -5px;
+}
+
+.testin h1{
+
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s; 
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+  
+}
+
+.tooltip-text{
+    background-color: red;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    width: 100px;
+    height: 100px;
+    
+}
+.fa-info-circle{
+    color: aqua; 
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 5px; !important
+    
+}
+
+
+#machine a{
+ margin: 0 auto;   
+}
+
+p.shake-horizontal {
+    color: red;
+    text-align: center;
+     margin: 0 auto;   
+}
+
+
+input{
+    -webkit-transition: all 1.0s ease-out;
+  -moz-transition: all 1.0s ease-out;
+  transition: all 1.0s ease-out;
+}
+
+input.active{
+    border: 4px solid cyan;
+    border-radius: 15px;
+}
+
+input.shake-horizontal {
+    background-color: red;
+     margin: 0 auto;   
+}
+
+span.shake-horizontal {
+      
+      color: red;  
+}
+
+@media screen and (max-width: 1000px) {
+    #MobileMsg{
+        display: block;
+    }
+    #content-wrapper , #machine{
+        display: none;
+    }
+}
+
+
+

@@ -28,32 +28,32 @@ export default class ScreenCommon extends React.Component {
          <div class="buttons-main">
             <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Deposit $1099 into Savings Account" icon="fa-money" nav="/confirm" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Deposit $1099 into Savings Account" icon="fa-money" nav="/common/confirm/1" {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="e-Transfer $410 to Bob Weeks" icon="fa-paper-plane-o" nav="/confirm" {...this.props}/>
+                <JButton buttonclass="boutton" text="e-Transfer $410 from chequing to Kunal Weeks" icon="fa-paper-plane-o" nav="/common/confirm/2" {...this.props}/>
             </div>
           </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Withdraw $40 from Checking Account" icon="fa-money" nav="/confirm" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Withdraw $40 from Chequing Account" icon="fa-money" nav="/common/confirm/3" {...this.props}/>
             </div>         
             </div>
             <div class="col-md-4">
              <div class='bouttons'>
-                <JButton buttonclass="boutton" text="Transfer $500 from Checking to Savings Account" icon="fa-exchange" nav="/confirm" {...this.props}/>
+                <JButton buttonclass="boutton" text="Transfer $500 from Chequing to Savings Account" icon="fa-exchange" nav="/common/confirm/4" {...this.props}/>
             </div>
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Check Savings Account for Money from Nigerian Prince" icon="fa-blind" nav="/confirm" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Check Savings Account for Money from Nigerian Prince" icon="fa-blind" nav="/common/confirm/5" {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Transfer $300 into RRSP Account from Savings Account" icon="fa-exchange" nav="/confirm" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Transfer $300 from Savings Account to RRSP Account" icon="fa-exchange" nav="/common/confirm/6" {...this.props}/>
             </div>         
             </div>
       

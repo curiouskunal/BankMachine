@@ -11,8 +11,13 @@ export default class VoiceModule extends React.Component {
         this.playIntro();
     }
     
+    toggleAccessibility(){
+        window.accessibility = !window.accessibility;
+        var say = new SpeechSynthesisUtterance('Accessibility Mode '+(window.accessibility ? 'enabled' : 'disabled')+', say ... options to list all available options at any time. ' + (window.accessibility ? 'You may say an option to select it and proceed.':''));
+        window.synthesis.speak(say);
+    }
+    
     playIntro(){
-        
         var say = new SpeechSynthesisUtterance(this.props.intro);
             window.synthesis.speak(say);
     }
@@ -104,7 +109,7 @@ export default class VoiceModule extends React.Component {
         <div class="buttons-main">
         <div class="col-md-offset-2 col-md-4 ">
         <div class='bouttons'>
-                <JButton buttonclass="boutton" icon="fa-microphone" {...this.props}/>
+                <JButton buttonclass="boutton" icon="fa-microphone" click={this.toggleAccessibility.bind(this)} {...this.props}/>
         </div>
         </div>
         </div>

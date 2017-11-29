@@ -19,8 +19,26 @@ export default class ScreenConfirm extends React.Component {
         return queryString.parse(this.props.location.search).to == null? (queryString.parse(this.props.location.search).input1==null ? this.props.to : queryString.parse(this.props.location.search).input1) : queryString.parse(this.props.location.search).to;
     }
     
+    shake(selector,t){
+            $(selector).addClass('shake-horizontal');
+            $(selector).addClass('shake-constant');        
+            setTimeout(()=>{
+                $(selector).removeClass('shake-constant');
+                $(selector).removeClass('shake-horizontal');
+            }, t);   
+    }
+    
     requirements(){
-        var result = this.props.update(this.props.type); //TODO MUST CHANGE FOR SUPPORT OF TWO WAY TRANSACTION
+        
+        if(this.props.confirm!=null && !this.props.confirm(this.props.from, this.props.amt) ){
+            $('.confirmtext h2').addClass('hide');
+            $('.confirmtext h1').text('Your '+this.props.from+' account has insufficient funds. Please return home.');
+            $('.confirmtext h1').css('color','red');
+            this.shake('.buttons-main button:contains("Yes")',1000);
+            return false;
+        }
+        
+        var result = this.props.update(this.props.type); 
 //        var result = this.props.update.apply(this, [ ( queryString.parse(this.props.location.search).from==null?queryString.parse(this.props.location.search).to:queryString.parse(this.props.location.search).from ), queryString.parse(this.props.location.search).amt ] ); //TODO MUST CHANGE FOR SUPPORT OF TWO WAY TRANSACTION
             if(!result){
                 alert('If you have reached this message you are quite the debugger ;)');
@@ -29,6 +47,8 @@ export default class ScreenConfirm extends React.Component {
             }
         return result;
     }
+    
+    
     
   render() {
       

@@ -61,6 +61,9 @@ footer{
 #download{
     font-size: 30px;
 }
+#downloadPDF{
+    font-size: 25px;
+}
 
 button{
 	display: block;
@@ -955,5 +958,13 @@ span.shake-horizontal {
     }
 }
 
-
-
+#pdf{
+    font-size: 45px;
+    color:red;
+}
+#pdf:hover, #downloadPDF:hover, #download:hover{
+    color: aliceblue;
+}
+#pdf:focus, #downloadPDF:focus, #download:focus{
+    color: lightgray;
+}

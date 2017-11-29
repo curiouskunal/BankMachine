@@ -29,7 +29,7 @@ export default class ScreenBalance extends React.Component {
           </div>
         </div>
       <div class="balancetext">
-          <h2>{'Your ' +(this.qparseAcct()==null? this.props.acct : this.qparseAcct()==null)+ ' Balance'}</h2>
+          <h2>{'Your ' +(this.qparseAcct()==null? this.props.acct : this.qparseAcct())+ ' Balance'}</h2>
             <h1>{'$ '+(this.qparseBal()==null ? this.props.bal : this.qparseBal() )}</h1>
         </div>
         <div class="balancetransactions">

@@ -37,7 +37,7 @@ export default class Machine extends React.Component {
     constructor(){
         super();
         this.state={
-            accounts: [{name: 'chequing', balance: 250}, {name: 'savings', balance: 1}, {name: 'student', balance: 1337}, {name: 'RRSP', balance: 1900}, {name: 'RESP', balance: 1000}, {name: 'Zero', balance: 0}],
+            accounts: [{name: 'Chequing', balance: 250}, {name: 'Savings', balance: 1}, {name: 'Student', balance: 1337}, {name: 'RRSP', balance: 1900}, {name: 'RESP', balance: 1000}, {name: 'Zero', balance: 0}],
             payees: [{name: 'Bob', balance:0}, {name: 'Joe', balance:0}, {name: 'McMaster', balance:0}, {name: 'Frank the drug dealer', balance:0}]
         };
     }
@@ -78,15 +78,15 @@ export default class Machine extends React.Component {
         if(type=='etrequest')
             return true;
         if(type=='common1')
-            return this.updateDeposit('savings', 1099);
+            return this.updateDeposit('Savings', 1099);
         if(type=='common2')
-            return this.updateWithdraw('chequing', 410);
+            return this.updateWithdraw('Chequing', 410);
         if(type=='common3')
-            return this.updateWithdraw('chequing', 40);
+            return this.updateWithdraw('Chequing', 40);
         if(type=='common4')
-            return this.updateTransfer('chequing','savings' , 500);
+            return this.updateTransfer('Chequing','Savings' , 500);
         if(type=='common6')
-            return this.updateTransfer('savings','RRSP' , 300);
+            return this.updateTransfer('Savings','RRSP' , 300);
     }
     
     updateWithdraw(account, deltabalance){
@@ -183,12 +183,12 @@ export default class Machine extends React.Component {
                 <Route path="/withdraw/loading" exact render={props => <ScreenLoading redirects={["/take"]} {...props} />}/>
                 <Route path="/deposit/loading" exact render={props => <ScreenLoading redirects={["/print"]} {...props} />}/>
                 
-                <Route path="/common/confirm/1" exact render={props => <ScreenConfirm text="Deposit?" type="common1" to="savings" amt="1099" no="/home" yes="/insert" update={this.update.bind(this)} {...props} />}/>
-                <Route path="/common/confirm/2" exact render={props => <ScreenConfirm text="e-Transfer" confirm={this.confirmTransaction.bind(this)} type="common2" from="chequing" to="weekkunal@gmail.com" amt="410" no="/home" yes="/print" update={this.update.bind(this)} {...props} />}/>
-                <Route path="/common/confirm/3" exact render={props => <ScreenConfirm text="Withdraw?" confirm={this.confirmTransaction.bind(this)} type="common3" from="chequing" amt="40" no="/home" yes="/take" update={this.update.bind(this)} {...props} />}/>
-                <Route path="/common/confirm/4" exact render={props => <ScreenConfirm text="Transfer" confirm={this.confirmTransaction.bind(this)} type="common4" from="chequing" to="savings" amt="500" no="/home" yes="/print" update={this.update.bind(this)} {...props} />}/>
+                <Route path="/common/confirm/1" exact render={props => <ScreenConfirm text="Deposit?" type="common1" to="Savings" amt="1099" no="/home" yes="/insert" update={this.update.bind(this)} {...props} />}/>
+                <Route path="/common/confirm/2" exact render={props => <ScreenConfirm text="e-Transfer" confirm={this.confirmTransaction.bind(this)} type="common2" from="Chequing" to="weekkunal@gmail.com" amt="410" no="/home" yes="/print" update={this.update.bind(this)} {...props} />}/>
+                <Route path="/common/confirm/3" exact render={props => <ScreenConfirm text="Withdraw?" confirm={this.confirmTransaction.bind(this)} type="common3" from="Chequing" amt="40" no="/home" yes="/take" update={this.update.bind(this)} {...props} />}/>
+                <Route path="/common/confirm/4" exact render={props => <ScreenConfirm text="Transfer" confirm={this.confirmTransaction.bind(this)} type="common4" from="Chequing" to="Savings" amt="500" no="/home" yes="/print" update={this.update.bind(this)} {...props} />}/>
                 <Route path="/common/confirm/5" exact render={props => <ScreenBalance acct="savings" bal={this.state.accounts[1].balance} {...props} />}/>  
-                <Route path="/common/confirm/6" exact render={props => <ScreenConfirm text="Transfer" confirm={this.confirmTransaction.bind(this)} type="common6" from="savings" to="RRSP" amt="300" no="/home" yes="/print" update={this.update.bind(this)} {...props} />}/>
+                <Route path="/common/confirm/6" exact render={props => <ScreenConfirm text="Transfer" confirm={this.confirmTransaction.bind(this)} type="common6" from="Savings" to="RRSP" amt="300" no="/home" yes="/print" update={this.update.bind(this)} {...props} />}/>
             </Switch>
         
       </div>

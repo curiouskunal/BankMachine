@@ -946,6 +946,38 @@ span.shake-horizontal {
       color: red;  
 }
 
+
+/* Experiments >:) */
+#result{
+	height: 200px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-shadow: 0 0 10px 0 #bbb;
+	margin-bottom: 30px;
+	font-size: 14px;
+	line-height: 25px;
+    background-color: aliceblue;
+}
+#button-stt{
+	font-size: 20px;
+	position: absolute;
+	top: 240px;
+	left: 50%;
+}
+
+#results span{
+    text-align: left;
+    display: inline;
+}
+.span-stt{
+    color:#999;
+    text-align:left;
+    display:inline;
+}
+
+/* END Experiments >:) */
+
+
 @media screen and (max-width: 1000px) {
     #MobileMsg{
         display: block;

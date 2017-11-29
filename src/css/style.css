@@ -38,6 +38,16 @@ h1{
 h3{
     text-align: center;
 }
+
+/** Styling for 'OR' on mobile sign in screen **/ 
+h4{
+    font-size: 45px;
+    color: white;
+    margin-left: 396px;
+    margin-top: -320px;
+    width: 55px;
+    background-color: var(--bg);
+}
 .confirmtext h1{
 	font-size: 60px;
 }

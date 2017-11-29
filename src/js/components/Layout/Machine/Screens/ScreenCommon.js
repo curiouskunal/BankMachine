@@ -48,7 +48,7 @@ export default class ScreenCommon extends React.Component {
           </div>
           <div class="col-md-4 ">
             <div class='bouttons'>
-                  <JButton buttonclass="boutton" text="Check Savings Account for Money from Nigerian Prince" icon="fa-blind" nav="/common/confirm/5" {...this.props}/>
+                  <JButton buttonclass="boutton" text="Check Savings Account" icon="fa-blind" nav="/common/confirm/5" {...this.props}/>
             </div>         
            </div>
           <div class="col-md-4">

@@ -125,7 +125,6 @@ export default class Machine extends React.Component {
                                 return true;
                             }
             }
-        
         return false;
     }
     

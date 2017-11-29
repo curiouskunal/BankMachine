@@ -188,6 +188,7 @@ export default class Machine extends React.Component {
                 <Route path="/common/confirm/2" exact render={props => <ScreenConfirm text="e-Transfer" confirm={this.confirmTransaction.bind(this)} type="common2" from="chequing" to="weekkunal@gmail.com" amt="410" no="/home" yes="/print" update={this.update.bind(this)} {...props} />}/>
                 <Route path="/common/confirm/3" exact render={props => <ScreenConfirm text="Withdraw?" confirm={this.confirmTransaction.bind(this)} type="common3" from="chequing" amt="40" no="/home" yes="/take" update={this.update.bind(this)} {...props} />}/>
                 <Route path="/common/confirm/4" exact render={props => <ScreenConfirm text="Transfer" confirm={this.confirmTransaction.bind(this)} type="common4" from="chequing" to="savings" amt="500" no="/home" yes="/print" update={this.update.bind(this)} {...props} />}/>
+                <Route path="/common/confirm/5" exact render={props => <ScreenBalance acct="savings" bal={this.state.accounts[1].balance} {...props} />}/>  
                 <Route path="/common/confirm/6" exact render={props => <ScreenConfirm text="Transfer" confirm={this.confirmTransaction.bind(this)} type="common6" from="savings" to="RRSP" amt="300" no="/home" yes="/print" update={this.update.bind(this)} {...props} />}/>
             </Switch>
         

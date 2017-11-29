@@ -14,7 +14,7 @@ export default class ConfirmText extends React.Component {
     }
 
   render() { 
-       this.state.amt = queryString.parse(this.props.location.search).amt;
+       this.state.amt = queryString.parse(this.props.location.search).amt == null ? this.props.amt : queryString.parse(this.props.location.search).amt;
          console.log(this.state.amt);
     return (
       <div class="confirmtext">

@@ -1,13 +1,26 @@
 import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
-
+import VoiceModule from "./Modules/VoiceModule";
 //var $ = require('jquery');
 
 export default class ScreenSignIn extends React.Component {
-//    componentWillMount(){
-//        this.props.history.push('/welcome?ijustgotpushed=true');
-//    }
+    constructor(){
+      super();
+         this.state = {
+             voice:{
+                 accessibility:
+                    [
+                        {keys: ['card', 'debit', 'pin'], selector: '.buttons-main button:contains("Card")',  msg: 'You selected Card sign in.', help:"Card sign in. Allows you to sign in using your bank card and pin."},
+                        {keys: ['mobile', 'tap', 'scan', 'app'], selector: '.buttons-main button:contains("Mobile")',  msg: 'You selected Mobile app sign in.', help:"Mobile app sign in. Allows you to sign in using the TD mobile app on your phone."},
+                        {keys: ['account', 'number'], selector: '.buttons-main button:contains("Account")',  msg: 'You selected Account number sign in.', help:"Account number sign in. Allows you to sign in using your account number and password."},
+                        {keys: ['back', 'undo'], selector: '.left button',  msg: 'You selected Back. Returning to previous menu.', help:"Back. Returns you to the previous menu."},
+                        {keys: ['quit', 'exit', 'logout', 'cancel'], selector: '.right button',  msg: 'You selected Exit. You have been logged out.', help:"Exit. Resets all information and returns to Welcome Screen."}
+                    ],         
+                 help: "You are on the sign in screen. From here you may select a method to sign in. You may say ... options at any time to explain your options. If you say ... accessibility, you may navigate the menus with your voice."       
+             }
+         };
+     }
 
   render() {
       console.log(this.props);
@@ -44,7 +57,9 @@ export default class ScreenSignIn extends React.Component {
 
         </div>
 
-        
+        <div class='module-voice'>
+            <VoiceModule options={this.state.voice.accessibility} help={this.state.voice.help} {...this.props}/>
+        </div>
       </div>
     );
   }

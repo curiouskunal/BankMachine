@@ -64,7 +64,10 @@ export default class ScreenWelcome extends React.Component {
         </div>
     </div>
     </div>
-    <VoiceModule options={this.state.voice.accessibility} intro={this.state.voice.intro} help={this.state.voice.help} {...this.props}/>
+    
+    <div class='module-voice'>
+        <VoiceModule options={this.state.voice.accessibility} intro={this.state.voice.intro} help={this.state.voice.help} {...this.props}/>
+    </div>
     </div>
     );
   }

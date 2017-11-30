@@ -6,11 +6,14 @@ var $ = require('jquery');
 export default class VoiceModule extends React.Component {
     componentDidMount(){
         
+        if(speechRecognizer != null && speechRecognizer != undefined){
             this.processSTT(window.speechRecognizer);
-        this.playIntro();
+            this.playIntro();
+        }
     }
     
     toggleAccessibility(){
+
         window.accessibility = !window.accessibility;
         var say = new SpeechSynthesisUtterance('Accessibility Mode '+(window.accessibility ? 'enabled' : 'disabled')+', say ... options to list all available options at any time. ' + (window.accessibility ? 'You may say an option to select it and proceed.':''));
         window.synthesis.speak(say);
@@ -21,15 +24,11 @@ export default class VoiceModule extends React.Component {
             window.synthesis.speak(say);
     }
     
-    
-    
     processSTT (speechRecognizer) {
-        if(speechRecognizer == null || speechRecognizer == undefined)
-            alert('null ro undefined');
+        
         
                     var r = document.getElementById('result');
                     r.innerHTML="";
-					
                     
 					var finalTranscripts = '';
 
@@ -52,41 +51,48 @@ export default class VoiceModule extends React.Component {
 				
     }
     
+    cancelSayDo(phrase, thenDo, timeout){
+        phrase = phrase || null;
+        timeout = timeout || 1000;
+        thenDo = thenDo || null;
+        window.synthesis.cancel();
+            setTimeout(()=>{
+                
+                if(phrase!=null){
+                    var say = new SpeechSynthesisUtterance(phrase);
+                    window.synthesis.speak(say);
+                    if(thenDo!=null)
+                        say.onend = thenDo;
+                }
+                else if(thenDo!=null)
+                    thenDo();
+                
+            },timeout);
+    }
+    
     handleInput(transcript){
         if(transcript.toLowerCase().indexOf('shut up')!=-1){
-            window.synthesis.cancel();
-            setTimeout(()=>{
-                var say = new SpeechSynthesisUtterance('alright, I am your bitch now.');
-                    window.synthesis.speak(say);
-            },100);
+            this.cancelSayDo('alright, I am your bitch now.');
             
         }
         
         if(transcript.toLowerCase().indexOf('accessibility')!=-1){
-            window.synthesis.cancel();
             window.accessibility = !window.accessibility;
-            setTimeout(()=>{
-            var say = new SpeechSynthesisUtterance('Accessibility Mode '+(window.accessibility ? 'enabled' : 'disabled')+', say ... options to list all available options at any time. ' + (window.accessibility ? 'You may say an option to select it and proceed.':''));
-                    window.synthesis.speak(say);
-            },100);
+            this.cancelSayDo('Accessibility Mode '+(window.accessibility ? 'enabled' : 'disabled')+', say ... options to list all available options at any time. ' + (window.accessibility ? 'You may say an option to select it and proceed.':''));
+            
         }
         
         if(transcript.toLowerCase().indexOf('help')!=-1){
-            window.synthesis.cancel();
-            setTimeout(()=>{
-            var say = new SpeechSynthesisUtterance(this.props.help);
-                    window.synthesis.speak(say);
-            },100);
+            this.cancelSayDo(this.props.help + ' '+(window.accessibility ? 'Say an option to select it.' : 'If you say ... accessibility, you may navigate the menus with your voice.')+' You may say ... options at any time to explain your options.');
         }
         
         if(transcript.toLowerCase().indexOf('options')!=-1){
-            window.synthesis.cancel();
-            setTimeout(()=>{
-            for(var i=0; i<this.props.options.length; i++){
-                var say = new SpeechSynthesisUtterance("Option " + (i+1) + ":" +this.props.options[i].help);
-                    window.synthesis.speak(say);
-            }
-            },100);
+            this.cancelSayDo(null, ()=>{
+                for(var i=0; i<this.props.options.length; i++){
+                    var say = new SpeechSynthesisUtterance("Option " + (i+1) + ":" +this.props.options[i].help);
+                        window.synthesis.speak(say);
+                    }
+            }, 1500 );
         }
         
         if(!window.accessibility)
@@ -95,15 +101,10 @@ export default class VoiceModule extends React.Component {
         this.props.options.forEach((i)=>{
             for( var j=0; j<i.keys.length; j++){//i.key.forEach((j)=>{
                 if(transcript.toLowerCase().indexOf(i.keys[j])!=-1){
-                    window.synthesis.cancel();
-            setTimeout(()=>{
-                    var say = new SpeechSynthesisUtterance(i.msg);
-                    window.synthesis.speak(say);
-                    say.onend = function(e){
-                        $(i.selector).click();
-                        console.log(e.elapsedTime);
-                    };
-                },100);
+                    this.cancelSayDo(i.msg, 
+                                        ()=> {
+                                            $(i.selector).click();
+                                        }, 1500);
                     break;
                 }
             }
@@ -116,7 +117,7 @@ export default class VoiceModule extends React.Component {
       console.log(this.props.title);
     return (
         <div id="module-voice">
-            <JButton buttonclass="smallButton" icon="fa-microphone" click={this.toggleAccessibility.bind(this)} {...this.props}/>
+            <JButton buttonclass={"smallButton" + ( (speechRecognizer != null && speechRecognizer != undefined)?'':' invis') } icon="fa-microphone" click={this.toggleAccessibility.bind(this)} {...this.props}/>
         </div>
     );
   }

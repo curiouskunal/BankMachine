@@ -15,7 +15,7 @@ export default class ScreenWelcome extends React.Component {
                         {keys: ['francais', 'french'], selector: '.buttons-main button:contains("Français")',  msg: 'You selected French.', help:"French. Sets the menu language to French."},
                         {keys: ['other', 'language'], selector: '.buttons-secondary button:contains("Other")',  msg: 'You selected Other Languages.', help:"Other Languages. Brings you to a screen where you may select from a list of languages."}
                     ],         
-                 intro: "Welcome to TD Canada Trust. If you need help at any time please say ... help. If you would like text to speech accessibility features, please say ... accessibility.",
+                 intro: "Welcome to TD Canada Trust. You can say ... use my voice ... to enable voice navigation and accessibility features.",
                  help: "You are on the welcome screen. From here you may select a language to proceed."       
              }
          };

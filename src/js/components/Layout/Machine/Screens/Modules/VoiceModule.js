@@ -73,17 +73,22 @@ export default class VoiceModule extends React.Component {
     handleInput(transcript){
         if(transcript.toLowerCase().indexOf('shut up')!=-1){
             this.cancelSayDo('alright, I am your bitch now.');
+        }
+        
+        if(transcript.toLowerCase().indexOf('voice')!=-1){
+            window.accessibility = !window.accessibility;
+            this.cancelSayDo('Voice control mode '+(window.accessibility ?
+                                                    'enabled. Say ... help to explain the screen you are on. Say ... options to list all available options. You can select an option by saying it.' 
+                                                    : 
+                                                    'disabled.') );
             
         }
         
-        if(transcript.toLowerCase().indexOf('accessibility')!=-1){
-            window.accessibility = !window.accessibility;
-            this.cancelSayDo('Accessibility Mode '+(window.accessibility ? 'enabled' : 'disabled')+', say ... options to list all available options at any time. ' + (window.accessibility ? 'You may say an option to select it and proceed.':''));
-            
-        }
+        if(!window.accessibility)
+            return;
         
         if(transcript.toLowerCase().indexOf('help')!=-1){
-            this.cancelSayDo(this.props.help + ' '+(window.accessibility ? 'Say an option to select it.' : 'If you say ... accessibility, you may navigate the menus with your voice.')+' You may say ... options at any time to explain your options.');
+            this.cancelSayDo(this.props.help + ' Say ... options at any time to explain your options.');
         }
         
         if(transcript.toLowerCase().indexOf('options')!=-1){
@@ -94,9 +99,6 @@ export default class VoiceModule extends React.Component {
                     }
             }, 1500 );
         }
-        
-        if(!window.accessibility)
-            return false;
         
         this.props.options.forEach((i)=>{
             for( var j=0; j<i.keys.length; j++){//i.key.forEach((j)=>{

@@ -440,7 +440,7 @@ span{
 
 /**Screen Card Page Start**/
 
-#screen-card img{
+#screen-card img, #screen-removecard img{
     border:2px solid white;
     border-radius: 40px;
 }
@@ -468,12 +468,12 @@ span{
 .padCashInsert{
     padding-right: 70px;
 }
-#screen-card p , #screen-insert p , #screen-take p{
+#screen-card p , #screen-insert p , #screen-take p, #screen-removecard p{
 	color: white;
 	font-size:30px;
     text-align: center;
 }
-#screen-card img{
+#screen-card img, #screen-removecard img{
 	margin: 0 auto;
 }
 #machine{

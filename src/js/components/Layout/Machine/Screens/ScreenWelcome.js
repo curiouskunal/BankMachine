@@ -11,11 +11,11 @@ export default class ScreenWelcome extends React.Component {
              voice:{
                  accessibility:
                     [
-                        {keys: ['english'], selector: '.buttons-main button:contains("English")',  msg: 'You selected English.', help:"English. Sets the menu language to English."},
-                        {keys: ['francais', 'french'], selector: '.buttons-main button:contains("Français")',  msg: 'You selected French.', help:"French. Sets the menu language to French."},
-                        {keys: ['other', 'language'], selector: '.buttons-secondary button:contains("Other")',  msg: 'You selected Other Languages.', help:"Other Languages. Brings you to a screen where you may select from a list of languages."}
+                        {keys: ['english'], action: ()=>{$('.buttons-main button:contains("English")').click()},  msg: 'You selected English.', help:"English. Sets the menu language to English."},
+                        {keys: ['francais', 'french'], action: ()=>{$('.buttons-main button:contains("Français")').click()},  msg: 'You selected French.', help:"French. Sets the menu language to French."},
+                        {keys: ['other', 'language'], action: ()=>{$('.buttons-main button:contains("English")').click()},  msg: 'You selected Other Languages.', help:"Other Languages. Brings you to a screen where you may select from a list of languages."}
                     ],         
-                 intro: "Welcome to TD Canada Trust. You can say ... use my voice ... to enable voice navigation and accessibility features.",
+                 forcedintro: "Welcome to TD Canada Trust. You can say ... use my voice ... to enable voice navigation and accessibility features.",
                  help: "You are on the welcome screen. From here you may select a language to proceed."       
              }
          };
@@ -68,7 +68,7 @@ export default class ScreenWelcome extends React.Component {
     <div class='module-voice'>
     <div class="buttons-secondary">
     <div class="col-md-12">
-        <VoiceModule options={this.state.voice.accessibility} intro={this.state.voice.intro} help={this.state.voice.help} {...this.props}/>
+        <VoiceModule options={this.state.voice.accessibility} forcedintro={this.state.voice.forcedintro} help={this.state.voice.help} {...this.props}/>
       </div>
       </div>
     </div>

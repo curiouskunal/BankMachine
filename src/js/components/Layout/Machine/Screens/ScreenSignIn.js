@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../Title";
 import JButton from "../JButton";
 import VoiceModule from "./Modules/VoiceModule";
-//var $ = require('jquery');
+var $ = require('jquery');
 
 export default class ScreenSignIn extends React.Component {
     constructor(){
@@ -11,11 +11,11 @@ export default class ScreenSignIn extends React.Component {
              voice:{
                  accessibility:
                     [
-                        {keys: ['card', 'debit', 'pin'], selector: '.buttons-main button:contains("Card")',  msg: 'You selected Card sign in.', help:"Card sign in. Allows you to sign in using your bank card and pin."},
-                        {keys: ['mobile', 'tap', 'scan', 'app'], selector: '.buttons-main button:contains("Mobile")',  msg: 'You selected Mobile app sign in.', help:"Mobile app sign in. Allows you to sign in using the TD mobile app on your phone."},
-                        {keys: ['account', 'number'], selector: '.buttons-main button:contains("Account")',  msg: 'You selected Account number sign in.', help:"Account number sign in. Allows you to sign in using your account number and password."},
-                        {keys: ['back', 'undo'], selector: '.left button',  msg: 'You selected Back. Returning to previous menu.', help:"Back. Returns you to the previous menu."},
-                        {keys: ['quit', 'exit', 'logout', 'cancel'], selector: '.right button',  msg: 'You selected Exit. You have been logged out.', help:"Exit. Resets all information and returns to Welcome Screen."}
+                        {keys: ['card', 'debit', 'pin'], action: ()=>{$('.buttons-main button:contains("Card")').click()},  msg: 'You selected Card sign in.', help:"Card sign in. Allows you to sign in using your bank card and pin."},
+                        {keys: ['mobile', 'tap', 'scan', 'app'], action: ()=>{$('.buttons-main button:contains("Mobile")').click()},  msg: 'You selected Mobile app sign in.', help:"Mobile app sign in. Allows you to sign in using the TD mobile app on your phone."},
+                        {keys: ['account', 'number'], action: ()=>{$('.buttons-main button:contains("Account")').click()},  msg: 'You selected Account number sign in.', help:"Account number sign in. Allows you to sign in using your account number and password."},
+                        {keys: ['back', 'undo'], action: ()=>{$('.left button').click()},  msg: 'You selected Back. Returning to previous menu.', help:"Back. Returns you to the previous menu."},
+                        {keys: ['quit', 'exit', 'logout', 'cancel'], action: ()=>{$('.right button').click()},  msg: 'You selected Exit. You have been logged out.', help:"Exit. Resets all information and returns to Welcome Screen."}
                     ],         
                  help: "You are on the sign in screen. From here you may select a method to sign in."       
              }

@@ -8,19 +8,22 @@ export default class VoiceModule extends React.Component {
         
         if(speechRecognizer != null && speechRecognizer != undefined){
             this.processSTT(window.speechRecognizer);
-            this.playIntro();
+            this.playIntro(window.accessibility);
         }
     }
     
     toggleAccessibility(){
-
         window.accessibility = !window.accessibility;
-        var say = new SpeechSynthesisUtterance('Accessibility Mode '+(window.accessibility ? 'enabled' : 'disabled')+', say ... options to list all available options at any time. ' + (window.accessibility ? 'You may say an option to select it and proceed.':''));
-        window.synthesis.speak(say);
+        this.cancelSayDo('Voice control mode '+(window.accessibility ?
+                                                'enabled. Say ... help to explain the screen you are on. Say ... options to list all available options. You can select an option by saying it.' 
+                                                : 
+                                                'disabled.') );
     }
     
-    playIntro(){
-        var say = new SpeechSynthesisUtterance(this.props.intro);
+    playIntro(accessibility){
+        if(this.props.intro==null && this.props.forcedintro==null)
+            return;
+        var say = new SpeechSynthesisUtterance((window.accessibility? this.props.intro : this.props.forcedintro));
             window.synthesis.speak(say);
     }
     
@@ -75,14 +78,16 @@ export default class VoiceModule extends React.Component {
             this.cancelSayDo('alright, I am your bitch now.');
         }
         
-        if(transcript.toLowerCase().indexOf('voice')!=-1){
-            window.accessibility = !window.accessibility;
-            this.cancelSayDo('Voice control mode '+(window.accessibility ?
-                                                    'enabled. Say ... help to explain the screen you are on. Say ... options to list all available options. You can select an option by saying it.' 
-                                                    : 
-                                                    'disabled.') );
-            
+        if(transcript.toLowerCase().indexOf('my name is')!=-1){
+            this.cancelSayDo('Your name is Fuck Boy. Get lost kid.');
         }
+        
+        if(transcript.toLowerCase().indexOf('lost')!=-1){
+            this.cancelSayDo('Where the fuck I am?');
+        }
+        
+        if(transcript.toLowerCase().indexOf('voice')!=-1)
+            this.toggleAccessibility();
         
         if(!window.accessibility)
             return;
@@ -103,10 +108,7 @@ export default class VoiceModule extends React.Component {
         this.props.options.forEach((i)=>{
             for( var j=0; j<i.keys.length; j++){//i.key.forEach((j)=>{
                 if(transcript.toLowerCase().indexOf(i.keys[j])!=-1){
-                    this.cancelSayDo(i.msg, 
-                                        ()=> {
-                                            $(i.selector).click();
-                                        }, 1500);
+                    this.cancelSayDo(i.msg, i.action, 1500);
                     break;
                 }
             }

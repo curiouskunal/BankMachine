@@ -18,7 +18,7 @@ export default class ScreenMobile extends React.Component {
                         {keys: ['back', 'undo'], selector: '.left button',  msg: 'You selected Back. Returning to previous menu.', help:"Back. Returns you to the previous menu."},
                         {keys: ['quit', 'exit', 'logout', 'cancel'], selector: '.right button',  msg: 'You selected Exit. You have been logged out.', help:"Exit. Resets all information and returns to Welcome Screen."}
                     ],         
-                 help: "You are on the mobile sign in screen. From here you may select a method to sign in. You may say ... options at any time to explain your options. If you say ... accessibility, you may navigate the menus with your voice."       
+                 help: "You are on the mobile sign in screen. From here you may select a method to sign in."       
              }
          };
      }

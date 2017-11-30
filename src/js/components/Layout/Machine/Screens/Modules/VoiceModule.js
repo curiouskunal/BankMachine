@@ -8,7 +8,7 @@ export default class VoiceModule extends React.Component {
         var sr = this.createSST();
         if(sr!=null && sr!=undefined)
             this.startSTT(sr);
-        this.playIntro();
+        //this.playIntro();
     }
     
     toggleAccessibility(){

@@ -12,6 +12,7 @@ export default class Layout extends React.Component {
         window.root="/";
         window.accessibility=false;
         window.synthesis = speechSynthesis;
+         window.speechRecognizer = this.createSST();
         this.populateVoiceList();
         document.getElementById("voiceSelect").onchange=function(e){
             //TODO select a voice
@@ -19,6 +20,27 @@ export default class Layout extends React.Component {
         if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
           speechSynthesis.onvoiceschanged = this.populateVoiceList;
         }
+    }
+    
+//    componentWillMount(){
+//       
+//    }
+    
+    
+    createSST(){
+        if(!('webkitSpeechRecognition' in window)){
+					alert('Your browser does not support speech recognition. Accessibility features will be disabled until you upgrade. Try Google Chrome.');
+                    return;   
+                }
+					var speechRecognizer = new webkitSpeechRecognition();
+					speechRecognizer.continuous = true;
+					speechRecognizer.interimResults = true;
+					speechRecognizer.lang = 'en-CA';
+                    speechRecognizer.onend = function () {
+	                   speechRecognizer.start();
+                    }
+                    speechRecognizer.start();
+                    return speechRecognizer;
     }
     
   constructor() {

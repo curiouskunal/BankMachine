@@ -5,9 +5,8 @@ var $ = require('jquery');
 
 export default class VoiceModule extends React.Component {
     componentDidMount(){
-        var sr = this.createSST();
-        if(sr!=null && sr!=undefined)
-            this.startSTT(sr);
+        
+            this.processSTT(window.speechRecognizer);
         //this.playIntro();
     }
     
@@ -22,26 +21,16 @@ export default class VoiceModule extends React.Component {
             window.synthesis.speak(say);
     }
     
-    createSST(){
-        if(!('webkitSpeechRecognition' in window)){
-					alert('Your browser does not support speech recognition. Accessibility features will be disabled until you upgrade. Try Google Chrome.');
-                    return;   
-                }
-					var speechRecognizer = new webkitSpeechRecognition();
-					speechRecognizer.continuous = true;
-					speechRecognizer.interimResults = true;
-					speechRecognizer.lang = 'en-CA';
-                    return speechRecognizer;
-    }
     
-    startSTT (speechRecognizer) {
+    
+    processSTT (speechRecognizer) {
+        if(speechRecognizer == null || speechRecognizer == undefined)
+            alert('null ro undefined');
         
                     var r = document.getElementById('result');
                     r.innerHTML="";
-					speechRecognizer.start();
-                    speechRecognizer.onend = function () {
-	                   speechRecognizer.start();
-                    }
+					
+                    
 					var finalTranscripts = '';
 
 					speechRecognizer.onresult = (event)=>{

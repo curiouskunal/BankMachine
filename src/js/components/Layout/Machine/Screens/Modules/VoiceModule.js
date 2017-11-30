@@ -7,7 +7,7 @@ export default class VoiceModule extends React.Component {
     componentDidMount(){
         
             this.processSTT(window.speechRecognizer);
-        //this.playIntro();
+        this.playIntro();
     }
     
     toggleAccessibility(){
@@ -53,6 +53,15 @@ export default class VoiceModule extends React.Component {
     }
     
     handleInput(transcript){
+        if(transcript.toLowerCase().indexOf('shut up')!=-1){
+            window.synthesis.cancel();
+            setTimeout(()=>{
+                var say = new SpeechSynthesisUtterance('alright, I am your bitch now.');
+                    window.synthesis.speak(say);
+            },100);
+            
+        }
+        
         if(transcript.toLowerCase().indexOf('accessibility')!=-1){
             window.accessibility = !window.accessibility;
             var say = new SpeechSynthesisUtterance('Accessibility Mode '+(window.accessibility ? 'enabled' : 'disabled')+', say ... options to list all available options at any time. ' + (window.accessibility ? 'You may say an option to select it and proceed.':''));
@@ -65,6 +74,7 @@ export default class VoiceModule extends React.Component {
         }
         
         if(transcript.toLowerCase().indexOf('options')!=-1){
+//           window.synthesis.cancel();
             for(var i=0; i<this.props.options.length; i++){
                 var say = new SpeechSynthesisUtterance("Option " + (i+1) + ":" +this.props.options[i].help);
                     window.synthesis.speak(say);

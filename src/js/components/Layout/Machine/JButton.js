@@ -10,6 +10,8 @@ export default class JButton extends React.Component {
     }
     
     handleClick(){
+        if(window.synthesis!= null)
+            window.synthesis.cancel();
         console.log("button with text: " + this.props.text + "  ---  " );
         console.log(this.props);
         

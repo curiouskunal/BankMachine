@@ -63,22 +63,30 @@ export default class VoiceModule extends React.Component {
         }
         
         if(transcript.toLowerCase().indexOf('accessibility')!=-1){
+            window.synthesis.cancel();
             window.accessibility = !window.accessibility;
+            setTimeout(()=>{
             var say = new SpeechSynthesisUtterance('Accessibility Mode '+(window.accessibility ? 'enabled' : 'disabled')+', say ... options to list all available options at any time. ' + (window.accessibility ? 'You may say an option to select it and proceed.':''));
                     window.synthesis.speak(say);
+            },100);
         }
         
         if(transcript.toLowerCase().indexOf('help')!=-1){
+            window.synthesis.cancel();
+            setTimeout(()=>{
             var say = new SpeechSynthesisUtterance(this.props.help);
                     window.synthesis.speak(say);
+            },100);
         }
         
         if(transcript.toLowerCase().indexOf('options')!=-1){
-//           window.synthesis.cancel();
+            window.synthesis.cancel();
+            setTimeout(()=>{
             for(var i=0; i<this.props.options.length; i++){
                 var say = new SpeechSynthesisUtterance("Option " + (i+1) + ":" +this.props.options[i].help);
                     window.synthesis.speak(say);
             }
+            },100);
         }
         
         if(!window.accessibility)
@@ -87,12 +95,15 @@ export default class VoiceModule extends React.Component {
         this.props.options.forEach((i)=>{
             for( var j=0; j<i.keys.length; j++){//i.key.forEach((j)=>{
                 if(transcript.toLowerCase().indexOf(i.keys[j])!=-1){
+                    window.synthesis.cancel();
+            setTimeout(()=>{
                     var say = new SpeechSynthesisUtterance(i.msg);
                     window.synthesis.speak(say);
                     say.onend = function(e){
                         $(i.selector).click();
                         console.log(e.elapsedTime);
                     };
+                },100);
                     break;
                 }
             }

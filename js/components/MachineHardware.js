@@ -32,6 +32,17 @@ export default class MachineHardware extends React.Component {
         	        </div>
         	        </div>                                                
                 }/>
+                
+                <Route path="/removecard" exact render={props =>                   
+                    <div> 
+                    <div class="col-md-6">
+        	            <img src={window.root+"img/MoneyHole.jpg"} />
+        	        </div>
+                    <div class="col-md-6">         	
+        	            <Link to="/home">  <img src={window.root+"img/IMG_7768.jpeg"} />    </Link>
+        	        </div>
+        	        </div>                                                
+                }/>
                                                         
                 <Route path="/insert" exact render={props =>        
                     <div>

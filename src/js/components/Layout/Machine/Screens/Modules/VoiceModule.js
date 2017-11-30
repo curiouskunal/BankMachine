@@ -105,15 +105,9 @@ export default class VoiceModule extends React.Component {
   render() {
       console.log(this.props.title);
     return (
-     <div id="module-voice">
-        <div class="buttons-main">
-        <div class="col-md-offset-2 col-md-4 ">
-        <div class='bouttons'>
-                <JButton buttonclass="boutton" icon="fa-microphone" click={this.toggleAccessibility.bind(this)} {...this.props}/>
+        <div id="module-voice">
+            <JButton buttonclass="smallButton" icon="fa-microphone" click={this.toggleAccessibility.bind(this)} {...this.props}/>
         </div>
-        </div>
-        </div>
-    </div>
     );
   }
 }

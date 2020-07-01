@@ -28,7 +28,7 @@
     "react-router-dom": "^4.2.2",
     "react-virtual-keyboard": "^1.0.1",
     "virtual-keyboard": "^1.27.0",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^3.1.11"
   },
   "devDependencies": {
     "webpack": "^1.15.0"

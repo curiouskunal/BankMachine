@@ -1,4 +1,5 @@
-# 4HC3 Assessment 2
+###### SFWR ENG 4HC3: Assessment 2
+# Bank Machine Human Interface UI Prototype for Touch Screen
 
 ## Live Demo
 [bankmachine.kunalshah.ca](http://bankmachine.kunalshah.ca)
